@@ -1,1 +1,13 @@
-test
+\subsection{VOC Tagging Approach}
+\begin{itemize}
+    \item boxmodel set-up, initial conditions, VOC emissions same as in \citet{Coates:2015}
+    \item only difference is the tagging approach used; \citet{Coates:2015} determine effects of VOC on O3 by inferring the effects of VOC on Ox production, hence this is looking at the effects on O3 indirectly
+    \item the tagging approach of \citet{Emmons:2012}, which looks at NOx-tagging has been adapted to VOC tagging by Shuai and Tim and now the effects of VOC on O3 mixing ratios can be directly compared
+    \item Tagging the VOC degradation of MOZART-4 was achieved using the same technique as S\&T but using the KPP version of MOZART-4, including the modifications to MOZART-4 outlined in \citet{Coates:2015} such as using MCM~v3.2 inorganic chemistry, using only reactions relevant to tropospheric processes.
+    \item From the gas-phase reactions in the KPP version, we have the full set of non-tagged reactions -- the ``real'' chemistry -- and appended this with reactions where the degradation reactions of a VOC are tagged for the VOC in order to trace the effects of the VOC degradation on O3 and Ox production.
+    \item The tagging approach requires extracting the set of reactions where reactions of the VOC products with members of the Ox family are also included.
+    \item We define the Ox family to include O3, O, O1D, NO2, NO3, N2O5, HNO3, ISOPNO3, ONIT, ONITR, HO2, HO2NO2.
+    \item The set of tagged chemistry which runs parallel to the ``real'' chemistry was then added to the KPP version of MOZART-4 chemical mechanism described above.
+    \item This chemistry was then implemented in the boxmodel and then tested to determine that the tagged chemistry does not influence the ``real'' chemistry by comparing the mixing ratios of tagged species to their non-tagged counterparts. If the chemistry is correctly set-up then there should be no difference.
+    \item The next testing stage was that this new chemistry set-up gives the same results as the previous chemistry (i.e. the results in \citet{Coates:2015}) by comparing the mixing ratios of the ``real'' chemistry in the new set-up to that in \citet{Coates:2015} and again there should be no differences as the boxmodels are set-up in exactly the same way.
+\end{itemize}
