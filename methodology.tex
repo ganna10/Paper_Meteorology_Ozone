@@ -11,3 +11,12 @@
     \item This chemistry was then implemented in the boxmodel and then tested to determine that the tagged chemistry does not influence the ``real'' chemistry by comparing the mixing ratios of tagged species to their non-tagged counterparts. If the chemistry is correctly set-up then there should be no difference.
     \item The next testing stage was that this new chemistry set-up gives the same results as the previous chemistry (i.e. the results in \citet{Coates:2015}) by comparing the mixing ratios of the ``real'' chemistry in the new set-up to that in \citet{Coates:2015} and again there should be no differences as the boxmodels are set-up in exactly the same way.
 \end{itemize}
+
+\subsection{Vertical Mixing with Diurnal Boundary Layer Height}
+\begin{itemize}
+    \item A parameterisation of the diurnal profile of the planetary boundary layer (PBL) height over Los Angeles was provided by Boris Bonn based on data from the CARES field campaign \citep{CARES:2008} \todo{check if reference correctly}.
+    \item The PBL height was calculated at every time point for the model run and then read into the boxmodel at each time point \todo{include plot}.
+    \item The concentrations of the chemical species within the PBL are diluted due to the larger mixing volume when the PBL height increases at the beginning of the day, also the increasing PBL height induces mixing of chemical species from the free troposphere with those chemical species within the PBL i.e. vertical mixing. When the PBL height collapses during night giving the stable nocturnal boundary layer, this traps the chemical species into a smaller volume thus increasing the concentrations of the chemical species.
+    \item This vertical mixing scheme was implemented into the boxmodel using the same approach of \citet{Lourens:2012}.
+    \item The mixing ratios of the chemical species in the free troposphere were taken from the MATCH-MPIC chemical weather forecast model on the 27th March (the start date of the simulations). The model results (\url{http://cwf.iass-potsdam.de/}) at the 700 hPa height were chosen and the daily average was used as input into the boxmodel. \todo{check about reference and if this is appropriate}
+\end{itemize}
