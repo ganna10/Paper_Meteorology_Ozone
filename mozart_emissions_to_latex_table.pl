@@ -1,36 +1,28 @@
 #! /usr/bin/env perl
-# Extract VOC emission data from country file, country name is ARGV, and transform into LaTeX table
+# Create LaTeX tables for each country
 # Version 0: Jane Coates 1/9/2015
 
 use strict;
 use diagnostics;
 
-my $country = $ARGV[0];
-die "No country specified : $!" unless (defined $ARGV[0]);
+my $file = "Benelux_MOZART_Total_NMVOC_Emissions.csv";
+my %emissions;
 
-my $csv_file = "${country}_MCM_Total_NMVOC_Emissions.csv";
-open my $in, '<:encoding(utf-8)', $csv_file or die $!;
-my (@lines) = <$in>;
+open my $in, '<:encoding(utf-8)', $file or die "Can't open $file for reading : $!";
+my @lines = <$in>;
 close $in;
 
-my $out_file = "${country}_MCM_emissions.tex";
+my $out_file = "table_MOZART_NMVOC_emissions.tex";
 open my $out, '>:encoding(utf-8)', $out_file or die $!;
-print $out "\\tiny\n";
-print $out "\\begin{longtable}{lllllllllllllll}\n";
-print $out "\t\\caption{$country AVOC and BVOC emissions, in molecules~cm\$^{-2}\$~s\$^{-1}\$, translated into MCM species.}\\\\%\n";
+print $out "\\footnotesize\n";
+print $out "\\begin{longtable}{llllll}\n";
+print $out "\t\\caption{Benelux AVOC and BVOC emissions, in molecules~cm\$^{-2}\$~s\$^{-1}\$, mapped from MCM~v3.2 species into corresponding MOZART-4 species. Emissions were weighted by the carbon numbers of the respective species.}\\\\%\n";
 print $out "\t\\hline \\hline\n";
 foreach my $line (@lines) {
     chomp $line;
     if ($line =~ /^Type/) {
-        $line =~ s/\s+$//;
-        $line =~ s/\.Emissions//g;
-        my @items = split /,/, $line;
-         foreach (@items) {
-             $_ = "\\textbf{${_}}";
-         }
-         $line = join ',', @items;
+        $line = "\\textbf{Type} & \\textbf{MCM Species} & \\textbf{Belgium} & \\textbf{Netherlands} & \\textbf{Luxembourg} & \\textbf{Total}";
          $line .= "\\\\\n\t\\endhead\n\t\\hline";
-         $line =~ s/,/ & /g;
          print $out "\t", $line, "\n";
          next;
     }
@@ -42,31 +34,31 @@ foreach my $line (@lines) {
     } elsif ($line =~ /^Pentanes/) {
         $line =~ s/Pentanes/\\hline \\multirow{3}{*}{Pentanes}/;
     } elsif ($line =~ /^Hexane/) {
-        $line =~ s/Hexane\.and\.Higher\.Alkanes/\\hline \\parbox[t]{2mm}{\\multirow{14}{*}{\\rotatebox[origin=c]{90}{Hexane and Higher Alkanes}}}/;
-    } elsif ($line =~ /^Higher\.Alkenes/) {
-        $line =~ s/Higher\.Alkenes/\\hline \\parbox[t]{2mm}{\\multirow{11}{*}{\\rotatebox[origin=c]{90}{Higher Alkenes}}}/;
+        $line =~ s/Hexane_and_Higher_Alkanes/\\hline \\parbox[t]{2mm}{\\multirow{14}{*}{\\rotatebox[origin=c]{90}{Hexane and Higher Alkanes}}}/;
+    } elsif ($line =~ /^Higher_Alkenes/) {
+        $line =~ s/Higher_Alkenes/\\hline \\parbox[t]{2mm}{\\multirow{11}{*}{\\rotatebox[origin=c]{90}{Higher Alkenes}}}/;
     } elsif ($line =~ /^Xylenes/) {
         $line =~ s/Xylenes/\\multirow{3}{*}{Xylenes}/;
     } elsif ($line =~ /^Trimethylbenzenes/) {
         $line =~ s/Trimethylbenzenes/\\hline \\multirow{3}{*}{Trimethylbenzenes}/;
-    } elsif ($line =~ /^Other\.Aromatics/) {
-        $line =~ s/Other\.Aromatics/\\hline \\parbox[t]{2mm}{\\multirow{11}{*}{\\rotatebox[origin=c]{90}{Other Aromatics}}}/;
-    } elsif ($line =~ /^Other\.Aldehydes/) {
-        $line =~ s/Other\.Aldehydes/\\parbox[t]{2mm}{\\multirow{9}{*}{\\rotatebox[origin=c]{90}{Other Aldehydes}}}/;
+    } elsif ($line =~ /^Other_Aromatics/) {
+        $line =~ s/Other_Aromatics/\\hline \\parbox[t]{2mm}{\\multirow{11}{*}{\\rotatebox[origin=c]{90}{Other Aromatics}}}/;
+    } elsif ($line =~ /^Other_Aldehydes/) {
+        $line =~ s/Other_Aldehydes/\\parbox[t]{2mm}{\\multirow{9}{*}{\\rotatebox[origin=c]{90}{Other Aldehydes}}}/;
     } elsif ($line =~ /^Alkadienes/) {
-        $line =~ s/Alkadienes\.and\.Other\.Alkynes/\\hline Alkadienes and/;
+        $line =~ s/Alkadienes_and_Other_Alkynes/\\hline Alkadienes and/;
     } elsif ($line =~ /C5H8/) {
         $line =~ s/^/Other Alkynes/;
-    } elsif ($line =~ /Organic\.Acids/) {
-        $line =~ s/Organic\.Acids/\\hline \\multirow{4}{*}{Organic Acids}/;
+    } elsif ($line =~ /Organic_Acids/) {
+        $line =~ s/Organic_Acids/\\hline \\multirow{4}{*}{Organic Acids}/;
     } elsif ($line =~ /Alcohols/) {
         $line =~ s/Alcohols/\\hline \\parbox[t]{2mm}{\\multirow{19}{*}{\\rotatebox[origin=c]{90}{Alcohols}}}/;
     } elsif ($line =~ /Ketones/) {
         $line =~ s/Ketones/\\hline \\parbox[t]{2mm}{\\multirow{10}{*}{\\rotatebox[origin=c]{90}{Ketones}}}/;
     } elsif ($line =~ /Ethers/) {
         $line =~ s/Ethers/\\hline \\parbox[t]{2mm}{\\multirow{10}{*}{\\rotatebox[origin=c]{90}{Ethers}}}/;
-    } elsif ($line =~ /Chlorinated\.Hydrocarbons/) {
-        $line =~ s/Chlorinated\.Hydrocarbons/\\hline \\parbox[t]{2mm}{\\multirow{12}{*}{\\rotatebox[origin=c]{90}{Chlorinated Hydrocarbons}}}/;
+    } elsif ($line =~ /Chlorinated_Hydrocarbons/) {
+        $line =~ s/Chlorinated_Hydrocarbons/\\hline \\parbox[t]{2mm}{\\multirow{12}{*}{\\rotatebox[origin=c]{90}{Chlorinated Hydrocarbons}}}/;
     } elsif ($line =~ /Esters/) {
         $line =~ s/Esters/\\hline \\parbox[t]{2mm}{\\multirow{6}{*}{\\rotatebox[origin=c]{90}{Esters}}}/;
     } elsif ($line =~ /^Terpenes/) {
@@ -92,12 +84,12 @@ foreach my $line (@lines) {
         $line =~ s/$/ \\hline/;
     }
     #remove pagebreaks from certain categories
-    if ($line =~ /CH3OH|C2H5OH|NPROPOL|IPROPOL|CH3OCH3/) {
+    if ($line =~ /CH3OH|C2H5OH|NPROPOL|IPROPOL|METHACET|ETHACET|NBUTACET|IPROACET|CH3OCHO|NPROACET/) {
         $line =~ s/$/*/;
     }
     print $out "\t", $line, "\n";
 }
 print $out "\t\\hline \\hline\n";
-print $out "\t\\label{t:${country}_MCM_emissions}\n";
+print $out "\t\\label{t:MOZART_NMVOC_emissions}\n";
 print $out "\\end{longtable}";
 close $out;

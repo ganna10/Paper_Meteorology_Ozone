@@ -38,21 +38,36 @@
         \centering%
         \caption{Anthropogenic NMVOC emissions in 2011 in tonnes from each SNAP category assigned from TNO-MACC\_III emission inventory and biogenic VOC emission in tonnes from Benelux region assigned from EMEP. The allocation of these emissions to each MCM~v3.2 and MOZART-4 species is found in the supplement.}%
         \input{table_NMVOC_emissions}
-        \vspace{-2mm}%
-        \label{t:NMVOC_emissions}%
     \end{table}%
 }
 
 {%supplement
-    %\renewcommand{\arraystretch}{1.1}%
     \begin{landscape}%
         \centering%
-        \captionof{table}{Belgium AVOC and BVOC emissions, in molecules~cm$^{-2}$~s$^{-1}$, translated into MCM species.}%
         \input{Belgium_MCM_emissions}
-        \vspace{-2mm}%
-        \label{t:Belgium_MCM_emissions}%
     \end{landscape}%
 }
+
+{%supplement
+    \begin{landscape}%
+        \centering%
+        \input{Netherlands_MCM_emissions}
+    \end{landscape}%
+}
+
+{%supplement
+    \begin{landscape}%
+        \centering%
+        \input{Luxembourg_MCM_emissions}
+    \end{landscape}%
+}
+
+%supplement
+{%supplement
+    \centering%
+    \input{table_MOZART_NMVOC_emissions}
+}
+The total MCM~v3.2 emissions for each initial species in Tables \ref{t:Belgium_MCM_emissions}, \ref{t:Netherlands_MCM_emissions} and \ref{t:Luxembourg_MCM_emissions} were translated to emissions of MOZART-4 species by weighting with the carbon numbers. The final emissions of the MOZART-4 species representing each MCM~v3.2 species are presented in Table \ref{t:MOZART_NMVOC_emissions} for each country in the Benelux region.
 
 \subsection{Vertical Mixing with Diurnal Boundary Layer Height} \label{ss:vertical_mixing}
 %most likely include in supplement
