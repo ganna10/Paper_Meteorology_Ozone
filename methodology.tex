@@ -32,7 +32,6 @@
     \item The MCM~v3.2 initial species were determined using the country specific profiles for each SNAP source category and where appropriate information of individual chemical species that can be represented by MCM~v3.2 were determined using the speciations of \citet{Passant:2002}. %%include examples from Solvents paper
     \item After calculating the MCM~v3.2 initial VOC and respective emissions were assigned to the respective MOZART-4 species and the emissions in MOZART-4 were weighted by the carbon numbers of the MCM~v3.2 species and the emitted MOZART-4 species.
 \end{itemize}
-%Table with initial conditions of VOC initial conditions in each mechanism (supplement)
 {%
     \renewcommand{\arraystretch}{1.1}%
     \begin{table}%
@@ -42,6 +41,17 @@
         \vspace{-2mm}%
         \label{t:NMVOC_emissions}%
     \end{table}%
+}
+
+{%supplement
+    %\renewcommand{\arraystretch}{1.1}%
+    \begin{landscape}%
+        \centering%
+        \captionof{table}{Belgium AVOC and BVOC emissions, in molecules~cm$^{-2}$~s$^{-1}$, translated into MCM species.}%
+        \input{Belgium_MCM_emissions}
+        \vspace{-2mm}%
+        \label{t:Belgium_MCM_emissions}%
+    \end{landscape}%
 }
 
 \subsection{Vertical Mixing with Diurnal Boundary Layer Height} \label{ss:vertical_mixing}
