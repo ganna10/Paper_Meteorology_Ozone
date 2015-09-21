@@ -19,9 +19,9 @@
     \item MECCA box model has been updated to include vertical mixing with the free troposphere and accordingly includes a diurnal cycle for the PBL height. These amendments are discussed further in Sect.~\ref{ss:vertical_mixing}.
     \item Simulations start at 06:00 using spring ecquinoctical conditions and the simulations ended after two days.
     \item All simulations performed using the Master Chemical Mechanism, MCM~v3.2, \citep{MCM_Site} and also repeated using MOZART-4 \citep{Emmons:2010}. \citet{Coates:2015} describes the implementation of both MCM~v3.2 and MOZART-4 for use with KPP within MECCA.
-    \item NOx and other parameters were varied systematically to analyse the effects on ozone mixing ratios over different NOx gradients and hence different atmospheric conditions.
+    \item NOx and other parameters, including NMVOC emissions, temperature and relative humidity, were varied systematically to analyse the effects on ozone mixing ratios over different NOx gradients and hence different atmospheric conditions. Table~\ref{t:variations} details the varied parameters and their ranges.
     \item VOC emissions constant until noon of first day, to simulate a plume of emitted VOC.
-    \item Two sets of runs were performed -- to include both a temperature dependent and independent source of biogenic VOC emissions. MEGANv2.1 \citep{Guenther:2012} was used to specify the temperature dependent BVOC emissions of isoprene and monoterpenes, the BVOC considered in this study. \todo{why these 2 for NW Europe}
+    \item Two sets of runs were performed -- to include both a temperature-dependent and temperature-independent source of biogenic VOC emissions. MEGANv2.1 \citep{Guenther:2012} was used to specify the temperature-dependent BVOC emissions of isoprene and monoterpenes, the BVOC considered in this study. \todo{why these 2 for NW Europe}
     \item Methane is fixed at $1.7$~ppmv throughout the model run, carbon monoxide (CO) and ozone were initialised at $200$~ppbv and $40$~ppbv and then allowed to evolve freely throughout the the simulation.
 \end{itemize}
 %Table with variations
@@ -30,63 +30,70 @@
     \begin{table}%
         \centering%
         \caption{The variables and their minimum and maximum values that were systematically varied in this study are outlined in this table.}%
+        \label{t:variations}%
         \input{table_systematic_variations}
     \end{table}%
 }
 
 \subsection{VOC Emissions} \label{ss:VOC_emissions}
 \begin{itemize}
-    \item Anthropogenic emissions from Benelux were obtained from the TNO-MACC\_III emission inventory. TNO-MACC\_III is the current version of the TNO-MACC\_II inventory and was created using the same methodology as \citep{Kuenen:2014} and based upon improvements to the existing emission inventory during the AQMEII~2 exercies described in \citet{Pouliot:2015}. 
-    \item Temperature independent emissions of the biogenic VOC isoprene and monoterpenes, were calculated as a fraction of the total anthropogenic VOC emissions from each country in the Benelux region, this data was obtained from the supplementary data available from the EMEP (European Monitoring and Evaluation Programme) model \citep{Simpson:2012}.
-    \item AVOC and BVOC emissions are included as total emissions from SNAP (Selected Nomenclature for Air Pollution) source categories and these emissions were assigned to chemical groupings based on the country specific profiles for Belgium, the Netherlands and Luxembourg provided by TNO.
-    \item The MCM~v3.2 initial species were determined using the country specific profiles for each SNAP source category and where appropriate information of individual chemical species that can be represented by MCM~v3.2 were determined using the speciations of \citet{Passant:2002}. %%include examples from Solvents paper
-    \item After calculating the MCM~v3.2 initial VOC and respective emissions were assigned to the respective MOZART-4 species and the emissions in MOZART-4 were weighted by the carbon numbers of the MCM~v3.2 species and the emitted MOZART-4 species.
+    \item Anthropogenic emissions from Benelux were obtained from the TNO-MACC\_III emission inventory. TNO-MACC\_III is the current version of the TNO-MACC\_II inventory and was created using the same methodology as \citet{Kuenen:2014} and based upon improvements to the existing emission inventory during the AQMEII~2 exercies described in \citet{Pouliot:2015}. 
+    \item Temperature-independent emissions of the biogenic VOC isoprene and monoterpenes, were calculated as a fraction of the total anthropogenic VOC emissions from each country in the Benelux region, this data was obtained from the supplementary data available from the EMEP (European Monitoring and Evaluation Programme) model \citep{Simpson:2012}.
+    \item AVOC and BVOC emissions are included as total emissions from SNAP (Selected Nomenclature for Air Pollution) source categories and these emissions were assigned to chemical groupings based on the country specific profiles for Belgium, the Netherlands and Luxembourg provided by TNO. \todo{reference for this?}
+    \item The MCM~v3.2 initial species were determined using the country specific profiles for each SNAP source category and where appropriate information of individual chemical species that can be represented by MCM~v3.2 were determined using the detailed speciations of \citet{Passant:2002}. %%include examples from Solvents paper
+    \item First the primary VOC that are represented by the MCM~v3.2 and respective emissions were determind. Using this MCM~v3.2 data, the NMVOC emission data were mapped to MOZART-4 species and the emissions in MOZART-4 were weighted by the carbon numbers of the MCM~v3.2 species and the emitted MOZART-4 species. The supplementary data outlines the primary NMVOC and calculated emissions with each chemical mechanism.
 \end{itemize}
 {%
     \renewcommand{\arraystretch}{1.1}%
     \begin{table}%
         \centering%
-        \caption{Anthropogenic NMVOC emissions in 2011 in tonnes from each SNAP category assigned from TNO-MACC\_III emission inventory and biogenic VOC emission in tonnes from Benelux region assigned from EMEP. The allocation of these emissions to each MCM~v3.2 and MOZART-4 species is found in the supplement.}%
+        \caption{Anthropogenic NMVOC emissions in 2011 in tonnes from each SNAP category assigned from TNO-MACC\_III emission inventory and biogenic VOC emission in tonnes from Benelux region assigned from EMEP. The allocation of these emissions to MCM~v3.2 and MOZART-4 species is found in the supplement.}%
         \input{table_NMVOC_emissions}
     \end{table}%
 }
-
-{%supplement
+%%%%Supplement
+{
     \begin{landscape}%
         \centering%
-        \input{Belgium_MCM_emissions}
+        %\input{Belgium_MCM_emissions}
     \end{landscape}%
 }
 
-{%supplement
+{
     \begin{landscape}%
         \centering%
-        \input{Netherlands_MCM_emissions}
+        %\input{Netherlands_MCM_emissions}
     \end{landscape}%
 }
 
-{%supplement
+{
     \begin{landscape}%
         \centering%
-        \input{Luxembourg_MCM_emissions}
+        %\input{Luxembourg_MCM_emissions}
     \end{landscape}%
 }
 
-%supplement
 {%supplement
     \centering%
-    \input{table_MOZART_NMVOC_emissions}
+    %\input{table_MOZART_NMVOC_emissions}
 }
-The total MCM~v3.2 emissions for each initial species in Tables \ref{t:Belgium_MCM_emissions}, \ref{t:Netherlands_MCM_emissions} and \ref{t:Luxembourg_MCM_emissions} were translated to emissions of MOZART-4 species by weighting with the carbon numbers. The final emissions of the MOZART-4 species representing each MCM~v3.2 species are presented in Table \ref{t:MOZART_NMVOC_emissions} for each country in the Benelux region.
+%The total MCM~v3.2 emissions for each initial species in Tables \ref{t:Belgium_MCM_emissions}, \ref{t:Netherlands_MCM_emissions} and \ref{t:Luxembourg_MCM_emissions} were translated to emissions of MOZART-4 species by weighting with the carbon numbers. The final emissions of the MOZART-4 species representing each MCM~v3.2 species are presented in Table \ref{t:MOZART_NMVOC_emissions} for each country in the Benelux region.
+%%%%End Supplement
 
 \subsection{Vertical Mixing with Diurnal Boundary Layer Height} \label{ss:vertical_mixing}
 %most likely include in supplement
 \begin{itemize}
-    \item The base boxmodel (Sect. \ref{ss:model_setup}) includes a constant boundary layer height of $1$ km and no interactions (mixing) with the free troposphere.
-    \item A parameterisation of the diurnal profile of the planetary boundary layer (PBL) height over Los Angeles was provided by Boris Bonn based on data from the CARES field campaign \citep{CARES:2008} \todo{check if reference correctly}.
-    \item The PBL height was calculated at every time point for the model run and then read into the boxmodel at each time point \todo{include plot}.
+    \item The MECCA box model used in \citet{Coates:2015} includes a constant boundary layer height of $1$ km and no interactions (mixing) with the free troposphere.
+    \item The planetary boundary layer (PBL) height varies diurnally and affects chemistry by diluting emissions after sunrise when the PBL rises. The expansion of the PBL into the free troposphere introduces vertical mixing with those chemical species present in the free troposphere. When the PBL collapses in the evening, pollutants are trapped in the PBL.
+    \item Boris Bonn provided a parameterisation of the diurnal profile of the PBL height based on data from the CARES field campaign \citep{CARES:2008} \todo{check if reference correctly}. This parameterisation was then used to calculate the PBL height at every time point for the model run and then read into the boxmodel at each time point. Figure~\ref{f:PBL_profile} illustrates the diurnal profile used in this study.
     \item The concentrations of the chemical species within the PBL are diluted due to the larger mixing volume when the PBL height increases at the beginning of the day, also the increasing PBL height induces mixing of chemical species from the free troposphere with those chemical species within the PBL i.e. vertical mixing. When the PBL height collapses during night giving the stable nocturnal boundary layer, this traps the chemical species into a smaller volume thus increasing the concentrations of the chemical species.
     \item This vertical mixing scheme was implemented into the boxmodel using the same approach of \citet{Lourens:2012}.
     \item The mixing ratios of O3, CO and CH4 in the free troposphere were respectively set to $50$ ppbv, $116$ ppbv and $1.8$ ppmv. These condions were taken from the MATCH-MPIC chemical weather forecast model on the 27th March (the start date of the simulations). The model results (\url{http://cwf.iass-potsdam.de/}) at the 700 hPa height were chosen and the daily average was used as input into the boxmodel. \todo{check reference}
-    \item Tagged free troposphere species were also included in the boxmodel to determine effect of free troposphere species on surface ozone levels.
+    %\item Tagged free troposphere species were also included in the boxmodel to determine effect of free troposphere species on surface ozone levels.
 \end{itemize}
+\begin{figure}%
+    \centering%
+    \caption{The planetary boundary layer (PBL) height diurnal profile used in the study.}%
+    \label{f:PBL_profile}%
+    \includegraphics[width=\textwidth]{img/PBL_time_series}
+\end{figure}
