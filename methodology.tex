@@ -19,13 +19,13 @@
     \item MECCA box model has been updated to include vertical mixing with the free troposphere and accordingly includes a diurnal cycle for the PBL height. These amendments are discussed further in Sect.~\ref{ss:vertical_mixing}.
     \item Simulations start at 06:00 using spring equinoctical conditions and the simulations ended after two days.
     \item All simulations performed using the Master Chemical Mechanism, MCM~v3.2, \citep{MCM_Site}, Common Representative Intermediates, CRI~v2 \citep{Jenkin:2008}, Model for Ozone and related chemical tracers, MOZART-4 \citep{Emmons:2010}, Regional Acid Deposition Model, RADM2 \citep{Stockwell:1990} and the Carbon Bond Mechanism, CB05 \citep{Yarwood:2005}. \citet{Coates:2015} describes the implementation of these chemical mechanisms for use with KPP within MECCA. These chemical mechanisms were chosen as they are commonly used by modelling groups and represent the highly-detailed chemistry (MCM~v3.2), chemistry suitable for regional 3D models (CRI~v2, RADM2 and CB05) and global 3D models (MOZART-4).
-    \item NOx and emissions and temperature were varied systematically to analyse the effects on ozone mixing ratios over different NOx gradients and different temperatures.
+    \item NOx emissions and temperature were varied systematically to analyse the effects on ozone mixing ratios over different NOx gradients and different temperatures.
     %\item NOx and other parameters, including NMVOC emissions, temperature and relative humidity, were varied systematically to analyse the effects on ozone mixing ratios over different NOx gradients and hence different atmospheric conditions. Table~\ref{t:variations} details the varied parameters and their ranges.
     \item VOC emissions constant until noon of first day, to simulate a plume of emitted VOC.
     \item Two sets of runs were performed -- to include both a temperature-dependent and temperature-independent source of biogenic VOC emissions. MEGANv2.1 \citep{Guenther:2012} was used to specify the temperature-dependent BVOC emissions of isoprene. Isoprene is the most important VOC at a global scale due its high emission rates and emissions from vegetation have been reported to depend on temperature \citep{Guenther:2006}.
     \item Methane is fixed at $1.7$~ppmv throughout the model run, carbon monoxide (CO) and ozone were initialised at $200$~ppbv and $40$~ppbv and then allowed to evolve freely throughout the the simulation.
-    \item The first set of model runs were performed using the MCM~v3.2, the most detailed chemical mechanism used in the study. The NO emissions used in each model run were then used in when running the model at the same conditions (NOx and temperature) with all the other chemical mechanisms.
-    \item NOx emissions are non-realistic and vary from XX to XX in each model run at the same temperature and each chemical mechanism. \todo{Determine min and max NO from MCM runs}
+    \item The first set of model runs were performed using the MCM~v3.2, the most detailed chemical mechanism used in the study.
+    \item A constant source of NO emissions was used throughout the model run; this NO source was systematically varied from XX to XX~molecules~(NO)~cm$^{-2}$~s$^{-1}$ at each temperature point used in this study. The temperature was systematically varied between 288 and 313~K (15 -- 40~$^{\circ}$C).
 \end{itemize}
 %Table with variations
 %{%
@@ -43,7 +43,6 @@
     \item Anthropogenic emissions from Benelux were obtained from the TNO-MACC\_III emission inventory. TNO-MACC\_III is the current version of the TNO-MACC\_II inventory and was created using the same methodology as \citet{Kuenen:2014} and based upon improvements to the existing emission inventory during the AQMEII~2 exercies described in \citet{Pouliot:2015}. 
     \item Temperature-independent emissions of the biogenic VOC isoprene and monoterpenes, were calculated as a fraction of the total anthropogenic VOC emissions from each country in the Benelux region, this data was obtained from the supplementary data available from the EMEP (European Monitoring and Evaluation Programme) model \citep{Simpson:2012}.
     \item AVOC and BVOC emissions are included as total emissions from SNAP (Selected Nomenclature for Air Pollution) source categories and these emissions were assigned to chemical groupings based on the country specific profiles for Belgium, the Netherlands and Luxembourg provided by TNO.
-    \item The monthly relative emissions factors for the different SNAP categories were then used to determine the total NMVOC emissions for the month of March, as the model starting date in March 21st. These monthly relative emissions factors were taken from EMEP data \todo{reference}.
     \item The MCM~v3.2 initial species were determined using the country specific profiles for each SNAP source category and where appropriate information of individual chemical species that can be represented by MCM~v3.2 were determined using the detailed speciations of \citet{Passant:2002}. %%include examples from Solvents paper
     \item First the primary VOC that are represented by the MCM~v3.2 and respective emissions were determind. Using this MCM~v3.2 data, the NMVOC emission data were mapped to mechanism species in the other four chemical mechanisms used in the study. The NMVOC emissions in the non-MCM~v3.2 chemical mechanisms were weighted by the carbon numbers of the MCM~v3.2 species and the emitted mechanism species. The supplementary data outlines the primary NMVOC and calculated emissions with each chemical mechanism.
 \end{itemize}
@@ -51,7 +50,7 @@
     \renewcommand{\arraystretch}{1.1}%
     \begin{table}%
         \centering%
-        \caption{Anthropogenic NMVOC emissions in March 2011 in tonnes from each SNAP category assigned from TNO-MACC\_III emission inventory and biogenic VOC emission in tonnes from Benelux region assigned from EMEP. The allocation of these emissions to MCM~v3.2, CRI~v2, CB05, MOZART-4 and RADM2 species is found in the supplement.}%
+        \caption{Total anthropogenic NMVOC emissions in 2011 in tonnes from each SNAP category assigned from TNO-MACC\_III emission inventory and biogenic VOC emission in tonnes from Benelux region assigned from EMEP. The allocation of these emissions to MCM~v3.2, CRI~v2, CB05, MOZART-4 and RADM2 species is found in the supplement.}%
         \input{table_NMVOC_emissions}
     \end{table}%
 }
