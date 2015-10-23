@@ -25,7 +25,7 @@
     \item Two sets of runs were performed -- to include both a temperature-dependent and temperature-independent source of biogenic VOC emissions. MEGANv2.1 \citep{Guenther:2012} was used to specify the temperature-dependent BVOC emissions of isoprene. Isoprene is the most important VOC at a global scale due its high emission rates and emissions from vegetation have been reported to depend on temperature \citep{Guenther:2006}.
     \item Methane is fixed at $1.7$~ppmv throughout the model run, carbon monoxide (CO) and ozone were initialised at $200$~ppbv and $40$~ppbv and then allowed to evolve freely throughout the the simulation.
     %\item The first set of model runs were performed using the MCM~v3.2, the most detailed chemical mechanism used in the study.
-    \item The only source of NOx emissions in the box model was a constant source of NO emissions. The NO emissions were systematically varied from $5.2~\times~10^6$ to $1.6~\times~10^9$~molecules~(NO)~cm$^{-2}$~s$^{-1}$ at each temperature point used in this study. The temperature was systematically varied between 288 and 313~K (15 -- 40~$^{\circ}$C). \todo{will need to change the NO emissions range}
+    \item The only source of NOx emissions in the box model was a constant source of NO emissions. The NO emissions were systematically varied from $5.0~\times~10^9$ to $1.5~\times~10^{12}$~molecules~(NO)~cm$^{-2}$~s$^{-1}$ at each temperature point used in this study. The temperature was systematically varied between 288 and 313~K (15 -- 40~$^{\circ}$C).
 \end{itemize}
 %Table with variations
 %{%
@@ -82,6 +82,25 @@
 }
 %The total MCM~v3.2 emissions for each initial species in Tables \ref{t:Belgium_MCM_emissions}, \ref{t:Netherlands_MCM_emissions} and \ref{t:Luxembourg_MCM_emissions} were translated to emissions of MOZART-4 species by weighting with the carbon numbers. The final emissions of the MOZART-4 species representing each MCM~v3.2 species are presented in Table \ref{t:MOZART_NMVOC_emissions} for each country in the Benelux region.
 %%%%End Supplement
+
+\subsection{Temperature Dependent Isoprene Emissions}
+\begin{itemize}
+    \item Temperature dependent isoprene emissions were estimated using the MEGAN2.1 algorithm \citep{Guenther:2012}.
+    \item The aim of the study is to look at the effects of temperature, hence in the MEGAN2.1 algorithm all parameters (except temperature) were kept constant.
+    \item The boxmodel setup uses a constant temperature throughout the model run and so the parameters T$_{24}$ and T$_{240}$, the average temperatures in the past 24 and 250 hours, were assumed to be constant and equal to the temperature value of the boxmodel.
+    \item Constant PAR (photosynthetically active radiation) and LAI (leaf area index) were used at each temperature step.
+    \item The LAI, plant functional type (PFT) and associated isoprene emission factor were taken from \citet{Guenther:2012} and selected to give the same isoprene mixing ratios at a temperature of $293$~K as in the temperature independent modelling case. For all other model runs over the different temperature, the MEGAN2.1 algorithm was used to estimate the isoprene emissions.
+    \item Thus using this idealised case, we can determine the effects of increasing isoprene emissions with temperature across \ce{NO_x} gradients.
+    \item This was repeated for each chemical mechanism.
+    \item As in the temperature independent model runs, the emissions of NMVOC and the temperature dependent source of isoprene, were held constant until noon of the first day.
+    \item Using these assumptions, the isoprene emissions at each temperature step of the study are illustrated in Fig.~\ref{f:isoprene_emissions} and show the expected exponential increase in emissions with temperature \citep{Guenther:2006}.
+\end{itemize}
+\begin{figure}%
+    \centering%
+    \caption{The estimated isoprene emissions (molecules~isoprene~cm$^{-2}$~s$^{-1}$) at each temperature step used in the study. Isoprene emissions were estimated using the MEGAN2.1 algorithm \citep{Guenther:2012}.}
+    \label{f:isoprene_emissions}%
+    %\includegraphics[width=\textwidth]{img/isoprene_emissions_with_T}
+\end{figure}
 
 \subsection{Vertical Mixing with Diurnal Boundary Layer Height} \label{ss:vertical_mixing}
 %most likely include in supplement
