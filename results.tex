@@ -1,4 +1,4 @@
-\subsection{Ozone mixing ratios as function of NOx and Temperature}
+\subsection{Ozone mixing ratios as function of NOx and Temperature} \label{ss:r_contours}
 
 \begin{figure}%
     \centering%
@@ -9,15 +9,39 @@
 
 Figure~\ref{f:ozone_contours} depicts the maximum mixing ratio of ozone obtained from each model run as a function of the total \ce{NO_x} emissions on the first day and temperature.
 Using each mechanism, a similar non-linear relationship of ozone mixing ratios on \ce{NO_x} and temperature is found and increased ozone levels are found at higher temperatures when including a temperature-dependent source of isoprene emissions.
-CB05 and RADM2 produce the largest amount of ozone at higher temperatures than the other chemical mechanisms.
-A temperature-dependent source of isoprene, leads to more efficient ozone production \todo{how? prove this} as at higher temperature a lower amount of \ce{NO_x} is required to produce the same amount of ozone as when using a temperature-independent source of isoprene.
-At low temperature and high \ce{NO_x}, similar amounts of ozone are predicted from both the temperature-dependent and temperature-independent sources of isoprene emissions.
+CB05 and RADM2 produce the largest amount of ozone at higher temperatures and higher \ce{NO_x} levels than the other chemical mechanisms.
 
-\subsection{Rate of Change of Ozone with Temperature}
+The temperature-dependent source of isoprene leads to increased ozone mixing ratios at higher temperatures and higher \ce{NO_x} levels (top-right of each plot in Fig.~\ref{f:ozone_contours}).
+The largest increase in ozone is found in the MCMv3.2 and CRIv2, where the ozone increased by 16~ppbv when using temperature-dependent isoprene emissions.
+All other mechanisms, had similar increases in ozone with temperature-dependent isoprene emissions; RADM2 with an increase of 11~ppbv had the lowest increase in ozone.
+At low temperatures, regardless of the \ce{NO_x} level, similar amounts of ozone are predicted from both the temperature-dependent and temperature-independent sources of isoprene emissions.
+
+\subsection{Ozone budgets} \label{ss:r_budgets}
 
 \begin{figure}%
     \centering%
-    \caption{Correlation of mean ozone mixing ratio with temperature in Low-NOx, maximal-O3 and High-NOx conditions for each chemical mechanism. A linear relationship between mean ozone mixing ratios and temperature is inferred, regression statistics are found in Table~\ref{t:O3_T_stats}.}
+    \caption{The contributions of the different reactions to total \ce{O_x} budget at each temperature at different \ce{NO_x} levels.}%
+    \label{f:ozone_budgets}%
+    %\includegraphics[width=\textwidth]{img/Mean_O3_T_NOx_conditions}
+\end{figure}
+
+We defined the \ce{O_x} family to consist of \todo{complete this and reasons}
+
+\citet{Sillman:1995} shows that the ratio of \ce{HNO3} to \ce{H2O2} can be used to determine whether an atmospheric system is in a \ce{NO_x}-sensitive, VOC-sensitive or in the ridge region of the \ce{NO_x}-VOC relationship with ozone, where maximum ozone is produced.
+Based on this, we assigned each model run used to generate the ozone contours in Fig.~\ref{f:ozone_contours} to three \ce{NO_x} regimes--Low-NOx, High-NOx and Maximal-O3--corresponding to \ce{NO_x}-sensitive, VOC-sensitive and \ce{NO_x}-VOC-sensitive regions defined by \citet{Sillman:1995}.
+Values of \ce{H2O2}/\ce{HNO3} less than $0.3$ correspond to the High-NOx regime, values larger than $0.5$ correspond to the Low-NOx regime and all values inbetween correspond to the ridge area in which maximal ozone is produced.
+
+In Fig.~\ref{f:ozone_budgets}, the production rates on the first day of each reaction contributing to the \ce{O_x} production budget are determined and these reaction rates are then averaged over each \ce{NO_x}-condition (Low-\ce{NO_x}, High-\ce{NO_x} and Maximal-O3).
+The fractional contribution of this reaction rate to the total \ce{O_x} budget was then calculated for each \ce{NO_x}-condition.
+
+Figure~\ref{f:ozone_budgets} shows that the reaction of the hydroperoxyl radical (\ce{HO2}) with NO has the largest contribution at each \ce{NO_x}-condition, but this fractional contribution decreaes at higher temperatures due to the increased contributions of other reactions.
+The increased contribution of the reaction of the acetyl peroxy radical (\ce{CH3CO3}) with NO with temperature has the most significant contribution to the total \ce{O_x} budget and this contribution is higher in CB05 and RADM2 compared to the other chemical mechanisms.
+
+\subsection{Rate of Change of Ozone with Temperature} \label{ss:r_mO3-T}
+
+\begin{figure}%
+    \centering%
+    \caption{Correlation of mean ozone mixing ratio with temperature in Low-NOx, maximal-O3 and High-NOx conditions for each chemical mechanism. A linear relationship between mean ozone mixing ratios and temperature is inferred, regression statistics are found in Table~\ref{t:O3_T_stats}.}%
     \label{f:rate_O3_T}%
     \includegraphics[width=\textwidth]{img/Mean_O3_T_NOx_conditions}
 \end{figure}
@@ -29,9 +53,7 @@ At low temperature and high \ce{NO_x}, similar amounts of ozone are predicted fr
     \input{table_regression_O3_T_stats}
 \end{table}
 
-Three \ce{NO_x} regimes--Low-NOx, High-NOx and Maximal-O3-- are determined using the ratio of \ce{H2O2} to \ce{HNO3}, this ratio has been shown in \citet{Sillman:1995} to describe the different regimes of ozone production in relation to \ce{NO_x} and VOC levels.
-Values of \ce{H2O2}/\ce{HNO3} less than $0.3$ correspond to the High-NOx regime, values larger than $0.5$ correspond to the Low-NOx regime and all values inbetween correspond to the ridge area in which maximal ozone is produced.
-Each model run was allocated to one of the three regimes for each temperature and the mean ozone mixing ratio in these \ce{NO_x} regimes were then correlated with temperature as shown in Fig.~\ref{f:rate_O3_T}.
+Each model run was allocated the three \ce{NO_x}-conditions as described in Sect.~\ref{ss:r_budgets} and then the mean ozone mixing ratio in these \ce{NO_x} regimes were then correlated with temperature as shown in Fig.~\ref{f:rate_O3_T}.
 In literature, a linear relationship is typically reported between ozone and temperature and so the linear regression statistics are reported in Table~\ref{t:O3_T_stats}.
 
 The linear increase of ozone with temperature, m$_{\text{O3-T}}$ in Table~\ref{t:O3_T_stats}, is highest at high-NOx conditions for each chemical mechanism and for each temperature case of isoprene emissions.
