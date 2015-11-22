@@ -24,8 +24,8 @@ my %data;
 foreach my $line (@lines) {
     next if ($line =~ /^Mech/);
     chomp $line;
-    my ($mechanism, $NOx, $run, $slope, $intercept, $r2) = split /,/, $line;
-    $data{$mechanism}{$NOx}{$run}{"Slope"} = sprintf "%.2f", $slope;
+    my ($mechanism, $run, $NOx, $slope, $r2) = split /,/, $line;
+    $data{$mechanism}{$NOx}{$run}{"Slope"} = sprintf "%.1f", $slope;
     $data{$mechanism}{$NOx}{$run}{"R2"} = sprintf "%.2f", $r2;
 }
 
