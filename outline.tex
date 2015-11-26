@@ -1,0 +1,123 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf, .png, .jpg}
+\usepackage{style}
+\usepackage{xcolor}
+
+\sloppy
+
+\title{Meteorology and Ozone, Temperature - Outline}
+\author[1]{J. Coates}
+\author[1]{T. Butler}
+\affil[1]{Institute for Advanced Sustainability Studies, Potsdam, Germany}
+
+\renewcommand\Authands{ and }
+
+\begin{document}
+
+\maketitle
+
+\section{Objective}
+\input{objective}
+
+\section{Introduction} \label{s:introduction}
+\subsection{Currently Accepted General Statement}
+\begin{itemize}
+    \item Many studies, both observational and modelling, have noted an almost linear increase of ozone levels with temperature.
+    \item Main reasons for this increase are the increased emissions of VOC from vegetation, in particular isoprene, and increased chemistry due to the increase in reaction rates, many of which are temperature dependent.
+\end{itemize}
+
+\subsection{Specific Problem(s)}
+\begin{itemize}
+    \item Climate change is due to cause an increase in temperatures world-wide with the potential for aggravating air pollution with increased amounts of surface ozone.
+\end{itemize}
+
+\subsection{Gap}
+\begin{itemize}
+    \item Although observations and many regional modelling studies have shown a strong dependence of O3 production and temperature, there has been (to our knowledge) no detailed modelling study looking at the relationship of O3 on NOx and T as represented in models. And furthermore in different chemical mechanisms used by models.
+\end{itemize}
+
+\subsection{Study Objective/Scientific Question/Hypothesis}
+\begin{itemize}
+    \item Determine what is more important: emissions or chemistry, for increased ozone with temperature under different NOx-regimes.
+    \item Compare simulations of different chemical mechanisms and see how they re-produce the observed relationship.
+\end{itemize}
+
+\section{Methodology} \label{s:methodology}
+\subsection{Experimental Design}
+\begin{itemize}
+    \item Box model to focus on the chemical details of what is causing increases of ozone with temperature.
+    \item Simulations with systematic variations in temperature and NOx for a set of initial AVOC emissions, repeated using a temperature-dependent and temperature-independent source of isoprene.
+    \item Repeat simulations using different chemical mechanisms to see whether the relationship between ozone and temperature is reproduced by different representations of the chemistry.
+    \item Temperature varied from $15$--$40$~$^{\circ}$C and NOx emissions (represented as NO emissions) from 
+\end{itemize}
+
+\subsection{Model Setup and Simulations}
+\begin{itemize}
+    \item MECCA box model used in Coates:2015 but updated to include a diurnal mixing layer and exchange with the free troposphere.
+    \item Broadly representing the central european area of Benelux (Belgium, Netherlands, Luxembourg), thus using solar zenith angle of $51$~$^{\circ}$C where temperature is a driver of ozone production (Noelia:2015).
+\end{itemize}
+
+\subsection{Initial Conditions}
+\begin{itemize}
+    \item See paper draft so far.
+\end{itemize}
+
+\section{Results} \label{s:results}
+\subsection{Ozone Contours}
+\begin{itemize}
+    \item Non-linear relationship of peak O3 with NOx and Temperature reproduced by each chemical mechanism.
+    \item RADM2 and CB05 produce the larger amounts of ozone compared to more detailed MCMv3.2 chemcial mechanism, especially at higher NOx levels.
+    \item When including a temperature-dependent source of isoprene, there is an increase in ozone, especially at higher NOx emissions. Increase of up to 16 ppbv from temperature dependent to independent.
+    \item At low NOx emissions, there is not much increase in ozone even when increasing temperature.
+\end{itemize}
+
+\subsection{Ox Production Budgets}
+\begin{itemize}
+    \item Determine budgets of  Ox (= O3, NO2, NO3, N2O5, RO2NO2) to look at the effects of reactions of peroxy radicals with NO that produce NO2 which goes on to produce O3.
+    \item All simulations split into a NOx regime: Low-NOx, Maximal-O3 and High-NOx based on ratio of HNO3 to H2O2 as defined by Sillman:1995. The mean of contributions of each peroxy radical reaction with NO to the total Ox budgets in each NOx regime is determined.
+    \item HO2 reaction with NO is always the highest contributor but at higher temperatures its fractional contributions decrease because of the increased contributions of other peroxy radicals.
+    \item The contributions of acyl peroxy radicals, eg. CH3CO3, those radicals that go on to produce RO2NO2 on reaction with NO2, show an increase in their contributions with temperature.
+    \item Non-acyl peroxy radicals, e.g. CH3O2, show little change in the contributions to the Ox budget.
+    \item \color{red}How is this contribution different with different mechanisms?
+    \item \color{red}{Quantitive results}
+\end{itemize}
+
+\subsection{Comparison to Observed Results}
+\begin{itemize}
+    \item ERA-Interim gridded data over Europe for the years 1998--2012, has been shown to indicate that in many regions over central Europe, ozone production is driven by temperature(Noelia:2015).
+    \item This data is base on observations from the measurement station network across europe and includes data for the mean 8-hr max O3 as well as the daily maximum temperature.
+    \item We show the observed relationship between ozone and temperature for many sub-regions of central Europe and look at the slopes of this relationship (m$_{O3-T}$).
+    \item We compare the simulated m$_{O3-T}$ for our model runs in eaCh chemical mechanism to these different regions.
+    \item The slope of the O3-T linear regression line is dependent on the NOx conditions and so we also compare the simulated slopes for each NOx-regime as detemined by the H2O2:HNO3, similar to Section Ox Production Budgets.
+    \item \color{red}{Missing results}
+\end{itemize}
+
+\section{Discussion} \label{s:discussion}
+\subsection{Ozone Contours}
+\begin{itemize}
+    \item test
+\end{itemize}
+
+\subsection{Ox Production Budgets}
+\begin{itemize}
+    \item test
+\end{itemize}
+
+\subsection{Comparison to Observed Results}
+\begin{itemize}
+    \item test
+\end{itemize}
+
+\section{Conclusions} \label{s:conclusions}
+\begin{itemize}
+    \item Do chemical mechanisms represent the observed relationship between ozone and temperature? Yes. with NOx gradients similar contours show a non-linear relationship between O3, NOx and Temperature as noted in Pusede:2014. But RADM2 and CB05 predict a higher sensitivity of ozone to temperature due to their representation of NMVOC chemistry; in particular the lack of ketones and rather aldehydes which promote ozone production.
+    \item What is more important for increasing ozone with temperature: isoprene emissions or chemistry? Isoprene emissions, as the increasing isoprene emissions with temperature as predicted by MEGAN2.1 give increases of up to 16 ppbv of ozone, depending on the NOx levels.
+    \item How do the results compare to observed? Comparing the gradient of ozone with temperature at the different NOx-regimes in our simulations to the observed regions over europe (ERA-Interim data)\dots.
+    \item Future temperature scenarios: Climate change is due to cause an increase in global temperatures, thus in locations with high NOx emissions and with vegetation know to emit isoprene, we expect increases in surface ozone. However, dramatically reducing NOx emissions would shift the atmospheric regime to a low-NOx regime would minimise the increases of ozone with temperature. Despite increased isoprene and increased chemistry.
+\end{itemize}
+
+\bibliographystyle{plainnat}
+\bibliography{References} 
+
+\end{document}
