@@ -66,10 +66,13 @@
 \section{Results} \label{s:results}
 \subsection{Ozone Contours}
 \begin{itemize}
+    \item Figure plot of contours TD and TI experiment for all mechanisms.
     \item Non-linear relationship of peak O3 with NOx and Temperature reproduced by each chemical mechanism.
-    \item RADM2 and CB05 produce the larger amounts of ozone compared to more detailed MCMv3.2 chemcial mechanism, especially at higher NOx levels.
-    \item When including a temperature-dependent source of isoprene, there is an increase in ozone, especially at higher NOx emissions. Increase of up to 16 ppbv from temperature dependent to independent.
-    \item At low NOx emissions, there is not much increase in ozone even when increasing temperature.
+    \item \textbf{Diff from MCMv3.2:} RADM2 and CB05 produce the larger amounts of ozone compared to more detailed MCMv3.2 chemcial mechanism, especially at higher NOx levels. The maximum percentage increase from the MCMv3.2 simulations is $8$~\% for RADM2 and $13$~\% for CB05 for the TI runs and$7$~\% and $10$~\% for RADM2 and CB05 in the TD runs, this maximum occurs under high temperature and high NOx in both experiments (top-right hand corner in contour plots). MOZART-4 produces at most $8$~\% lower ozone than MCMv3.2 in both the TD and TI runs, again when having high temperatures and high NOx.  CRIv2 produces similar amounts of ozone to MCMv3.2 throughout the range of temperatures and NOx.
+    \item \textbf{Diff between TD and TI:} When including a temperature-dependent source of isoprene, there is an increase in ozone when using each chemical mechanism, the largest increases from the TI case is at the highest temperature ($40$~$^{\circ}$C) and at higher NOx emissions. In MCMv3.2, CRIv2 and MOZART-4 the largest increase of ozone produced by the increased isoprene emissions is around $30$~\%, while in RADM2 and CB05 an increase of about $20$~\%.
+    \item At low NOx emissions, there is not much increase in ozone even when increasing temperature regardless of chemical mechanism.
+    \item \textbf{Increase from reference to maximum Temperature :} Assigning each model run from the NOx-T matrix of runs to a NOx-regime (Low-NOx, Maximal-O3, High-NOx) based upon the value of the\ce{HNO3} to \ce{H2O2} ratio in Sillman:2015, Then calculating the mean O3 in each of the three NOx-regimes we determined the increase in ozone due to increased chemistry from the TI runs and then the added increase from the TD source of isoprene by comparing the difference in ozone produced at our reference temperature ($20$~$^{\circ}$C) and the highest temperature in the study ($40$~$^{\circ}$C).
+    \item Results in Table: In each NOx-regime, CB05 and RADM2 have the largest increase in ozone between temperatures in the TI runs (High: about 37~\%, Maximal-O3: about 28~\%, Low: about 18~\%), but then when including the TD source of isoprene, the ozone increases an additional 17~\% in High, 12~\% in Maximal-O3 and 8~\% in Low. Compared to MCMv3.2, CRIv2 and MOZART-4, where the increases in ozone due to chemistry alone are less than those in CB05 and RADM2 but when including a temperature-dependent source of isoprene, the percentage of additional ozone due to increased emissions is higher (especially High and Maximal NOx regimes) but not much difference in Low-NOx regime.
 \end{itemize}
 
 \subsection{Ox Production Budgets}
@@ -96,7 +99,12 @@
 \section{Discussion} \label{s:discussion}
 \subsection{Ozone Contours}
 \begin{itemize}
-    \item test
+    \item \textbf{Increase from MCMv3.2:}
+    \item \textbf{Increase with higher isoprene source:} The ozone produced when using a temperature-dependent source of isoprene in RADM2 and CB05 is lower than in the other chemical mechanisms, indicating that it is the treatment of isoprene degradation in RADM2 and CB05 that is causing this slower response to increased emissions.
+    \item Out of the chemical mechanisms used in out study, CB05 and RADM2 describe isoprene degradation with the least amount of species (CB05 - $24$, RADM2 - $18$) and also use the least amount of species specific to isoprene degradation (CB05 - $2$, RADM2 - none). Compared to MOZART-4 which describes isoprene degradation using $33$ species, $14$ of which are unique to isoprene oxidation.
+    \item Isoprene degradation is know to be a source of ozone due to the large amount of peroxy radicals produced during its degradation and also the importance of the degradation products methacrolein and methyl vinyl ketone. These two major degradation products are not included in either CB05 or RADM2, and the lack of species also means that less peroxy radicals are produced which in conditions with enough NOx, would further catalyse ozone production.
+    \item \textbf{Increase from reference temperature:} Looking at the increases in ozone from the reference temperature of 298K, indicates that while in each case the largest increases are due to increased chemistry rather than increased isoprene emissions as the percentage increase from chemistry alone is higher than that when adding a temperature dependent source of isoprene. Largest increases in High-NOx.
+    \item The differences in the response between the mechanisms indicates that the chemistry in CB05 and RADM2 is much more temperature-sensitive, especially at higher NOx levels than in the other chemical mechanism. However, as noted previously, CB05 and RADM2 seem to underpredict the ozone produced from isoprene degradation leading to a lower increase in temperature in these mechanisms.
 \end{itemize}
 
 \subsection{Ox Production Budgets}
