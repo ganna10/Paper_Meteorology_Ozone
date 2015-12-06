@@ -1,20 +1,17 @@
-\begin{tabular}{c|c|c|c|c}
+\scalebox{.7}[.7]{\begin{tabularx}{1.5\textwidth}{c|c| *{6}{|Y}} 
     \hline \hline
-    \textbf{Mechanism} & \textbf{Run} & \textbf{High-\ce{NO_x}} & \textbf{Maximal-\ce{O3}} & \textbf{Low-\ce{NO_x}} \\ \hline
-    \multirow{3}{*}{MCMv3.2} & TI & 31 \% & 24 \% & 14 \% \\
-                             & TD & 53 \% & 38 \% & 23 \% \\
-                             & TD - TI & 22 \% & 14 \% & 9 \% \\ \hline
-    \multirow{3}{*}{CRIv2}   & TI & 28 \% & 21 \% & 12 \% \\
-                             & TD & 50 \% & 36 \% & 22 \% \\
-                             & TD - TI & 22 \% & 15 \% & 10 \% \\ \hline
-    \multirow{3}{*}{MOZART-4}& TI & 26 \% & 19 \% & 12 \% \\
-                             & TD & 47 \% & 32 \% & 21 \% \\
-                             & TD - TI & 21 \% & 13 \% & 9 \% \\ \hline
-    \multirow{3}{*}{CB05}    & TI & 40 \% & 29 \% & 19 \% \\
-                             & TD & 59 \% & 42 \% & 28 \% \\
-                             & TD - TI & 19 \% & 13 \% & 9 \% \\ \hline
-    \multirow{3}{*}{RADM2}   & TI & 35 \% & 26 \% & 17 \% \\
-                             & TD & 50 \% & 36 \% & 25 \% \\
-                             & TD - TI & 15 \% & 10 \% & 8 \% \\ 
+    \textbf{Chemical} & \textbf{Source of} & \multicolumn{3}{c|}{\textbf{Ozone Increase at 40~$^{\circ}$C from 20~$^{\circ}$C (ppbv)}} & \multicolumn{3}{c}{\textbf{Ozone Difference at 40~$^{\circ}$C from MCMv3.2 (ppbv)}} \\ \cline{3-8}
+    \textbf{Mechanism} & \textbf{Difference} & \textbf{Low-\ce{NO_x}} & \textbf{Maximal-\ce{O3}} & \textbf{High-\ce{NO_x}} & \textbf{Low-\ce{NO_x}} & \textbf{Maximal-\ce{O3}} & \textbf{High-\ce{NO_x}} \\ 
     \hline \hline
-\end{tabular}
+    \multirow{2}{*}{MCMv3.2} & Chemistry & 6.8 & 12.5 & 15.2 & - & - & - \\
+    & Emissions & 4.6 & 7.7 & 10.6 & - & - & - \\ \hline
+    \multirow{2}{*}{CRIv2} & Chemistry & 6.0 & 11.1 & 13.7 & 0.6 & 1.2 & 1.1 \\
+    & Emissions & 4.8 & 7.9 & 10.8 & -0.1 & -0.2 & -0.2 \\ \hline
+    \multirow{2}{*}{MOZART-4} & Chemistry & 6.0 & 10.2 & 12.3 & 0.0 & 1.8 & 3.8 \\
+    & Emissions & 4.1 & 6.7 & 10.0 & 0.5 & 1.0 & 0.6 \\ \hline
+    \multirow{2}{*}{CB05} & Chemistry & 9.3 & 16.0 & 19.9 & -4.2 & -6.1 & -6.2 \\
+    & Emissions & 4.6 & 7.4 & 9.8 & 0.1 & 0.3 & 0.7 \\ \hline
+    \multirow{2}{*}{RADM2} & Chemistry & 8.6 & 14.1 & 17.3 & -2.8 & -3.4 & -3.3 \\
+    & Emissions & 3.8 & 5.7 & 7.8 & 0.9 & 2.0 & 2.7 \\ 
+    \hline \hline
+\end{tabularx}}
