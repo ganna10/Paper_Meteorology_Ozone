@@ -2,22 +2,22 @@
 
 \begin{figure}%
     \centering%
-    \caption{Contours of maximum ozone mixing ratio as a function of the total \ce{NO_x} emissions on the first day and daily temperature for each chemical mechanism and using both a temperature-dependent and -independent source of isoprene emissions.}
+    \caption{Contours of maximum ozone mixing ratio as a function of the total \ce{NO_x} emissions on the first day and temperature for each chemical mechanism and using both a temperature-dependent and -independent source of isoprene emissions.}
     \label{f:ozone_contours}%
     \includegraphics[width=\textwidth]{img/O3_comparison}
 \end{figure}
 
 \begin{figure}%
     \centering%
-    \caption{Maximum 8-hr mean ozone mixing ratios at each temperature allocated to different \ce{NO_x} regimes. Slopes of linear correlation between ozone and temperature are also displayed for each chemical mechanism and source of isoprene emissions.}%
+    \caption{Ozone mixing ratios at each temperature are allocated to different \ce{NO_x}-regimes of Fig.~\ref{f:ozone_contours}. The differences in ozone mixing ratios of Table~\ref{t:differences} are represented graphically.}%
     \label{f:O3-T}%
     \includegraphics[width=\textwidth]{img/O3-T_correlation}%
 \end{figure}
 
 \begin{table}%
     \centering%
-    \caption{Percentage increase in ozone mixing ratios at maximum temperature ($40$~$^{\circ}$C) from reference temperature ($20$~$^{\circ}$C) in Temperature Dependent and Independent Experiments.}%
-    \label{t:difference_td_ti}%
+    \caption{Increase in ozone mixing ratio (ppbv) due to chemistry and emissions at $40$~$^{\circ}$C from reference temperature ($20$~$^{\circ}$C) in the \ce{NO_x}-regimes of Fig.~\ref{f:ozone_contours}.}%
+    \label{t:differences}%
     \input{table_differences_td_ti}
 \end{table}
 
@@ -34,7 +34,7 @@ At low temperatures, regardless of the \ce{NO_x} level, similar amounts of ozone
 
 \begin{figure}%
     \centering%
-    \caption{The contributions of the different reactions to total \ce{O_x} budget at each temperature at different \ce{NO_x} levels.}%
+    \caption{\ce{O_x} production budgets normalised by the total oxidation rate of emitted VOC in the \ce{NO_x}-regimes of Fig.~\ref{f:ozone_contours}. The budgets are allocated to the categories of inorganic reactions, peroxy nitrate (RO2NO2) decomposition, reactions of NO with HO2, non-acyl peroxy radicals (RO2) and acyl peroxy radicals (ARO2). All other reactions contributing to \ce{O_x} budgets are allocated to `Other Organic'.}%
     \label{f:ozone_budgets}%
     \includegraphics[width=\textwidth]{img/Ox_budgets}
 \end{figure}
@@ -53,25 +53,25 @@ The increased contribution of the reaction of the acetyl peroxy radical (\ce{CH3
 
 Add quantitative values of differences.
 
-\subsection{Rate of Change of Ozone with Temperature} \label{ss:r_mO3-T}
-
-\begin{figure}%
-    \centering%
-    \caption{Correlation of mean ozone mixing ratio with temperature in Low-NOx, maximal-O3 and High-NOx conditions for each chemical mechanism. A linear relationship between mean ozone mixing ratios and temperature is inferred, regression statistics are found in Table~\ref{t:O3_T_stats}.}%
-    \label{f:rate_O3_T}%
-    %\includegraphics[width=\textwidth]{img/Mean_O3_T_NOx_conditions}
-\end{figure}
-
-\begin{table}%
-    \centering%
-    \caption{Regression statistics for the linear relationship between ozone mixing ratios and temperature shown in Figure~\ref{f:rate_O3_T}.}%
-    \label{t:O3_T_stats}%
-    \input{table_regression_O3_T_stats}
-\end{table}
-
-Each model run was allocated the three \ce{NO_x}-conditions as described in Sect.~\ref{ss:r_budgets} and then the mean ozone mixing ratio in these \ce{NO_x} regimes were then correlated with temperature as shown in Fig.~\ref{f:rate_O3_T}.
-In literature, a linear relationship is typically reported between ozone and temperature and so the linear regression statistics are reported in Table~\ref{t:O3_T_stats}.
-
-The linear increase of ozone with temperature, m$_{\text{O3-T}}$ in Table~\ref{t:O3_T_stats}, is highest at high-NOx conditions for each chemical mechanism and for each temperature case of isoprene emissions.
-The high-NOx regime corresponds to the top regions of the contour plots in Fig.~\ref{f:ozone_contours} where increases in temperature would shift the ozone production towards the ridge of maximal ozone production, thus this increase in m$_{\text{O3-T}}$ is expected.
-Similarly, the lowest m$_{\text{O3-T}}$ are achieved in the low-NOx regime, the bottom regions of the contours in Fig.~\ref{f:ozone_contours}, where increases in temperature do not neccisarily lead to increased ozone levels.
+%\subsection{Rate of Change of Ozone with Temperature} \label{ss:r_mO3-T}
+%
+%\begin{figure}%
+%    \centering%
+%    \caption{Correlation of mean ozone mixing ratio with temperature in Low-NOx, maximal-O3 and High-NOx conditions for each chemical mechanism. A linear relationship between mean ozone mixing ratios and temperature is inferred, regression statistics are found in Table~\ref{t:O3_T_stats}.}%
+%    \label{f:rate_O3_T}%
+%    %\includegraphics[width=\textwidth]{img/Mean_O3_T_NOx_conditions}
+%\end{figure}
+%
+%\begin{table}%
+%    \centering%
+%    \caption{Regression statistics for the linear relationship between ozone mixing ratios and temperature shown in Figure~\ref{f:rate_O3_T}.}%
+%    \label{t:O3_T_stats}%
+%    \input{table_regression_O3_T_stats}
+%\end{table}
+%
+%Each model run was allocated the three \ce{NO_x}-conditions as described in Sect.~\ref{ss:r_budgets} and then the mean ozone mixing ratio in these \ce{NO_x} regimes were then correlated with temperature as shown in Fig.~\ref{f:rate_O3_T}.
+%In literature, a linear relationship is typically reported between ozone and temperature and so the linear regression statistics are reported in Table~\ref{t:O3_T_stats}.
+%
+%The linear increase of ozone with temperature, m$_{\text{O3-T}}$ in Table~\ref{t:O3_T_stats}, is highest at high-NOx conditions for each chemical mechanism and for each temperature case of isoprene emissions.
+%The high-NOx regime corresponds to the top regions of the contour plots in Fig.~\ref{f:ozone_contours} where increases in temperature would shift the ozone production towards the ridge of maximal ozone production, thus this increase in m$_{\text{O3-T}}$ is expected.
+%Similarly, the lowest m$_{\text{O3-T}}$ are achieved in the low-NOx regime, the bottom regions of the contours in Fig.~\ref{f:ozone_contours}, where increases in temperature do not neccisarily lead to increased ozone levels.
