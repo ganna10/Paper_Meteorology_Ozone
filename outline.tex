@@ -23,8 +23,10 @@
 \section{Introduction} \label{s:introduction}
 \subsection{Currently Accepted General Statement}
 \begin{itemize}
-    \item Many studies, both observational and modelling, have noted an almost linear increase of ozone levels with temperature.
-    \item Main reasons for this increase are the increased emissions of VOC from vegetation, in particular isoprene, and increased chemistry due to the increase in reaction rates, many of which are temperature dependent.
+    \item Many studies, both observational and modelling, have noted that temperature is an important meteorological driver for ground-level ozone (Noelia:2015). In some areas, increases in temperature can lead to an almost linear increase of ozone (refs).
+    \item Main reasons for this increase are the increased emissions of VOC from vegetation, in particular isoprene, and faster chemistry due to the increase in reaction rates, many of which are temperature dependent. (Pusede:2015)
+    \item Observational studies look at the total effect of ozone with temperature, whereas a model can look at the temperature-dependent processes that influence ozone. In other words, observational studies look at the total derivative of ozone with temperature while models can look at the partial derivatives of the temperature-dependent processes influencing ozone. (equation)
+        % fix this \[ d[O3]/dT = \fraction{\partial [O3]}{\partial [BVOC]}\fraction{\partial [BVOC]}{\partial T} \]
 \end{itemize}
 
 \subsection{Specific Problem(s)}
@@ -34,7 +36,7 @@
 
 \subsection{Gap}
 \begin{itemize}
-    \item Although observations and many regional modelling studies have shown a strong dependence of O3 production and temperature, there has been (to our knowledge) no detailed modelling study looking at the relationship of O3 on NOx and T as represented in models. And furthermore in different chemical mechanisms used by models.
+    \item Although observations and many regional modelling studies have shown a strong dependence of O3 production and temperature, there has been (to our knowledge) no detailed modelling study looking at the relationship of O3 on NOx and T as represented in models. And furthermore in different chemical mechanisms used by models. Also by performing highly detailed modelling the effects of faster chemistry and increased emissions can be separately analysed.
 \end{itemize}
 
 \subsection{Study Objective/Scientific Question/Hypothesis}
@@ -49,13 +51,13 @@
     \item Box model to focus on the chemical details of what is causing increases of ozone with temperature.
     \item Simulations with systematic variations in temperature and NOx for a set of initial AVOC emissions, repeated using a temperature-dependent and temperature-independent source of isoprene.
     \item Repeat simulations using different chemical mechanisms to see whether the relationship between ozone and temperature is reproduced by different representations of the chemistry.
-    \item Temperature varied from $15$--$40$~$^{\circ}$C and NOx emissions (represented as NO emissions) from 
+    \item Temperature varied from $15$--$40$~$^{\circ}$C and NOx emissions (represented as NO emissions) from (range) to (range)~molecules~(NO)~cm$^{-2}$~s$^{-1}$.
 \end{itemize}
 
 \subsection{Model Setup and Simulations}
 \begin{itemize}
-    \item MECCA box model used in Coates:2015 but updated to include a diurnal mixing layer and exchange with the free troposphere.
-    \item Broadly representing the central european area of Benelux (Belgium, Netherlands, Luxembourg), thus using solar zenith angle of $51$~$^{\circ}$C where temperature is a driver of ozone production (Noelia:2015).
+    \item MECCA box model used in Coates:2015 but updated to include a diurnal mixing layer and vertical mixing with the free troposphere.
+    \item Representing urban conditions, we chose the central european area of Benelux (Belgium, Netherlands, Luxembourg), thus using solar zenith angle of $51$~$^{\circ}$C.
 \end{itemize}
 
 \subsection{Initial Conditions}
@@ -70,16 +72,19 @@
     \item Non-linear relationship of peak O3 with NOx and Temperature reproduced by each chemical mechanism.
     \item \textbf{Diff between TD and TI:} When including a temperature-dependent source of isoprene emissions, there is an increase in ozone when using each chemical mechanism, the largest increases from the TI case is at the highest temperature ($40$~$^{\circ}$C) and at higher NOx emissions. 
     \item Lowest increase in peak ozone is under low-NOx conditions for each chemical mechanism regardless of the source of isoprene emissions.
-    \item Figure of mean of peak O3 at each NOx-condition, determined based on ratio of HNO3 to H2O2 (Sillman:1995). Mean ozone at each temperature in the NOx-regime was used for plots. Includes indication of where the differences are taken which are reported in table.
+    \item Figure of mean of peak O3 at each NOx-condition, determined based on ratio of HNO3 to H2O2 (Sillman:1995). Mean ozone at each temperature in the NOx-regime was used for plots. Fig. includes indication of where the differences are taken which are reported in table.
     \item Table of increase in ozone mixing ratios due to chemistry and emissions from the increase in ozone at 40C from reference temperature of 20C. Difference of chemical mechanisms ozone mixing ratios at 40C from MCMv3.2 mixing ratio due to chemistry and emissions also indicated.
     \item \textbf{Increase from reference to maximum Temperature:} Largest increases in ozone at 40C from 20C in high-NOx conditions, the increase in ozone at high-NOx conditions is around double the increase in ozone with low-NOx.
-    \item Largest increase in ozone due to faster reaction rates rather than increased isoprene emissions at each NOx-condition and each chemical mechanism.
-    \item \textbf{Diff from MCMv3.2:} CRIv2 shows similar increases in ozone due to chemistry and isoprene emissions to the MCMv3.2. MOZART-4 has largest differences due to chemistry at high-NOx conditions from MCMv3.2. CB05 and RADM2 have higher increases in ozone due to chemistry than MCMv3.2. Increase in ozone due to increased isoprene emissions in RADM2 is lower than that of the MCMv3.2.
+    \item Largest increase in ozone due to faster chemistry rather than increased isoprene emissions at each NOx-condition and each chemical mechanism.
+    \item \textbf{Diff from MCMv3.2:} CRIv2 shows similar increases in ozone due to chemistry and isoprene emissions to the MCMv3.2. MOZART-4 has largest differences due to chemistry at high-NOx conditions from MCMv3.2. CB05 and RADM2 have higher increases in ozone due to chemistry than MCMv3.2, CB05 produces 7~ppbv of ozone more than MCMv3.2 while RADM2 produces 3~ppbv more ozone. Increase in ozone due to increased isoprene emissions in RADM2 is lower 3~ppbv than that of the MCMv3.2.
 \end{itemize}
 
 \subsection{Ox Production Budgets}
 \begin{itemize}
     \item Figure: Budgets of Ox (= O3, NO2, O) allocated to categories contributing to Ox production: RO2NO2 (peroxynitrate) decomposition, reactions of the HO2, acyl (ARO2) and non-acyl (RO2) peroxy radicals with NO, other reactions of organic compounds and inorganic reactions. The RO2NO2 category includes HO2NO2, CH3O2NO2 and PAN species; the ARO2 category includes all acyl peroxy radicals such as CH3CO3 that may form RO2NO2 species when reacting with NO2 and the RO2 category includes non-acyl peroxy radicals such as CH3O2 and C2H5O2.
+    \item Production budgets are normalised by total loss rate of emitted NMVOC, Fig. (no) displays the number of molecules of Ox produced per molecule of NMVOC oxidised. As the temperature increases, the reaction rates of most of the reactions speeds up, including the rate at which the emitted NMVOC are oxidised. In fact, the dual effects of increasing isoprene emissions and faster oxidation rates are effectively constant in both cases (a) the temperature-dependent emissions and (b) temperature-independent emissions of isoprene. In the case of the MCMv3.2, 7 molcules of Ox are produced per molecule of NMVOC oxidised, all the reduced chemical mechanisms produce up to 2 molecules of Ox per molecule of NMVOC oxidised less than MCMv3.2.
+    \item Pusede:2015 indicates that the RO2NO2 lifetime decreases with temperature, making it a less effective reservoir for peroxy radicals and NO2. Production of Ox increases with temperature due to faster chemistry which speeds of the degradation of NMVOC, promoting radical production which in the presence of NOx produces Ox. Peroxy radicals can also react with NO2 to form RO2NO2, an important reservoir for peroxy radicals and NOx at low temperatures whereas at high temperatures, thermal decomposition speeds up which quickly re-releases RO2 and NO2, which may lead to more Ox production.
+    \item The increased thermal decomposition of RO2NO2, which makes it a less effective reservoir for acyl peroxy radicals and NO2 increases with temperature. Concurrently the effects of inorganic processes (mainly \dots) decreases with temperature.
     \item All simulations split into a NOx regime: Low-NOx, Maximal-O3 and High-NOx based on ratio of HNO3 to H2O2 as defined by Sillman:1995. The mean of each category contributing to the Ox budgets in each NOx regime is determined at each temperature.
     \item In all NOx-regimes, RO2NO2 decomposition contributes the most to Ox production, followed by the reactions of NO with the HO2, RO2 and ARO2 peroxy radicals. The contributions of these categories are highly temperature dependent, with a maximum at 40C and minimum at 15C. The contribution of inorganic chemistry to Ox production is constant with temperature.
     \item When using a temperature-dependent and temperature-independent source of isoprene emissions, Ox production is maximum at the highest temperature. At 40C, the contribution of RO2NO2 decomposition to Ox production is almost double the contribution of HO2 to the Ox budget in the MCMv3.2. From the reduced chemical mechanisms, CB05 and RADM2 have larger contributions of RO2NO2 to Ox production than CRIv2 and MOZART-4.
@@ -88,27 +93,27 @@
 
 \subsection{Comparison to Observed Results}
 \begin{itemize}
-    \item ERA-Interim gridded data over Europe for the years 1998--2012, has been shown to indicate that in many regions over central Europe, ozone production is driven by temperature(Noelia:2015).
-    \item This data is base on observations from the measurement station network across europe and includes data for the mean 8-hr max O3 as well as the daily maximum temperature.
-    \item We show the observed relationship between ozone and temperature for many sub-regions of central Europe and look at the slopes of this relationship (m$_{O3-T}$).
-    \item We compare the simulated m$_{O3-T}$ for our model runs in eaCh chemical mechanism to these different regions.
+    \item ERA-Interim gridded data over Europe for the summers of the years 1998--2012, has been shown to indicate that in many regions over central Europe, ozone production is driven by temperature(Noelia:2015).
+    \item This data is based on observations from the measurement station network across europe and includes data for the mean 8-hr max O3 as well as the daily maximum temperature.
+    \item We show the observed relationship between the maximum 8-hour mean of ozone and daily maximum temperature for sub-regions of Europe and plot overlay the ozone mixing ratios obtained in each NOx-condition for the temperature-dependent simulations.
     \item The slope of the O3-T linear regression line is dependent on the NOx conditions and so we also compare the simulated slopes for each NOx-regime as detemined by the H2O2:HNO3, similar to Section Ox Production Budgets.
-    \item \color{red}{Missing results}
+    \item The model does not capture the rate of increase of ozone with temperature. The ozone mixing ratios at lower temperature are over-estimated and the ozone mixing ratios at higher temperatures are under-estimated. Thus the chemical mechanisms are less-senstive to temperature as the real-world observations. The WRF-Chem model results, using RADM2 and MOZART-4 chemistry, (does this look more like the observations or the model?)
 \end{itemize}
 
 \section{Discussion} \label{s:discussion}
 \subsection{Ozone Contours}
 \begin{itemize}
     \item \textbf{Increase from MCMv3.2:}
-    \item \textbf{Increase with higher isoprene source:} The ozone produced when using a temperature-dependent source of isoprene in RADM2 and CB05 is lower than in the other chemical mechanisms, indicating that it is the treatment of isoprene degradation in RADM2 and CB05 that is causing this slower response to increased emissions.
-    \item Out of the chemical mechanisms used in out study, CB05 and RADM2 describe isoprene degradation with the least amount of species (CB05 - $24$, RADM2 - $18$) and also use the least amount of species specific to isoprene degradation (CB05 - $2$, RADM2 - none). Compared to MOZART-4 which describes isoprene degradation using $33$ species, $14$ of which are unique to isoprene oxidation.
-    \item Isoprene degradation is know to be a source of ozone due to the large amount of peroxy radicals produced during its degradation and also the importance of the degradation products methacrolein and methyl vinyl ketone. These two major degradation products are not included in either CB05 or RADM2, and the lack of species also means that less peroxy radicals are produced which in conditions with enough NOx, would further catalyse ozone production.
-    \item \textbf{Increase from reference temperature:} Looking at the increases in ozone from the reference temperature of 298K, indicates that while in each case the largest increases are due to increased chemistry rather than increased isoprene emissions as the percentage increase from chemistry alone is higher than that when adding a temperature dependent source of isoprene. Largest increases in High-NOx.
-    \item The differences in the response between the mechanisms indicates that the chemistry in CB05 and RADM2 is much more temperature-sensitive, especially at higher NOx levels than in the other chemical mechanism. However, as noted previously, CB05 and RADM2 seem to underpredict the ozone produced from isoprene degradation leading to a lower increase in temperature in these mechanisms.
+    %\item \textbf{Increase with higher isoprene source:} The ozone produced when using a temperature-dependent source of isoprene in RADM2 and CB05 is lower than in the other chemical mechanisms, indicating that it is the treatment of isoprene degradation in RADM2 and CB05 that is causing this slower response to increased emissions.
+    %\item Out of the chemical mechanisms used in out study, CB05 and RADM2 describe isoprene degradation with the least amount of species (CB05 - $24$, RADM2 - $18$) and also use the least amount of species specific to isoprene degradation (CB05 - $2$, RADM2 - none). Compared to MOZART-4 which describes isoprene degradation using $33$ species, $14$ of which are unique to isoprene oxidation.
+    %\item Isoprene degradation is know to be a source of ozone due to the large amount of peroxy radicals produced during its degradation and also the importance of the degradation products methacrolein and methyl vinyl ketone. These two major degradation products are not included in either CB05 or RADM2, and the lack of species also means that less peroxy radicals are produced which in conditions with enough NOx, would further catalyse ozone production.
+    \item \textbf{Increase from reference temperature:} Looking at the increases in ozone from the reference temperature of 298K, indicates that while in each case the largest increases are due to increased chemistry rather than increased isoprene emissions as the percentage increase from chemistry alone is higher than that when adding a temperature dependent source of isoprene. Largest increases in High-NOx. Need to look at Ox production budgets to analyse and determine which chemical processes are the most important.
+    \item The differences in the response between the mechanisms indicates that the chemistry in CB05 and RADM2 is much more temperature-sensitive, especially at higher NOx levels than in the other chemical mechanism. The analysis of the Ox production budgets leads to the answers for this.
 \end{itemize}
 
 \subsection{Ox Production Budgets}
 \begin{itemize}
+    \item Analysis of RO2NO2 budgets indicates that the increased RO2NO2 in the MCMv3.2, that is the main difference in Fig. (no) is die to the inclusion of CH3O2NO2 reservoir in the MCMv3.2. No reduced chemical mechanism used in this study includes CH3O2NO2 chemistry. In fact, the RO2NO2 per molecule of NMVOC oxidised of all other RO2NO2 is very similar between all chemical mechanisms. Thus, including CH3O2NO2 chemistry would aid in capturing the Ox production described by the MCMv3.2.
     \item Thus the decrease in lifetime of RO2NO2 means that RO2NO2 is not such an effective sink for peroxy radicals and NO2 and these are re-formed quicker at higher temperatures. The peroxy radicals and NO2 may then produce Ox through other reactions.
     \item Further analysis of the RO2NO2 budgets in each mechanism shows that the MCMv3.2 is the only mechanism which includes CH3O2NO2 production. CH3O2NO2 is the peroxynitrate formed from the methyl peroxy radical, CH3O2, and NO2. \todo{Literature on its importance?} 
     \item In all other chemical mechanisms the main contributor to RO2NO2 is HO2NO2 followed by PAN. The contributions of HO2NO2 and PAN are higher in non-MCM mechanisms but not high enough to fully compensate for the missing contribution of CH3O2NO2. 
@@ -118,7 +123,8 @@
 
 \subsection{Comparison to Observed Results}
 \begin{itemize}
-    \item test
+    \item Observations include other temperature-dependent process that are not included in our simulations, the most important of which is that our simulations do not include stagnation.
+    \item Also, we have concentrated our study on the increase of isoprene emissions with temperature, in reality many other NMVOC are emitted from vegetation with increased temperature (Guenther:2006).
 \end{itemize}
 
 \section{Conclusions} \label{s:conclusions}
@@ -127,6 +133,9 @@
     \item What is more important for increasing ozone with temperature: isoprene emissions or chemistry? Isoprene emissions, as the increasing isoprene emissions with temperature as predicted by MEGAN2.1 give increases of up to 16 ppbv of ozone, depending on the NOx levels.
     \item How do the results compare to observed? Comparing the gradient of ozone with temperature at the different NOx-regimes in our simulations to the observed regions over europe (ERA-Interim data)\dots.
     \item Future temperature scenarios: Climate change is due to cause an increase in global temperatures, thus in locations with high NOx emissions and with vegetation know to emit isoprene, we expect increases in surface ozone. However, dramatically reducing NOx emissions would shift the atmospheric regime to a low-NOx regime would minimise the increases of ozone with temperature. Despite increased isoprene and increased chemistry.
+    \item Chemical mechanisms can represent the non-linear chemistry of ozone with temperature and NOx but this chemistry is not as senstive as observational results.
+    \item Most of these increase (result) is due to faster chemistry and not increased isoprene emissions with temprature. Out of the faster chemistry, it is the decrease in the lifetime of RO2NO2 species that has the largest influence on ozone mixing ratios.
+    \item In all experiments, conditions with high-NOx leads to more ozone with temperature. At low-NOx conditions, the increase of ozone with temperature is minimised and thus reducing NOx emissions could minimise the effects of increasing ozone with temperature.
 \end{itemize}
 
 \bibliographystyle{plainnat}
