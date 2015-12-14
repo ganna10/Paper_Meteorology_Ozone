@@ -25,8 +25,10 @@
 \begin{itemize}
     \item Many studies, both observational and modelling, have noted that temperature is an important meteorological driver for ground-level ozone (Noelia:2015). In some areas, increases in temperature can lead to an almost linear increase of ozone (refs).
     \item Main reasons for this increase are the increased emissions of VOC from vegetation, in particular isoprene, and faster chemistry due to the increase in reaction rates, many of which are temperature dependent. (Pusede:2015)
-    \item Observational studies look at the total effect of ozone with temperature, whereas a model can look at the temperature-dependent processes that influence ozone. In other words, observational studies look at the total derivative of ozone with temperature while models can look at the partial derivatives of the temperature-dependent processes influencing ozone. (equation)
-        % fix this \[ d[O3]/dT = \fraction{\partial [O3]}{\partial [BVOC]}\fraction{\partial [BVOC]}{\partial T} \]
+    \item Observational studies look at the total effect of ozone with temperature, whereas a model can look at the temperature-dependent processes that influence ozone. In other words, observational studies look at the total derivative of ozone with temperature while models can look at the partial derivatives of the temperature-dependent processes influencing ozone. 
+        \begin{equation*} 
+            \frac{d[O3]}{dT} = \frac{\partial [O3]}{\partial [BVOC]}\frac{\partial [BVOC]}{\partial T} + \frac{\partial [O3]}{\partial \text{Chemistry}}\frac{\partial \text{Chemistry}}{\partial T} + \frac{\partial [O3]}{\partial \text{Stagnation}}\frac{\partial \text{Stagnation}}{\partial T} + \dots
+        \end{equation*}
 \end{itemize}
 
 \subsection{Specific Problem(s)}
