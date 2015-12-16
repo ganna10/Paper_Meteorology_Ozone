@@ -9,7 +9,7 @@
 
 \begin{figure}%
     \centering%
-    \caption{Ozone mixing ratios at each temperature are allocated to different \ce{NO_x}-regimes of Fig.~\ref{f:ozone_contours}. The differences in ozone mixing ratios of Table~\ref{t:differences} are represented graphically.}%
+    \caption{Ozone mixing ratios at each temperature are allocated to different \ce{NO_x}-regimes of Fig.~\ref{f:ozone_contours}. The differences in ozone mixing ratios due to chemistry and emissions of Table~\ref{t:differences} are represented graphically for MOZART-4, the approach was used to calculate the differences with each chemical mechanism.}%
     \label{f:O3-T}%
     \includegraphics[width=\textwidth]{img/O3-T_correlation}%
 \end{figure}
@@ -21,14 +21,35 @@
     \input{table_differences_td_ti}
 \end{table}
 
-Figure~\ref{f:ozone_contours} depicts the maximum mixing ratio of ozone obtained from each model run as a function of the total \ce{NO_x} emissions on the first day and temperature.
-Using each mechanism, a similar non-linear relationship of ozone mixing ratios on \ce{NO_x} and temperature is found and increased ozone levels are found at higher temperatures when including a temperature-dependent source of isoprene emissions.
-CB05 and RADM2 produce the largest amount of ozone at higher temperatures and higher \ce{NO_x} levels than the other chemical mechanisms.
+Figure~\ref{f:ozone_contours} depicts the maximum mixing ratio of ozone as a function of the total \ce{NO_x} emissions on the first day and temperature when using temperature-independent and temperature-dependent source of isoprene emissions for each chemical mechanism.
+A non-linear relationship of ozone mixing ratios with \ce{NO_x} and temperature is reproduced by each chemical mechanism.
 
-The temperature-dependent source of isoprene leads to increased ozone mixing ratios at higher temperatures and higher \ce{NO_x} levels (top-right of each plot in Fig.~\ref{f:ozone_contours}).
-The largest increase in ozone is found in the MCMv3.2 and CRIv2, where the ozone increased by 16~ppbv when using temperature-dependent isoprene emissions.
-All other mechanisms, had similar increases in ozone with temperature-dependent isoprene emissions; RADM2 with an increase of 11~ppbv had the lowest increase in ozone.
-At low temperatures, regardless of the \ce{NO_x} level, similar amounts of ozone are predicted from both the temperature-dependent and temperature-independent sources of isoprene emissions.
+The highest mixing ratios of ozone in Fig.~\ref{f:ozone_contours} are produced at higher temperatures and high-\ce{NO_x} conditions, also ozone mixing ratios increase when using a temperature-dependent source of isoprene emissions.
+Conversely, the least amount of ozone is produced with low-\ce{NO_x} conditions over the whole temperature range ($15$~--~$40~^{\circ}$C) when using both a temperature-independent and temperature-dependent source of isoprene emissions.
+
+The non-linear relationship of ozone with \ce{NO_x} and temperature can be split into three \ce{NO_x}-regimes (low-\ce{NO_x}, maximal-\ce{O3} and high-\ce{NO_x}) based on the ratio of \ce{HNO3} to \ce{H2O2} used in \citet{Sillman:1995} to determine \ce{NO_x}-regimes for the non-linear relationship of ozone with \ce{NO_x} and VOC.
+The low-\ce{NO_x} regime corresponds to the lower-left most area in Fig.~\ref{f:ozone_contours} where there is little increase in ozone with temperature, also called \ce{NO_x}-sensitive conditions.
+The high-\ce{NO_x} regime is when ozone levels increase rapidly with temperature in Fig.~\ref{f:ozone_contours}, sometimes called \ce{NO_x}-saturated conditions.
+Finally, the ridges of the contours in Fig.~\ref{f:ozone_contours} correspond to maximal-ozone production and we call this the maximal-\ce{O3} regime.
+The ozone mixing ratios obtained in each simulation were assigned to a \ce{NO_x} regime based on the \ce{H2O2}:\ce{HNO3} of the simulation and Fig.~\ref{f:O3-T} illustrates the mean ozone mixing ratio at each temperature in these \ce{NO_x} regimes.
+
+Calculating the difference in ozone mixing ratios at $40$~$^{\circ}$C from $20$~$^{\circ}$C when using a temperature-independent source of isoprene emissions gives the absolute increase in ozone due to faster chemistry.
+When using a temperature-dependent source of isoprene emissions, the difference in ozone mixing ratios at $40$~$^{\circ}$C from $20$~$^{\circ}$C less the increase due to faster chemistry, gives the absolute increase in ozone due to increased isoprene emissions.
+These differences are represented graphically in Fig.~\ref{f:O3-T} and summarised in Table~\ref{t:differences}.
+
+Both Fig.~\ref{f:O3-T} and Table~\ref{t:differences} highlight that the absolute increase in ozone at $40$~$^{\circ}$C from $20$~$^{\circ}$C is largest with high-\ce{NO_x} conditions.
+The increase in ozone mixing ratio at $40$~$^{\circ}$C from $20$~$^{\circ}$C due to faster chemistry with high-\ce{NO_x} conditions is almost double that with low-\ce{NO_x} conditions.
+We shall explore which chemical processes are responsible for the increases in ozone mixing ratios at $40$~$^{\circ}$C from $20$~$^{\circ}$C by analysing \ce{O_x} production budgets in Sect.~\ref{ss:r_budgets}.
+
+Comparing the response of ozone mixing ratios to temperature in the reduced chemical mechanisms (CRIv2, MOZART-4, CB05 and RADM2) to the near-explicit MCMv3.2 chemical mechanism shows that the largest differences from the MCMv3.2 occur in the maximal-\ce{O3} and high-\ce{NO_x} regimes.
+Table~\ref{t:differences} also indicates that all reduced chemical mechanisms, except RADM2, have similar increases in ozone due to temperature-dependent isoprene emissions to MCMv3.2.
+RADM2 produces $3$~ppbv less ozone than the MCMv3.2 due to temperature-dependent isoprene emissions consistently in each \ce{NO_x} regime, indicating that this difference is due to how isoprene degradation chemistry is treated in RADM2.
+
+The Tagged Ozone Production Potential (TOPP) of isoprene is a measure of the number of molecules of ozone produced per molecule of isoprene emitted and \citet{Coates:2015} shows that less ozone is produced from isoprene degradation using RADM2 than with MCMv3.2.
+The degradation of isoprene has been extensively studied and it is well-known that the species methyl vinyl ketone (MVK) and methacrolein are signatures of isoprene degradation.
+All chemical mechanisms used in our study do explicitly include MVK and methacrolein (or in the case of CB05, a lumped species representing both these secondary degradation products) production during isoprene degradation except RADM2.
+RADM2 does not include methacrolein and the ketone species included in RADM2 represents a mixture of acetone and methyl ethyl ketone (MEK), thus the secondary degradation of isoprene in RADM2 is unable to represent the ozone production from the further degradation of its signature degradation products MVK and methacrolein.
+More recent versions of RADM2, RACM \citep{Stockwell:1997} and RACM2 \citep{Goliff:2013}, sequentially include methacrolein and MVK and with these updates the TOPP values of isoprene reported in \citet{Coates:2015} are similar to the TOPP value of isoprene in the MCMv3.2.
 
 \subsection{Ozone budgets} \label{ss:r_budgets}
 
