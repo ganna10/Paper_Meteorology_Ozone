@@ -4,10 +4,10 @@
     \centering%
     \caption{Contours of maximum ozone mixing ratio as a function of the total \ce{NO_x} emissions on the first day and temperature for each chemical mechanism and using both a temperature-dependent and -independent source of isoprene emissions.}
     \label{f:ozone_contours}%
-    \includegraphics[width=\textwidth]{img/O3_comparison}
+    \includegraphics[width=\textwidth]{img/O3_comparison}%
 \end{figure}
 
-\begin{figure}%
+\begin{figure}[t]%
     \centering%
     \caption{Ozone mixing ratios at each temperature are allocated to different \ce{NO_x}-regimes of Fig.~\ref{f:ozone_contours}. The differences in ozone mixing ratios due to chemistry and emissions of Table~\ref{t:differences} are represented graphically for MOZART-4, the approach was used to calculate the differences with each chemical mechanism.}%
     \label{f:O3-T}%
@@ -16,16 +16,16 @@
 
 \begin{table}%
     \centering%
-    \caption{Increase in ozone mixing ratio (ppbv) due to chemistry and emissions at $40$~$^{\circ}$C from reference temperature ($20$~$^{\circ}$C) in the \ce{NO_x}-regimes of Fig.~\ref{f:ozone_contours}.}%
+    \caption{Increase in ozone mixing ratio (ppbv) due to chemistry and emissions at $40$~\degree C from reference temperature ($20$~\degree C) in the \ce{NO_x}-regimes of Fig.~\ref{f:ozone_contours}.}%
     \label{t:differences}%
-    \input{table_differences_td_ti}
+    \input{table_differences_td_ti}%
 \end{table}
 
 Figure~\ref{f:ozone_contours} depicts the maximum mixing ratio of ozone as a function of the total \ce{NO_x} emissions on the first day and temperature when using temperature-independent and temperature-dependent source of isoprene emissions for each chemical mechanism.
 A non-linear relationship of ozone mixing ratios with \ce{NO_x} and temperature is reproduced by each chemical mechanism.
 
 The highest mixing ratios of ozone in Fig.~\ref{f:ozone_contours} are produced at higher temperatures and high-\ce{NO_x} conditions, also ozone mixing ratios increase when using a temperature-dependent source of isoprene emissions.
-Conversely, the least amount of ozone is produced with low-\ce{NO_x} conditions over the whole temperature range ($15$~--~$40~^{\circ}$C) when using both a temperature-independent and temperature-dependent source of isoprene emissions.
+Conversely, the least amount of ozone is produced with low-\ce{NO_x} conditions over the whole temperature range ($15$~--~$40$~\degree C) when using both a temperature-independent and temperature-dependent source of isoprene emissions.
 
 The non-linear relationship of ozone with \ce{NO_x} and temperature can be split into three \ce{NO_x}-regimes (low-\ce{NO_x}, maximal-\ce{O3} and high-\ce{NO_x}) based on the ratio of \ce{HNO3} to \ce{H2O2} used in \citet{Sillman:1995} to determine \ce{NO_x}-regimes for the non-linear relationship of ozone with \ce{NO_x} and VOC.
 The low-\ce{NO_x} regime corresponds to the lower-left most area in Fig.~\ref{f:ozone_contours} where there is little increase in ozone with temperature, also called \ce{NO_x}-sensitive conditions.
@@ -33,13 +33,13 @@ The high-\ce{NO_x} regime is when ozone levels increase rapidly with temperature
 Finally, the ridges of the contours in Fig.~\ref{f:ozone_contours} correspond to maximal-ozone production and we call this the maximal-\ce{O3} regime.
 The ozone mixing ratios obtained in each simulation were assigned to a \ce{NO_x} regime based on the \ce{H2O2}:\ce{HNO3} of the simulation and Fig.~\ref{f:O3-T} illustrates the mean ozone mixing ratio at each temperature in these \ce{NO_x} regimes.
 
-Calculating the difference in ozone mixing ratios at $40$~$^{\circ}$C from $20$~$^{\circ}$C when using a temperature-independent source of isoprene emissions gives the absolute increase in ozone due to faster chemistry.
-When using a temperature-dependent source of isoprene emissions, the difference in ozone mixing ratios at $40$~$^{\circ}$C from $20$~$^{\circ}$C less the increase due to faster chemistry, gives the absolute increase in ozone due to increased isoprene emissions.
+Calculating the difference in ozone mixing ratios at $40$~\degree C from $20$~\degree C when using a temperature-independent source of isoprene emissions gives the absolute increase in ozone due to faster chemistry.
+When using a temperature-dependent source of isoprene emissions, the difference in ozone mixing ratios at $40$~\degree C from $20$~\degree C less the increase due to faster chemistry, gives the absolute increase in ozone due to increased isoprene emissions.
 These differences are represented graphically in Fig.~\ref{f:O3-T} and summarised in Table~\ref{t:differences}.
 
-Both Fig.~\ref{f:O3-T} and Table~\ref{t:differences} highlight that the absolute increase in ozone at $40$~$^{\circ}$C from $20$~$^{\circ}$C is largest with high-\ce{NO_x} conditions.
-The increase in ozone mixing ratio at $40$~$^{\circ}$C from $20$~$^{\circ}$C due to faster chemistry with high-\ce{NO_x} conditions is almost double that with low-\ce{NO_x} conditions.
-We shall explore which chemical processes are responsible for the increases in ozone mixing ratios at $40$~$^{\circ}$C from $20$~$^{\circ}$C by analysing \ce{O_x} production budgets in Sect.~\ref{ss:r_budgets}.
+Both Fig.~\ref{f:O3-T} and Table~\ref{t:differences} highlight that the absolute increase in ozone at $40$~\degree C from $20$~\degree C is largest with high-\ce{NO_x} conditions.
+The increase in ozone mixing ratio at $40$~\degree C from $20$~\degree C due to faster chemistry with high-\ce{NO_x} conditions is almost double that with low-\ce{NO_x} conditions.
+We shall explore which chemical processes are responsible for the increases in ozone mixing ratios at $40$~\degree C from $20$~\degree C by analysing \ce{O_x} production budgets in Sect.~\ref{ss:r_budgets}.
 
 Comparing the response of ozone mixing ratios to temperature in the reduced chemical mechanisms (CRIv2, MOZART-4, CB05 and RADM2) to the near-explicit MCMv3.2 chemical mechanism shows that the largest differences from the MCMv3.2 occur in the maximal-\ce{O3} and high-\ce{NO_x} regimes.
 Table~\ref{t:differences} also indicates that all reduced chemical mechanisms, except RADM2, have similar increases in ozone due to temperature-dependent isoprene emissions to MCMv3.2.
@@ -51,28 +51,61 @@ All chemical mechanisms used in our study do explicitly include MVK and methacro
 RADM2 does not include methacrolein and the ketone species included in RADM2 represents a mixture of acetone and methyl ethyl ketone (MEK), thus the secondary degradation of isoprene in RADM2 is unable to represent the ozone production from the further degradation of its signature degradation products MVK and methacrolein.
 More recent versions of RADM2, RACM \citep{Stockwell:1997} and RACM2 \citep{Goliff:2013}, sequentially include methacrolein and MVK and with these updates the TOPP values of isoprene reported in \citet{Coates:2015} are similar to the TOPP value of isoprene in the MCMv3.2.
 
-\subsection{Ozone budgets} \label{ss:r_budgets}
+\subsection{Ozone Production Budgets} \label{ss:r_budgets}
 
-\begin{figure}%
+\begin{figure}[t]%
     \centering%
-    \caption{\ce{O_x} production budgets normalised by the total oxidation rate of emitted VOC in the \ce{NO_x}-regimes of Fig.~\ref{f:ozone_contours}. The budgets are allocated to the categories of inorganic reactions, peroxy nitrate (RO2NO2) decomposition, reactions of NO with HO2, non-acyl peroxy radicals (RO2) and acyl peroxy radicals (ARO2). All other reactions contributing to \ce{O_x} budgets are allocated to `Other Organic'.}%
+    \caption{Day-time \ce{O_x} production budgets normalised by the total oxidation rate of emitted VOC in the \ce{NO_x}-regimes of Fig.~\ref{f:ozone_contours}. The budgets are allocated to the categories of inorganic reactions, peroxy nitrate (RO2NO2) decomposition, reactions of NO with HO2, alkyl peroxy radicals (RO2) and acyl peroxy radicals (ARO2). All other reactions contributing to \ce{O_x} budgets are allocated to `Other Organic'.}%
     \label{f:ozone_budgets}%
     \includegraphics[width=\textwidth]{img/Ox_budgets}
 \end{figure}
 
-We defined the \ce{O_x} family to consist of \todo{complete this and reasons}
+In order to determine which chemical processes are causing the increase in ozone with temperature (Sect.~\ref{ss:r_contours}), we analyse the \ce{O_x} production budgets in each \ce{NO_x} regime (low-\ce{NO_x}, Maximal-\ce{O3} and high-\ce{NO_x}) defined in Sect.~\ref{ss:r_contours}.
+We defined the \ce{O_x} family to consist of \ce{O3}, \ce{NO2} and O, and Fig.~\ref{f:ozone_budgets} displays the total day-time \ce{O_x} production budgets normalised by the total initial oxidation rates of the emitted NMVOC for each chemical mechanism within each \ce{NO_x} regime.
+The \ce{O_x} production budgets in Fig.~\ref{f:ozone_budgets} are allocated to the major sources, where `HO2', `RO2', `ARO2' represent the reactions of NO with \ce{HO2}, alkyl peroxy radicals and acyl peroxy radicals respectively.
+`RO2NO2' represents the thermal decomposition of peroxy nitrates, `Inorganic' represents all inorganic contributions to the \ce{O_x} production budgets (primarily the de-excitation of \ce{O^1D} to O) and any other remaining organic reactions producing \ce{O_x} are included in the `Other Organic' category.
 
-\citet{Sillman:1995} shows that the ratio of \ce{HNO3} to \ce{H2O2} can be used to determine whether an atmospheric system is in a \ce{NO_x}-sensitive, VOC-sensitive or in the ridge region of the \ce{NO_x}-VOC relationship with ozone, where maximum ozone is produced.
-Based on this, we assigned each model run used to generate the ozone contours in Fig.~\ref{f:ozone_contours} to three \ce{NO_x} regimes--Low-NOx, High-NOx and Maximal-O3--corresponding to \ce{NO_x}-sensitive, VOC-sensitive and \ce{NO_x}-VOC-sensitive regions defined by \citet{Sillman:1995}.
-Values of \ce{H2O2}/\ce{HNO3} less than $0.3$ correspond to the High-NOx regime, values larger than $0.5$ correspond to the Low-NOx regime and all values inbetween correspond to the ridge area in which maximal ozone is produced.
+In Fig.~\ref{f:ozone_budgets} the number of molecules of \ce{O_x} produced per molecule of NMVOC oxidised in High-\ce{NO_x} conditions is similar when using temperature-dependent or temperature-independent isoprene emissions for each chemical mechanism; the same is also true for the Maximal-\ce{O3} and Low-\ce{NO_x} regimes.
+Thus the increases in isoprene emissions in the temperature-dependent simulations are balanced by the faster oxidation rates of the emitted NMVOC.
+The highest amount of \ce{O_x} is produced in the High-\ce{NO_x} regime and the lowest amount of \ce{O_x} is produced in the Low-\ce{NO_x} regime, mirroring the \ce{O3} mixing ratios in the different \ce{NO_x} regimes in Fig.\ref{f:O3-T}.
+For example, when using MCMv3.2 seven molecules of \ce{O_x} are produced per molecule of NMVOC oxidation in High-\ce{NO_x} conditions, decreased to about six and five molecules of \ce{O_x} produced per molecule of NMVOC oxidised in the Maximal-\ce{O3} and Low-\ce{NO_x} regimes.
+In each \ce{NO_x} regime, all the reduced chemical mechanisms produce up to two molecules of \ce{O_x} per molecule of emitted NMVOC oxidised less than the MCMv3.2.
 
-In Fig.~\ref{f:ozone_budgets}, the production rates on the first day of each reaction contributing to the \ce{O_x} production budget are determined and these reaction rates are then averaged over each \ce{NO_x}-condition (Low-\ce{NO_x}, High-\ce{NO_x} and Maximal-O3).
-The fractional contribution of this reaction rate to the total \ce{O_x} budget was then calculated for each \ce{NO_x}-condition.
+Turning to the individual contributions to the normalised production of \ce{O_x} in Fig.~\ref{f:ozone_budgets}, peroxy nitrate (RO2NO2) decomposition and inorganic reactions show a strong (and opposing) dependence on temperature in all \ce{NO_x} regimes, each chemical mechanism and regardless of the source of isoprene emissions.
+Whereas the contributions of the reaction of NO with the peroxy radicals (HO2, RO2 and ARO2 in Fig.~\ref{f:ozone_budgets}) to the normalised production budgets of \ce{O_x} do not increase strongly with temperature indicating that these processes are strongly related to the faster oxidation of the emitted NMVOC with temperature.
 
-Figure~\ref{f:ozone_budgets} shows that the reaction of the hydroperoxyl radical (\ce{HO2}) with NO has the largest contribution at each \ce{NO_x}-condition, but this fractional contribution decreaes at higher temperatures due to the increased contributions of other reactions.
-The increased contribution of the reaction of the acetyl peroxy radical (\ce{CH3CO3}) with NO with temperature has the most significant contribution to the total \ce{O_x} budget and this contribution is higher in CB05 and RADM2 compared to the other chemical mechanisms.
+\subsubsection{Peroxynitrates}
+We shall now turn our focus to the peroxy nitrate (RO2NO2) contribution as this category has a strongly temperature-dependent contribution to the normalised \ce{O_x} production.
+Peroxy nitrates are an important reservoir species for both peroxy radicals and \ce{NO_x} that are formed from the reactions of alkyl and acyl peroxy nitrates with \ce{NO2} (Reaction \ref{r:RO2_NO2}).
+\begin{rxnarray}
+    && \ce{RO2 + NO2 + M} \rightleftharpoons \ce{RO2NO2 + M} \label{r:RO2_NO2}
+\end{rxnarray}
+The chemical bond of \ce{RO2NO2} is quite weak with thermal decomposition being the most important chemical reaction and thermal decomposition depends strongly on temperature.
+At low temperatures, \ce{RO2NO2} can accumulate and be transported downwind of emissions of the sources of its precursors (NMVOC and \ce{NO_x}), after thermal decomposition the release of \ce{NO2} and peroxy radicals can promote production of \ce{O3} downwind \citep{Moxim:1996}.
 
-Add quantitative values of differences.
+Peroxy nitrates are formed from both alkyl and acyl peroxy radicals, with the acyl peroxy radicals being more thermally stable than the alkyl peroxy nitrates.
+The most important alkyl peroxy nitrates are pernitric acid (\ce{HO2NO2}) and methylperoxy nitrate (\ce{CH3O2NO2}), while peroxy acetyl nitrate (PAN, \ce{CH3C(O)O2NO2}) and peroxy propionyl nitrate (PPN, \ce{C2H5C(O)O2NO2}) are important acyl peroxy nitrates.
+
+The alkyl peroxy nitrates have a weaker \ce{RO2-NO2} bond than acyl peroxy nitrates hence alkyl peroxy nitrates have a shorter lifetime than acyl peroxy nitrates.
+For example, \ce{CH3O2NO2} has a lifetime of $0.5$~seconds at $298$~K while PAN has a lifetime of $51$~minutes at $298$~K \citep{Orlando:2012}.
+
+Each chemical mechanism used in our study represents \ce{HO2NO2} and PAN, although in many reduced chemical mechanisms PAN represents \ce{CH3C(O)O2NO2} and other acyl peroxy nitrates.
+This representation of PAN in reduced chemical mechanisms can lead to overestimations of PAN levels compared to more detailed chemical mechanisms \citep{Luecken:1999}.
+The near-explicit MCMv3.2 represent a diverse range of peroxy nitrates including \ce{CH3O2NO2} and about $280$~acyl peroxy nitrates.
+
+\begin{figure}[t]%
+    \centering%
+    \caption{Day-time \ce{RO2NO2} production budgets normalised by the total oxidation rate of emitted VOC in the \ce{NO_x}-regimes of Fig.~\ref{f:ozone_contours}. The total budgets are allocated to the most important peroxy nitrates and all other contributions included as `Others'.}%
+    \label{f:ro2no2_budgets}%
+    \includegraphics[width=\textwidth]{img/RO2NO2_budgets}
+\end{figure}
+
+Figure~\ref{f:ro2no2_budgets} displays the normalised production budgets of \ce{RO2NO2} by the total loss rate of the emitted NMVOC, similar to Fig.~\ref{f:ozone_budgets} for each chemical mechanism in each \ce{NO_x} regime and when using a temperature-independent and temperature-dependent source of isoprene emissions.
+The large contribution of \ce{CH3O2NO2} in MCMv3.2 is not mirrored in any reduced chemical mechanism as \ce{CH3O2NO2} is not represented in any of the reduced chemical mechanisms.
+In fact the number of molecules of \ce{RO2NO2} per molecules of NMVOC oxidised in each reduced chemical mechanism is very similar to that of MCMv3.2 less the contribution of \ce{CH3O2NO2} for the separate \ce{NO_x} regimes and regardless of isoprene source.
+
+The contribution of RO2NO2 to the normalised \ce{O_x} production in Fig.~\ref{f:ozone_budgets} is largest in the MCMv3.2 than the reduced chemical mechanisms due to the representation of \ce{CH3O2NO2} in the MCMv3.2.
+If reduced chemical mechanisms represent \ce{CH3O2NO2} chemistry then this would improve the representation of the total \ce{RO2NO2} production which would have the added effect of improving the representation of \ce{O_x} production budgets.
 
 %\subsection{Rate of Change of Ozone with Temperature} \label{ss:r_mO3-T}
 %
