@@ -1,116 +1,69 @@
-%\subsection{VOC Tagging Approach} \label{ss:O3_tagging}
-%\begin{itemize}
-%    \item boxmodel set-up, initial conditions, VOC emissions same as in \citet{Coates:2015}
-%    \item only difference is the tagging approach used; \citet{Coates:2015} determine effects of VOC on O3 by inferring the effects of VOC on Ox production, hence this is looking at the effects on O3 indirectly
-%    \item the tagging approach of \citet{Emmons:2012}, which looks at NOx-tagging has been adapted to VOC tagging by Shuai and Tim and now the effects of VOC on O3 mixing ratios can be directly compared
-%    \item Tagging the VOC degradation of MOZART-4 was achieved using the same technique as S\&T but using the KPP version of MOZART-4, including the modifications to MOZART-4 outlined in \citet{Coates:2015} such as using MCM~v3.2 inorganic chemistry, using only reactions relevant to tropospheric processes.
-%    \item From the gas-phase reactions in the KPP version, we have the full set of non-tagged reactions -- the ``real'' chemistry -- and appended this with reactions where the degradation reactions of a VOC are tagged for the VOC in order to trace the effects of the VOC degradation on O3 and Ox production.
-%    \item The tagging approach requires extracting the set of reactions where reactions of the VOC products with members of the Ox family are also included.
-%    \item We define the Ox family to include O3, O, O1D, NO2, NO3, N2O5, HNO3, ISOPNO3, ONIT, ONITR, HO2, HO2NO2.
-%    \item The set of tagged chemistry which runs parallel to the ``real'' chemistry was then added to the KPP version of MOZART-4 chemical mechanism described above.
-%    \item This chemistry was then implemented in the boxmodel and then tested to determine that the tagged chemistry does not influence the ``real'' chemistry by comparing the mixing ratios of tagged species to their non-tagged counterparts. If the chemistry is correctly set-up then there should be no difference.
-%    \item The next testing stage was that this new chemistry set-up gives the same results as the previous chemistry (i.e. the results in \citet{Coates:2015}) by comparing the mixing ratios of the ``real'' chemistry in the new set-up to that in \citet{Coates:2015} and again there should be no differences as the boxmodels are set-up in exactly the same way.
-%    \item The final boxmodel setup was used as the base case for each of the subsequent modelling scenarios, and simulates NOx conditions that produce maximum ozone for each VOC.
-%\end{itemize}
-
 \subsection{Model Setup} \label{ss:model_setup}
-\begin{itemize}
-    \item MECCA box model as described in \citet{Coates:2015} to broadly simulate the Benelux (Belgium, Netherlands and Luxembourg) region. As photolysis rates are parameterised by the solar zenith angle, the solar zenith angle of $51^{\circ}$N was used, representative of the central Benelux region.
-    \item MECCA box model has been updated to include vertical mixing with the free troposphere and accordingly includes a diurnal cycle for the PBL height. These amendments are discussed further in Sect.~\ref{ss:vertical_mixing}.
-    \item Simulations start at 06:00 using spring equinoctical conditions and the simulations ended after two days.
-    \item All simulations performed using the Master Chemical Mechanism, MCM~v3.2, \citep{MCM_Site}, Common Representative Intermediates, CRI~v2 \citep{Jenkin:2008}, Model for Ozone and related chemical tracers, MOZART-4 \citep{Emmons:2010}, Regional Acid Deposition Model, RADM2 \citep{Stockwell:1990} and the Carbon Bond Mechanism, CB05 \citep{Yarwood:2005}. \citet{Coates:2015} describes the implementation of these chemical mechanisms for use with KPP within MECCA. These chemical mechanisms were chosen as they are commonly used by modelling groups and represent the highly-detailed chemistry (MCM~v3.2), chemistry suitable for regional 3D models (CRI~v2, RADM2 and CB05) and global 3D models (MOZART-4).
-    \item NOx emissions and temperature were varied systematically to analyse the effects on ozone mixing ratios over different NOx gradients at each temperature.
-    %\item NOx and other parameters, including NMVOC emissions, temperature and relative humidity, were varied systematically to analyse the effects on ozone mixing ratios over different NOx gradients and hence different atmospheric conditions. Table~\ref{t:variations} details the varied parameters and their ranges.
-    \item VOC emissions constant until noon of first day, to simulate a plume of emitted VOC.
-    \item Two sets of runs were performed -- to include both a temperature-dependent and temperature-independent source of biogenic VOC emissions. MEGANv2.1 \citep{Guenther:2012} was used to specify the temperature-dependent BVOC emissions of isoprene. Isoprene is the most important VOC at a global scale due its high emission rates and emissions from vegetation have been reported to depend on temperature \citep{Guenther:2006}. In reality, increased temperature can also increase AVOC emissions by increasing evaporation of NMVOCs, this is not included in our study.
-    \item Methane is fixed at $1.7$~ppmv throughout the model run, carbon monoxide (CO) and ozone were initialised at $200$~ppbv and $40$~ppbv and then allowed to evolve freely throughout the the simulation.
-    %\item The first set of model runs were performed using the MCM~v3.2, the most detailed chemical mechanism used in the study.
-    \item The temperature was systematically varied between 288 and 313~K (15 -- 40~$^{\circ}$C). The only source of NOx emissions in the box model was a constant source of NO emissions. The NO emissions were systematically varied from $5.0~\times~10^9$ to $1.5~\times~10^{12}$~molecules~(NO)~cm$^{-2}$~s$^{-1}$ at each temperature used in this study. 
-\end{itemize}
-%Table with variations
-%{%
-%    \renewcommand{\arraystretch}{1.1}%
-%    \begin{table}%
-%        \centering%
-%        \caption{The variables and their minimum and maximum values that were systematically varied in this study are outlined in this table.}%
-%        \label{t:variations}%
-%        \input{table_systematic_variations}
-%    \end{table}%
-%}
+All simulations were performed using the MECCA box model, originally described in \citet{Sander:2005}, as set up in \citet{Coates:2015} to broadly simulate urban conditions of central Europe.
+In this study, MECCA box model was further updated to include vertical mixing with the free troposphere and included a diurnal cycle for the PBL height based on the data from the BAERLIN 2014 campaign over Berlin, Germany \citep{Bonn:2016}. 
+The supplementary material includes further details about these updates.
+
+Simulations were performed using equinoctical conditions and started at 06:00 with a run time of two days.
+Methane was fixed at $1.7$~ppmv throughout the model run, carbon monoxide (CO) and ozone were initialised at $200$~ppbv and $40$~ppbv and then allowed to evolve freely throughout the the simulation.
+All VOC emissions were held constant until noon of first day, to simulate a plume of emitted VOC.
+
+Model runs were repeated using a temperature-dependent and temperature-independent source of biogenic VOC (BVOC) emissions. 
+MEGAN2.1 \citep{Guenther:2012} was used to specify the temperature-dependent BVOC emissions of isoprene, Sect.~\ref{ss:megan} provides further details. 
+We focus only on isoprene as isoprene is the most important BVOC on the global scale due its high emission rates and emissions from vegetation are dependent on temperature \citep{Guenther:2006}. 
+In reality, increased temperature can also increase anthropogenic VOC (AVOC) emissions through increased evaporation.
+
+All simulations were repeated using different chemical mechanisms to investigate how well the relationship of ozone with temprature across \ce{NO_x} gradients is represented.
+The reference chemical mechanism is the near-explicit Master Chemical Mechanism, MCMv3.2, \citep{Jenkin:1997}, \citep{Jenkin:2003}, \citep{Saunders:2003}, \citep{MCM_Site}.
+The reduced chemical mechanisms in our study are Common Representative Intermediates, CRIv2 \citep{Jenkin:2008}, Model for ozone and related chemical tracers, MOZART-4 \citep{Emmons:2010}, Regional Acid Deposition Model, RADM2 \citep{Stockwell:1990} and the Carbon Bond Mechanism, CB05 \citep{Yarwood:2005}. 
+\citet{Coates:2015} describes these chemical mechanisms and the implementation of these chemical mechanisms in MECCA.
+These reduced chemical mechanisms were chosen as they are commonly used by modelling groups in 3D regional and global models.
+
+The temperature was systematically varied between $288$ and $313$~K ($15$~--~$40$~\degree C). 
+The only source of NOx emissions in the box model was a constant source of NO emissions. 
+The NO emissions were systematically varied from $5.0~\times~10^9$ to $1.5~\times~10^{12}$~molecules~(NO)~cm$^{-2}$~s$^{-1}$ at each temperature used in this study. 
 
 \subsection{VOC Emissions} \label{ss:VOC_emissions}
-\begin{itemize}
-    \item Anthropogenic emissions from Benelux for the year 2011 were obtained from the TNO-MACC\_III emission inventory. TNO-MACC\_III is the current version of the TNO-MACC\_II inventory and was created using the same methodology as \citet{Kuenen:2014} and based upon improvements to the existing emission inventory during the AQMEII-2 exercies described in \citet{Pouliot:2015}. 
-    \item Temperature-independent emissions of the biogenic VOC isoprene and monoterpenes, were calculated as a fraction of the total anthropogenic VOC emissions from each country in the Benelux region, this data was obtained from the supplementary data available from the EMEP (European Monitoring and Evaluation Programme) model \citep{Simpson:2012}.
-    \item AVOC and BVOC emissions are included as total emissions from SNAP (Selected Nomenclature for Air Pollution) source categories and these emissions were assigned to chemical groupings based on the country specific profiles for Belgium, the Netherlands and Luxembourg provided by TNO.
-    \item The MCM~v3.2 initial species were determined using the country specific profiles for each SNAP source category and where appropriate information of individual chemical species that can be represented by MCM~v3.2 were determined using the detailed speciations of \citet{Passant:2002}. This approach was also used in \citet{vonSchneidemesser:2015} and further details are found within this article.
-    \item As in \citet{vonSchneidemesser:2015}, first the primary VOC that are represented by the MCM~v3.2 and respective emissions were determined. Using this MCM~v3.2 data, the NMVOC emission data were mapped to mechanism species in the other four chemical mechanisms used in the study. The NMVOC emissions in the non-MCM~v3.2 chemical mechanisms were weighted by the carbon numbers of the MCM~v3.2 species and the emitted mechanism species. The supplementary data outlines the primary NMVOC and calculated emissions with each chemical mechanism.
-\end{itemize}
 {%
     \renewcommand{\arraystretch}{1.1}%
     \begin{table}%
         \centering%
-        \caption{Total anthropogenic NMVOC emissions in 2011 in tonnes from each SNAP category assigned from TNO-MACC\_III emission inventory and biogenic VOC emission in tonnes from Benelux region assigned from EMEP. The allocation of these emissions to MCM~v3.2, CRI~v2, CB05, MOZART-4 and RADM2 species is found in the supplement.}%
+        \caption{Total AVOC emissions in 2011 in tonnes from each SNAP category assigned from TNO-MACC\_III emission inventory and temperature-independent biogenic VOC emission in tonnes from Benelux region assigned from EMEP. The allocation of these emissions to MCMv3.2, CRIv2, CB05, MOZART-4 and RADM2 species is found in the supplementary material.}%
         \input{table_NMVOC_emissions}
+        \label{t:emissions}
     \end{table}%
 }
-%%%%Supplement
-{
-    \begin{landscape}%
-        \centering%
-        %\input{Belgium_MCM_emissions}
-    \end{landscape}%
-}
+Typical emissions of urban AVOC over central Europe were taken from TNO-MACC\_III emission inventory from the Benelux (Belgium, Netherlands and Luxembourg) region for the year 2011.
+TNO-MACC\_III is the current version of the TNO-MACC\_II inventory created using the same methodology as \citet{Kuenen:2014} and based upon improvements to the existing emission inventory during the AQMEII-2 exercies described in \citet{Pouliot:2015}. 
 
-{
-    \begin{landscape}%
-        \centering%
-        %\input{Netherlands_MCM_emissions}
-    \end{landscape}%
-}
+Temperature-independent emissions of the biogenic VOC isoprene and monoterpenes, were calculated as a fraction of the total AVOC emissions from each country in the Benelux region.
+This data was obtained from the supplementary data available from the EMEP (European Monitoring and Evaluation Programme) model \citep{Simpson:2012}.
+Temperature-dependent emissions of isoprene are detailed in Sect.~\ref{ss:megan}.
 
-{
-    \begin{landscape}%
-        \centering%
-        %\input{Luxembourg_MCM_emissions}
-    \end{landscape}%
-}
+The AVOC emissions from the emission inventory were allocated to SNAP (Selected Nomenclature for Air Pollution) source categories and these category emissions were assigned to chemical species and groups based on the country specific profiles for Belgium, the Netherlands and Luxembourg provided by TNO.
+Table~\ref{t:emissions} shows the tonnes of NMVOC emissions from each SNAP category and the temperature-independent BVOC emissions.
 
-{%supplement
-    \centering%
-    %\input{table_MOZART_NMVOC_emissions}
-}
-%The total MCM~v3.2 emissions for each initial species in Tables \ref{t:Belgium_MCM_emissions}, \ref{t:Netherlands_MCM_emissions} and \ref{t:Luxembourg_MCM_emissions} were translated to emissions of MOZART-4 species by weighting with the carbon numbers. The final emissions of the MOZART-4 species representing each MCM~v3.2 species are presented in Table \ref{t:MOZART_NMVOC_emissions} for each country in the Benelux region.
-%%%%End Supplement
+In order to represent the AVOC emissions from each SNAP category in the MCMv3.2, the same approach as described in \citet{vonSchneidemesser:2015} was used.
+In summary, most individual chemical species are represented by the MCMv3.2 otherwise the individual contributions of a group of NMVOC were further split into individual components using the detailed speciation of \citet{Passant:2002}.
+For example, `xylenes' are one of the component chemical groups to many SNAP categories but the MCMv3.2 treats xylenes by the individual isomers (m-, o-, p-xylene) and the individual contributions of the individual isomers to a SNAP category was provided by \citet{Passant:2002}.
 
-\subsection{Temperature Dependent Isoprene Emissions}
-\begin{itemize}
-    \item Temperature dependent isoprene emissions were estimated using the MEGAN2.1 algorithm \citep{Guenther:2012}.
-    \item The aim of the study is to look at the effects of temperature, hence in the MEGAN2.1 algorithm all parameters (except temperature) were kept constant.
-    \item The boxmodel setup uses a constant temperature throughout the model run and so the parameters T$_{24}$ and T$_{240}$, the average temperatures in the past 24 and 250 hours, were assumed to be constant and equal to the temperature value of the boxmodel.
-    \item Constant PAR (photosynthetically active radiation) and LAI (leaf area index) were used at each temperature step.
-    \item The LAI, plant functional type (PFT) and associated isoprene emission factor were taken from \citet{Guenther:2012} and selected to give the same isoprene mixing ratios at a temperature of $293$~K as in the temperature independent modelling case. For all other model runs over the different temperature, the MEGAN2.1 algorithm was used to estimate the isoprene emissions.
-    \item Thus using this idealised case, we can determine the effects of increasing isoprene emissions with temperature across \ce{NO_x} gradients.
-    \item This was repeated for each chemical mechanism.
-    \item As in the temperature independent model runs, the emissions of NMVOC and the temperature dependent source of isoprene, were held constant until noon of the first day.
-    \item Using these assumptions, the isoprene emissions at each temperature step of the study are illustrated in Fig.~\ref{f:isoprene_emissions} and show the expected exponential increase in emissions with temperature \citep{Guenther:2006}.
-\end{itemize}
-\begin{figure}[ht]%
+Again similarly to \citet{vonSchneidemesser:2015}, the NMVOC emissions were first assigned to chemcial species represented by the MCMv3.2 and then mapped to the mechanism species representing NMVOC emissions in the reduced chemical mechanisms.
+The NMVOC emissions in the reduced chemical mechanisms were weighted by the carbon numbers of the MCMv3.2 species and the emitted mechanism species. 
+The supplementary data outlines the primary NMVOC and calculated emissions with each chemical mechanism.
+
+\subsection{Temperature Dependent Isoprene Emissions} \label{ss:megan}
+\begin{figure}[t]%
     \centering%
     \caption{The estimated isoprene emissions (molecules~isoprene~cm$^{-2}$~s$^{-1}$) at each temperature step used in the study. Isoprene emissions were estimated using the MEGAN2.1 algorithm \citep{Guenther:2012}.}
     \label{f:isoprene_emissions}%
-    \includegraphics[width=\textwidth]{img/isoprene_emissions}
+    \includegraphics[width=0.8\textwidth]{img/isoprene_emissions}
 \end{figure}
+Temperature-dependent emissions of isoprene were estimated using the MEGAN2.1 model for calculating the emissions of VOC from vegetation \citep{Guenther:2012}.
+Emissions from plants are dependent on variables including temperature, radiation and age but for the purpose of our study we are only interested in the effects of temperature, hence all variables except temprature were held constant.
 
-\subsection{Vertical Mixing with Diurnal Boundary Layer Height} \label{ss:vertical_mixing}
-%most likely include in supplement
-\begin{itemize}
-    \item The MECCA box model used in \citet{Coates:2015} included a constant boundary layer height of $1$~km and no interactions (vertical mixing) with the free troposphere.
-    \item The planetary boundary layer (PBL) height varies diurnally and affects chemistry by diluting emissions after sunrise when the PBL rises. The expansion of the PBL into the free troposphere introduces vertical mixing with those chemical species present in the free troposphere. When the PBL collapses in the evening, pollutants are trapped in the PBL.
-    \item The mixing layer height was measured as part of the BAERLIN campaign \todo{Reference Boris' paper} over the city of Berlin, Germany. The profile of mean mixing layer height during the campaign period (June -- August 2014) was used in the model to represent the diurnal cycle of the mixing layer height.
-    %\item Boris Bonn provided a parameterisation of the diurnal profile of the PBL height based on data from the CARES field campaign \citep{CARES:2008} \todo{check if reference correctly}. This parameterisation was then used to calculate the PBL height at every time point for the model run and then read into the boxmodel at each time point. Figure~\ref{f:PBL_profile} illustrates the diurnal profile used in this study.
-    \item The concentrations of the chemical species within the PBL are diluted due to the larger mixing volume when the PBL height increases at the beginning of the day, also the increasing PBL height mixes the chemical species from the free troposphere with the chemical species within the PBL i.e. vertical mixing. The PBL height collapses during night leaving the stable nocturnal boundary layer, trapping the chemical species into a smaller volume thus increasing the concentrations of the chemical species.
-    \item This vertical mixing scheme was implemented into the boxmodel using the same approach of \citet{Lourens:2012}.
-    \item The mixing ratios of O3, CO and CH4 in the free troposphere were respectively set to $50$ ppbv, $116$ ppbv and $1.8$ ppmv. These conditions were taken from the MATCH-MPIC chemical weather forecast model on the 21st March (the start date of the simulations). The model results (\url{http://cwf.iass-potsdam.de/}) at the 700 hPa height were chosen and the daily average was used as input into the boxmodel. \todo{check reference}
-    %\item Tagged free troposphere species were also included in the boxmodel to determine effect of free troposphere species on surface ozone levels.
-\end{itemize}
+The MEGAN2.1 parameters were chosen to give similar isoprene mixing ratios at $20$~\degree C to the temperature-independent emissions, enabling an adequate comparison of the effects of increased isoprene emissions from the temperature-independent case.
+The estimated emissions of isoprene with MEGAN2.1 using these assumptions, are illustrated in Fig.~\ref{f:isoprene_emissions} and show the expected exponential increase in emissions with temperature \citep{Guenther:2006}.
+
+To verify whether our inputs to calculating isoprene emissions using MEGAN2.1, we compare the simulated isoprene mixing ratios to those measured from over the urban area of Essen, Germany \citep{Wagner:2014}.
+At $20$~\degree C, the estimated emissions of isoprene lead to $0.07$~ppbv of isoprene in our model while at $30$~\degree C, the increased emissions of isoprene using MEGAN2.1 estimations lead to $0.35$~ppbv of isoprene in the model.
+In the measurement campaign over Essen, $0.1$~ppbv of isoprene were measured at temperatures of $20$~\degree C and $0.3$~ppbv of isoprene were measured at $30$~\degree C.
+This comparison indicates that the values chosen for calculating the temperature-dependent emissions of isoprene with MEGAN2.1 lead to reasonable values of isoprene mixing ratios.
