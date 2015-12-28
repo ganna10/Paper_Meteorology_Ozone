@@ -115,6 +115,8 @@ If reduced chemical mechanisms represent \ce{CH3O2NO2} chemistry then this would
     \caption{The maximum 8-h mean ozone from each box model experiment (temperature-dependent and temperature-independent isoprene emissions), allocated to the different \ce{NO_x} regimes for each chemical mechanisms (solid lines). The box model ozone-temperature relationship is compared to the summer 2007 ERA-Interim data (black circles) and to WRF-Chem simulations using MOZART-4 (purple boxes) and RADM2 (orange triangles).}%
     \label{f:comparison}%
     \begin{subfigure}[t]{\textwidth}%
+        \centering
+        \vspace{2mm}
         \caption{Ozone-Temperature relationship over central and eastern Germany}%
         \label{f:WRF_ERA_Germany}%
         \includegraphics[height=0.44\textheight]{img/Germany_O3-T_ERA_WRF_2007}%
@@ -127,6 +129,26 @@ If reduced chemical mechanisms represent \ce{CH3O2NO2} chemistry then this would
     \end{subfigure}%
 \end{figure}
 
+\begin{table}[t]%
+    \centering%
+    \caption{Slopes (m$_{\text{O3-T}}$ in ppbv ozone per \degree C) of the linear fit to the ozone-temperature relationships displayed in Fig.~\ref{f:comparison}}%
+    \label{t:mo3-t}%
+    \begin{subtable}[t]{\textwidth}%
+        \centering%
+        \vspace{2mm}%
+        \caption{Slope of linear fit of the ERA-Interim observational data and WRF-Chem model output using MOZART-4 and RADM2 chemistry over central and eastern Germany and western and central Poland.}%
+        \label{t:era_wrf_o3-T}%
+        \input{table_wrf_era_O3_T}%
+    \end{subtable}
+    \begin{subtable}[t]{\textwidth}%
+        \centering%
+        \vspace{2mm}
+        \caption{Slope of linear fit of box model experiments for each chemical mechanism, type of isoprene emissions allocated to the three \ce{NO_x}-regimes.}%
+        \label{t:boxmodel_o3-T}%
+        \input{table_regression_O3_T_stats}%
+    \end{subtable}
+\end{table} 
+
 Our next aim was to compare the results from the detailed box model simulations of this study to real-world observations.
 The study of \citet{Otero:2016} used the interpolated data set of \citet{Schnell:2015} of the ERA-Interim re-analysis data set \citep{Dee:2011} which includes the daily maximum temperature and daily maximum 8-h mean of ozone for the years 1998--2012.
 We were also in a position to compare our box model results to model simulations from the 3-D WRF-Chem regional model that was set-up over the European domain for the year 2007 using MOZART-4 and RADM2 chemistry \todo{Katie ref.}.
@@ -134,17 +156,19 @@ We have limited the ERA-Interim data to the summer (JJA) values as the \citet{Ot
 
 Figure~\ref{f:comparison} compares the summer 2007 data from observations (ERA-Interim), WRF-Chem model output and the maximum 8-hr mean ozone from the box model simulations using a temperature-independent and temperature-dependent source of isoprene emissions for each chemical mechanism and allocated to the different \ce{NO_x}-regimes.
 We have selected two regions of the gridded domains for both the observations and WRF-Chem output to central and eastern Germany (Fig.~\ref{f:WRF_ERA_Germany}) and central and western Poland (Fig.~\ref{f:WRF_ERA_Poland}) as the summertime ozone values are correlated with temperature \citep{Otero:2016}.
+Table~\ref{t:mo3-t} summarises the slopes (m$_{\text{O3-T}}$) of the linear fits of all the data displayed in Fig.~\ref{f:comparison} in ppbv of ozone per \degree C.
 
-The spread of the ERA-Interim ozone values over both Germany and Poland at the different temperatures are well captured by the combined WRF-Chem simulations using both MOZART-4 and RADM2 chemistry. 
+The large spread of the ERA-Interim ozone values over both Germany and Poland at the different temperatures are well captured by the combined WRF-Chem simulations using both MOZART-4 and RADM2 chemistry. 
 The ozone results from the WRF-Chem model using MOZART-4 chemistry re-produce the higher ozone values with temperature from ERA-Interim but not the lower values.
 On the other hand, the WRF-Chem simulations using RADM2 chemistry only reproduced the lower ozone values from the ERA-Interim data.
-Moreover, the ozone values at the lower end of the temperature range ($15$--$18$~\degree C) are not simulated with the WRF-Chem model with either MOZART-4 or RADM2 chemistry.
+The slopes of the WRF-Chem simulations using MOZART-4 chemistry are closer to the ERA-Interim data han the WRF-Chem simulations using RADM2 chemistry.
+However, the ozone values at the lower end of the temperature range ($15$--$18$~\degree C) are not simulated with the WRF-Chem model with either MOZART-4 or RADM2 chemistry.
 
-The box model simulations using a temperature-independent source of isoprene emissions does not fit the spread of ozone-temperature data from ERA-Interim.
-When using a temperature-dependent source of isoprene emissions, the ozone-temperature values from the ERA-Interim data over Germany and Poland have a better fit to the overall spread of the data set. \todo{fit values}
-The fit of the box model results is better in the Maximal-\ce{O3} and High-\ce{NO_x} regimes than in the Low-\ce{NO_x} regime; both Germany and Poland have large \ce{NO_x} emissions. \todo{value?}
+The box model simulations using a temperature-independent source of isoprene emissions does not reproduce the spread of ozone-temperature data from ERA-Interim, also indicated by the m$_{\text{O3-T}}$ values in Table~\ref{t:mo3-t}.
+When using a temperature-dependent source of isoprene emissions in the box model, the ozone-temperature values from the ERA-Interim data over Germany and Poland are reproduced slightly better as indicated by the m$_{\text{O3-T}}$ values in Table~\ref{t:mo3-t}.
+The slopes from the box model results is best in the High-\ce{NO_x}.
 
-Even in the box model results that have the best fit to the ERA-Interim data, the maximum 8-h mean ozone simulated by the box model are not as sensitive to temperature as the observations (and WRF-Chem simulations).
+However, even in the box model results that have the most similar m$_{\text{O3-T}}$ to the ERA-Interim data, the slopes with the box model data are half that of the ERA-Interim data over both Germany and Poland.
 In particular, the box model ozone values at lower temperatures are over-predicted while the ozone values at higher temperatures are under-predicted to the ERA-Interim data.
 
 One reason for the box model simulations being less sensitive to temperature than the observations are related to the set-up of the experiments.
