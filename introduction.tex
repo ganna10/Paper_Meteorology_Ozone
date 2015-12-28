@@ -1,27 +1,24 @@
-Surface-level ozone (\ce{O3}) is a secondary air pollutant formed from the photochemical degradation of volatile organic compounds (VOCs) in the presence of nitrogen oxides (\ce{NO_x}).
-Due to the photochemical nature of ozone production, meteorological factors such as temperature strongly influence ozone production \citep{Jacob:2009}.
+Surface-level ozone (\ce{O3}) is a secondary air pollutant formed during the photochemical degradation of volatile organic compounds (VOCs) in the presence of nitrogen oxides (\ce{NO_x} $\equiv$ NO + \ce{NO2}).
+Due to the photochemical nature of ozone production, meteorological variables such as temperature strongly influence ozone production \citep{Jacob:2009}.
+A study by \citet{Otero:2016} indicated that temperature is a major meteorological driver for ozone in many areas of central europe during the summertime.
 
-Temperature influences ozone production through temperature-dependent emissions of VOC from biogenic sources (anthropogenic emissions are typically not temperature dependent) and the reaction rates of many of the chemical reactions involved in producing ozone are also temperature dependent.
-The recent review of \citet{Pusede:2015} provides a detailed description of the temperature-dependent processes impacting ozone production.
-A recent study by \citet{Otero:2016} indicates that temperature is a major meteorological driver for ozone in central europe.
+Temperature primarily influences ozone production in two ways: speeding up the reaction rates of many chemical reactions leading to ozone production and increasing emissions of VOCs from biogenic sources (BVOCs).
+In general, emissions of anthropogenic VOCs (AVOCs) are not typically temperature dependent, although evaporative emissions of AVOCs tend to increase with temperature \citep{Rubin:2006}.
+The review of \citet{Pusede:2015} provides further details of the temperature-dependent processes impacting ozone production.
 
-Many studies over the US \citep{Sillman:1995a, Dawson:2007, Pusede:2014} have observed the relationship between ozone and temperature, noting that increased temperatures tend to lead to higher ozone levels, often exceeding local air quality guidelines.
-Some of these studies \citep{Sillman:1995a, Dawson:2007} include modelling experiments using regional chemical tranport models which have indeed verified the observed increases in ozone with temperature.
-The increase in the thermal decomposition rate of PAN (peroxy acetyl nitrate) with temperature is commonly cited for the increase of ozone with temperature.
+Many studies over the US \citep{Sillman:1995a, Dawson:2007, Pusede:2014} noted that increased temperatures tend to lead to higher ozone levels, often exceeding local air quality guidelines.
+Some studies \citep{Sillman:1995a, Dawson:2007} included modelling experiments using regional chemical tranport models simulating the observed increases in ozone with temperature.
+In these studies, the increase of ozone with temperature was attibuted to the decrease in the lifetime of PAN (peroxy acetyl nitrate) at higher temperatures and increased emissions of BVOCs, in particular isoprene, from vegetation.
 
-Environmental chamber studies have looked at the relationship of ozone with temperature using a particular mixture of VOCs.
-The chamber experiments of \citet{Carter:1979} and \citet{Hatakeyama:1991}, also showed inreases in ozone with temperature and have also linked this relationship to increased PAN decomposition at higher temperatures (T \textgreater 303~K).
-\citet{Hatakeyama:1991} looked primarily at the influence of \ce{HO2NO2} decomposition on ozone production and induced that at lower temperatures (T $<$ 303~K) \ce{HO2NO2} decomposition has a large influence on ozone production but the influence of PAN decomposition on ozone production increases with temperature.
+\citet{Pusede:2014} used an analytical model constrained by observations over San Joaquin Valley, California to infer a non-linear relationship of ozone production with temperature and \ce{NO_x}, similar to the well-known non-linear relationship of ozone production on \ce{NO_x} and VOC levels \citep{Sillman:1999}.
+Morever, \citet{Pusede:2014} showed that temperature can be used as a surrogate for VOC levels when considering the relationship of ozone across \ce{NO_x} gradients.
 
-\citet{Pusede:2014} used observations over the San Joaquin Valley, California to infer a non-linear relationship of ozone production with temperature and \ce{NO_x}, similar to the well-known non-linear relationship of ozone production on \ce{NO_x} and VOC levels \citep{Sillman:1999}.
-In fact, \citet{Pusede:2014} show that temperature can be used as a surrogate for VOC levels when looking at the relationship of ozone across \ce{NO_x} gradients.
-Moreover, the described relationship of ozone on both \ce{NO_x} and temperature needs to be considered when looking at effective stratgies to reduce levels of surface ozone.
+Environmental chamber studies have also been used to analyse the relationship of ozone with temperature for a particular mixture of VOCs.
+The chamber experiments of \citet{Carter:1979} and \citet{Hatakeyama:1991}, also showed inreases in ozone with temperature linked to increased PAN decomposition at higher temperatures (T \textgreater 303~K).
 
-Despite a wealth of studies looking at the effects of temperature on ozone chemistry, there have not been (to our knowledge) modelling studies focusing on these effects across different \ce{NO_x} gradients and whether the observed relationships are well-represented by different chemical mechanisms used in air quality models.
-The review of \citet{Pusede:2015} also highlights a lack of modelling studies looking at this non-linear relationship of ozone on temperature across \ce{NO_x} gradients.
+Despite many studies considering the effects of temperature on ozone production from an observational and chamber study perspective, there have not been (to our knowledge) modelling studies focusing on the detailed chemical processes of the influence of temperature on ozone production.
+Where regional modelling has accompanied observational studies, these have only considered the relationship of temperature on ozone under the same \ce{NO_x} conditions.
+The review of \citet{Pusede:2015} also highlights a lack of modelling studies looking at the non-linear relationship of ozone on temperature across \ce{NO_x} gradients.
+
 In this study, we use an idealised box model to determine how ozone levels vary with temperature and across \ce{NO_x} gradients.
-We separate the effects of temperature-dependent chemistry and VOC emissions on ozone production by performing simulations including a temperature-independent source of isoprene followed by simulations using a temperature-dependent source of isoprene. 
-
-The study of \citet{Rasmussen:2013} looking at the change of ozone with temperature in California (termed the ``Ozone-Climate Penalty'') indicates that changing the chemical mechanism used by a model may also change the Ozone-Climate Penalty and should be investigated.
-Finally, by repeating these simulations with different chemical mechanisms, we determine whether the temperature dependence of ozone production is reproduced across different \ce{NO_x} gradients in these chemical mechanisms.
-
+We separate the effects of temperature-dependent chemistry and temperature-dependent BVOC emissions on ozone production by performing simulations using a temperature-independent source of isoprene followed by simulations using a temperature-dependent source of isoprene at differing temperatures and \ce{NO_x} emissions. 
