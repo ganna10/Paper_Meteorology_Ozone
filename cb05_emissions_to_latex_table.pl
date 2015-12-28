@@ -1,28 +1,28 @@
 #! /usr/bin/env perl
 # Create LaTeX tables for each country
-# Version 0: Jane Coates 1/9/2015
+# Version 0: Jane Coates 28/12/2015
 
 use strict;
 use diagnostics;
 
-my $file = "Benelux_MOZART_Total_NMVOC_Emissions.csv";
+my $allocation_file = "Benelux_CB05_NMVOC_Allocation.csv";
 my %emissions;
 
-open my $in, '<:encoding(utf-8)', $file or die "Can't open $file for reading : $!";
+open my $in, '<:encoding(utf-8)', $allocation_file or die "Can't open $allocation_file for reading : $!";
 my @lines = <$in>;
 close $in;
 
-my $out_file = "table_MOZART_NMVOC_emissions.tex";
+my $out_file = "table_CB05_NMVOC_allocations.tex";
 open my $out, '>:encoding(utf-8)', $out_file or die $!;
-print $out "\\footnotesize\n";
-print $out "\\begin{longtable}{lllllll}\n";
-print $out "\t\\caption{Benelux AVOC and BVOC emissions, in molecules~cm\$^{-2}\$~s\$^{-1}\$, mapped from MCMv3.2 species into corresponding MOZART-4 species. Emissions were weighted by the carbon numbers of the respective species.}\\\\%\n";
+print $out "\\scriptsize\n";
+print $out "\\begin{longtable}{llllllllllllllllll}\n";
+print $out "\t\\caption{Allocation of MCMv3.2 species used to represent NMVOC emissions from Benelux allocated to CB05 species.}\\\\\n";
 print $out "\t\\hline \\hline\n";
 foreach my $line (@lines) {
     chomp $line;
     if ($line =~ /^Type/) {
-        $line = "\\multirow{2}{*}{\\textbf{Type}} & \\textbf{MCMv3.2} & \\textbf{MOZART-4} & \\multirow{2}{*}{\\textbf{Belgium}} & \\multirow{2}{*}{\\textbf{Netherlands}} & \\multirow{2}{*}{\\textbf{Luxembourg}} & \\multirow{2}{*}{\\textbf{Total}} \\\\\n";
-        $line .= " & \\textbf{Species} & \\textbf{Species} & & & & ";
+        $line = "\\multirow{2}{*}{\\textbf{Type}} & \\textbf{MCMv3.2} & \\multirow{2}{*}{\\textbf{PAR}} & \\multirow{2}{*}{\\textbf{OLE}} & \\multirow{2}{*}{\\textbf{TOL}} & \\multirow{2}{*}{\\textbf{XYL}} & \\multirow{2}{*}{\\textbf{FORM}} & \\multirow{2}{*}{\\textbf{ALD2}} & \\multirow{2}{*}{\\textbf{ALDX}} & \\multirow{2}{*}{\\textbf{MEOH}} & \\multirow{2}{*}{\\textbf{ETOH}} & \\multirow{2}{*}{\\textbf{FACD}} & \\multirow{2}{*}{\\textbf{AACD}} & \\multirow{2}{*}{\\textbf{ETH}} & \\multirow{2}{*}{\\textbf{ETHA}} & \\multirow{2}{*}{\\textbf{IOLE}} & \\multirow{2}{*}{\\textbf{ISOP}} & \\multirow{2}{*}{\\textbf{TERP}} \\\\\n";
+        $line .= "& \\textbf{Species} & & & & & & & & & & & & & & & & ";
         $line .= "\\\\\n\t\\endhead\n\t\\hline";
         print $out "\t", $line, "\n";
         next;
@@ -85,12 +85,12 @@ foreach my $line (@lines) {
         $line =~ s/$/ \\hline/;
     }
     #remove pagebreaks from certain categories
-    if ($line =~ /HCOOH|CH3CO2H|CH3OCH3|DIETETHER/) {
+    if ($line =~ /HEX1ENE|BUT1ENE|MEPROPENE|EBENZ|PBENZ|ETHTOL/) {
         $line =~ s/$/*/;
     }
     print $out "\t", $line, "\n";
 }
 print $out "\t\\hline \\hline\n";
-print $out "\t\\label{t:MOZART_NMVOC_emissions}\n";
-print $out "\\end{longtable}";
+print $out "\t\\label{t:CB05_NMVOC_allocations}\n";
+print $out "\\end{longtable}\n";
 close $out;

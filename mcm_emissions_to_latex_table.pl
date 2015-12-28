@@ -17,7 +17,7 @@ my $out_file = "${country}_MCM_emissions.tex";
 open my $out, '>:encoding(utf-8)', $out_file or die $!;
 print $out "\\tiny\n";
 print $out "\\begin{longtable}{lllllllllllllll}\n";
-print $out "\t\\caption{$country AVOC and BVOC emissions, in molecules~cm\$^{-2}\$~s\$^{-1}\$, mapped to MCM~v3.2 species.}\\\\%\n";
+print $out "\t\\caption{$country AVOC and BVOC emissions, in molecules~cm\$^{-2}\$~s\$^{-1}\$, mapped to MCMv3.2 species.}\\\\%\n";
 print $out "\t\\hline \\hline\n";
 foreach my $line (@lines) {
     chomp $line;

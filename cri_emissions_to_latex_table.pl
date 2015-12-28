@@ -1,27 +1,27 @@
 #! /usr/bin/env perl
 # Create LaTeX tables for each country
-# Version 0: Jane Coates 1/9/2015
+# Version 0: Jane Coates 28/12/2015
 
 use strict;
 use diagnostics;
 
-my $file = "Benelux_MOZART_Total_NMVOC_Emissions.csv";
+my $file = "Benelux_CRI_Total_NMVOC_Emissions.csv";
 my %emissions;
 
 open my $in, '<:encoding(utf-8)', $file or die "Can't open $file for reading : $!";
 my @lines = <$in>;
 close $in;
 
-my $out_file = "table_MOZART_NMVOC_emissions.tex";
+my $out_file = "table_CRI_NMVOC_emissions.tex";
 open my $out, '>:encoding(utf-8)', $out_file or die $!;
 print $out "\\footnotesize\n";
 print $out "\\begin{longtable}{lllllll}\n";
-print $out "\t\\caption{Benelux AVOC and BVOC emissions, in molecules~cm\$^{-2}\$~s\$^{-1}\$, mapped from MCMv3.2 species into corresponding MOZART-4 species. Emissions were weighted by the carbon numbers of the respective species.}\\\\%\n";
+print $out "\t\\caption{Benelux AVOC and BVOC emissions, in molecules~cm\$^{-2}\$~s\$^{-1}\$, mapped from MCMv3.2 species into corresponding CRIv2 species. Emissions were weighted by the carbon numbers of the respective species.}\\\\%\n";
 print $out "\t\\hline \\hline\n";
 foreach my $line (@lines) {
     chomp $line;
     if ($line =~ /^Type/) {
-        $line = "\\multirow{2}{*}{\\textbf{Type}} & \\textbf{MCMv3.2} & \\textbf{MOZART-4} & \\multirow{2}{*}{\\textbf{Belgium}} & \\multirow{2}{*}{\\textbf{Netherlands}} & \\multirow{2}{*}{\\textbf{Luxembourg}} & \\multirow{2}{*}{\\textbf{Total}} \\\\\n";
+        $line = "\\multirow{2}{*}{\\textbf{Type}} & \\textbf{MCMv3.2} & \\textbf{CRIv2} & \\multirow{2}{*}{\\textbf{Belgium}} & \\multirow{2}{*}{\\textbf{Netherlands}} & \\multirow{2}{*}{\\textbf{Luxembourg}} & \\multirow{2}{*}{\\textbf{Total}} \\\\\n";
         $line .= " & \\textbf{Species} & \\textbf{Species} & & & & ";
         $line .= "\\\\\n\t\\endhead\n\t\\hline";
         print $out "\t", $line, "\n";
@@ -91,6 +91,6 @@ foreach my $line (@lines) {
     print $out "\t", $line, "\n";
 }
 print $out "\t\\hline \\hline\n";
-print $out "\t\\label{t:MOZART_NMVOC_emissions}\n";
+print $out "\t\\label{t:CRI_NMVOC_emissions}\n";
 print $out "\\end{longtable}";
 close $out;
