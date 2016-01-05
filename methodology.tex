@@ -12,13 +12,13 @@ Model runs were repeated using a temperature-dependent and temperature-independe
 MEGAN2.1 \citep{Guenther:2012} specified the temperature-dependent BVOC emissions of isoprene and Sect.~\ref{ss:megan} provides further details. 
 We considered only isoprene emissions from vegetation as isoprene emissions are the most important on the global scale \citep{Guenther:2006}. 
 Only temperature-dependent emissions of isoprene were considered, all other emissions were constant in all simulations.
-In reality, many other BVOC are emitted from varying vegetation types \citep{Guenther:2006} and increased temperature can also increase AVOC emissions through increased evaporation \citep{Rubin:2006}.
+In reality, many other BVOC are emitted from varying vegetation types \citep{Guenther:2006} and increased temperature can also increase AVOC emissions through increased \mbox{evaporation \citep{Rubin:2006}}.
 
-All simulations were repeated using different chemical mechanisms to investigate how well the relationship of ozone with temparture across \ce{NO_x} gradients is represented by the different representation of ozone production chemistry.
-The reference chemical mechanism was the near-explicit Master Chemical Mechanism, MCMv3.2, \citep{Jenkin:1997}, \citep{Jenkin:2003}, \citep{Saunders:2003}, \citep{MCM_Site}.
+All simulations were repeated using different chemical mechanisms to investigate how well the relationship of ozone with temperature across \ce{NO_x} gradients is represented by different representations of ozone production chemistry.
+The reference chemical mechanism was the near-explicit Master Chemical Mechanism, MCMv3.2, \citep{Jenkin:1997, Jenkin:2003, Saunders:2003, MCM_Site}.
 The reduced chemical mechanisms in our study were Common Representative Intermediates, CRIv2 \citep{Jenkin:2008}, Model for ozone and related chemical tracers, MOZART-4 \citep{Emmons:2010}, Regional Acid Deposition Model, RADM2 \citep{Stockwell:1990} and the Carbon Bond Mechanism, CB05 \citep{Yarwood:2005}. 
 \citet{Coates:2015} described these chemical mechanisms and the implementation of these chemical mechanisms in MECCA.
-These reduced chemical mechanisms were chosen as they are commonly used by modelling groups in 3D regional and global models.
+These reduced chemical mechanisms were chosen as they are commonly used by modelling groups in 3D regional and global models \citep{Baklanov:2014}.
 
 Box model simulations were performed by systematically varying the temperature between $288$ and $313$~K ($15$~--~$40$~\degree C). 
 The only source of \ce{NO_x} emissions in the box model was a constant source of NO emissions. 
@@ -38,7 +38,7 @@ At $20$~\degree C, these NO emissions corresponded to peak \ce{NO_x} mixing rati
 Emissions of urban AVOC over central Europe were taken from TNO-MACC\_III emission inventory for the Benelux (Belgium, Netherlands and Luxembourg) region for the year 2011.
 TNO-MACC\_III is the updated version of the TNO-MACC\_II emission inventory created using the same methodology as \citet{Kuenen:2014} and based upon improvements to the existing emission inventory during AQMEII-2 \citep{Pouliot:2015}. 
 
-Temperature-independent emissions of the BVOC, isoprene and monoterpenes, were calculated as a fraction of the total AVOC emissions from each country in the Benelux region.
+Temperature-independent emissions of isoprene and monoterpenes from biogenic sources were calculated as a fraction of the total AVOC emissions from each country in the Benelux region.
 This data was obtained from the supplementary data available from the EMEP (European Monitoring and Evaluation Programme) model \citep{Simpson:2012}.
 Temperature-dependent emissions of isoprene are detailed in Sect.~\ref{ss:megan}.
 
@@ -49,7 +49,7 @@ Most individual chemical species are represented by the MCMv3.2, otherwise the i
 For example, `xylenes' are one of the component chemical groups in many SNAP categories but the MCMv3.2 treats xylenes as the individual isomers (m-, o-, p-xylene) and the contributions of the individual isomers to a SNAP category was provided by \citet{Passant:2002}.
 This approach was also used in \citet{vonSchneidemesser:2015} to allocate AVOC emissions from different solvent sector speciations to MCMv3.2 species.
 
-Again similar to \citet{vonSchneidemesser:2015}, the VOC emissions were first assigned to chemical species represented by the MCMv3.2 and then mapped to the mechanism species representing VOC emissions in each reduced chemical mechanism.
+The VOC emissions represented by the MCMv3.2 were mapped to the mechanism species representing VOC emissions in each reduced chemical mechanism based on the recommendations of the source literature.
 The VOC emissions in the reduced chemical mechanisms were weighted by the carbon numbers of the MCMv3.2 species and the emitted mechanism species. 
 The supplementary data outlines the primary VOC and calculated emissions with each chemical mechanism.
 
@@ -58,9 +58,9 @@ The supplementary data outlines the primary VOC and calculated emissions with ea
     \centering%
     \caption{The estimated isoprene emissions (molecules~isoprene~cm$^{-2}$~s$^{-1}$) using MEGAN2.1 at each temperature used in the study.}
     \label{f:isoprene_emissions}%
-    \includegraphics[width=\textwidth]{img/isoprene_emissions}
+    \includegraphics[scale = 0.8]{img/isoprene_emissions}
 \end{figure}
-Temperature-dependent emissions of isoprene were estimated using the MEGAN2.1 model for calculating the emissions of VOC from vegetation \citep{Guenther:2012}.
+Temperature-dependent emissions of isoprene were estimated using the MEGAN2.1 algorithm for calculating the emissions of VOC from vegetation \citep{Guenther:2012}.
 Emissions from plants are dependent on variables including temperature, radiation and age but for the purpose of our study all variables except temperature were held constant.
 
 The MEGAN2.1 parameters were chosen to give similar isoprene mixing ratios at $20$~\degree C to the temperature-independent emissions of isoprene in order to compare the effects of increased isoprene emissions with temperature.
