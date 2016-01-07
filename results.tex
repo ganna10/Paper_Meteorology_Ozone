@@ -51,7 +51,7 @@ RADM2 produces $3$~ppbv less ozone than the MCMv3.2 due to increased isoprene em
 
 The Tagged Ozone Production Potential (TOPP) defined in \citet{Butler:2011} is a measure of the number of molecules of ozone produced per molecule of VOC emitted.
 \citet{Coates:2015} compared ozone production in different chemical mechanisms to the MCMv3.2 using TOPPs and showed that less ozone is produced per molecule of isoprene emitted using RADM2 than with MCMv3.2.
-The degradation of isoprene has been extensively studied and it is well-known that methyl vinyl ketone (MVK) and methacrolein are signatures of isoprene degradation. \todo[noline]{reference}
+The degradation of isoprene has been extensively studied and it is well-known that methyl vinyl ketone (MVK) and methacrolein are signatures of isoprene degradation \citep{Atkinson:2000}.
 All chemical mechanisms in our study except RADM2 explicitly represent MVK and methacrolein (or in the case of CB05, a lumped species representing both these secondary degradation products).
 RADM2 does not represent methacrolein and the mechanism species representing ketones (KET) is a mixture of acetone and methyl ethyl ketone (MEK) \citep{Stockwell:1990}. 
 Thus the secondary degradation of isoprene in RADM2 is unable to represent the ozone production from the further degradation of the signature secondary degradation products of isoprene, MVK and methacrolein.
@@ -113,9 +113,7 @@ In fact when removing the contribution of \ce{CH3O2NO2} to normalised \ce{RO2NO2
 Including \ce{CH3O2NO2} chemistry in reduced chemical mechanisms would improve the representation of the total \ce{RO2NO2} production having the added benefit of improving the representation of \ce{O_x} production budgets in Fig.~\ref{f:ozone_budgets}.
 
 \subsection{Comparison to Observations and 3D Model Simulations} \label{ss:r_observations}
-\todo[inline]{check differences in emissions from TNO in 2007 and 2011}
-
-\begin{figure}%
+ \begin{figure}%
     \centering%
     \caption{The maximum 8~h mean ozone from the box model simulations allocated to the different \ce{NO_x} regimes for each chemical mechanisms (solid lines). The box model ozone-temperature correlation is compared to the summer 2007 ERA-Interim data (black circles) and WRF-Chem output using MOZART-4 (purple boxes) and RADM2 (orange triangles).}%
     \label{f:comparison}%
