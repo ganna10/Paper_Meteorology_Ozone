@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="518.53998"
+   height="32.186913"
+   id="svg59392"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="New document 10">
+  <defs
+     id="defs59394" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="291.40761"
+     inkscape:cy="78.944456"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1023"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata59397">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-83.592391,-579.11973)">
+    <g
+       id="g59279"
+       transform="matrix(1.25,0,0,-1.25,-50.860531,1195.9166)">
+      <g
+         id="g59230">
+        <path
+           inkscape:connector-curvature="0"
+           id="path9018-0"
+           style="fill:none;stroke:#000000;stroke-width:1.51514494;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+           d="m 119.37045,488.54921 c 0,-5.49599 -7.52088,-5.49599 -7.52088,0 0,5.49428 7.52088,5.49428 7.52088,0" />
+        <text
+           xml:space="preserve"
+           style="font-size:28.79999924px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Sans"
+           x="122.96673"
+           y="-484.59497"
+           id="text59150"
+           sodipodi:linespacing="125%"
+           transform="scale(1,-1)"><tspan
+             sodipodi:role="line"
+             id="tspan59152"
+             x="122.96673"
+             y="-484.59497"
+             style="font-size:11.19999981px;font-weight:bold;-inkscape-font-specification:Nimbus Sans L Bold">ERA-Interim</tspan></text>
+      </g>
+      <g
+         transform="translate(-0.49174805,0)"
+         id="g59235">
+        <path
+           inkscape:connector-curvature="0"
+           id="path55784"
+           style="fill:none;stroke:#6c254f;stroke-width:3.9973762;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+           d="m 228.57843,488.54857 19.42157,0" />
+        <text
+           xml:space="preserve"
+           style="font-size:11.19999981px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#6c254f;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Sans Bold"
+           x="252"
+           y="-484.52777"
+           id="text59158"
+           sodipodi:linespacing="125%"
+           transform="scale(1,-1)"><tspan
+             sodipodi:role="line"
+             id="tspan59160"
+             x="252"
+             y="-484.52777">MCMv3.2</tspan></text>
+      </g>
+      <g
+         transform="translate(-15.249243,0)"
+         id="g59240">
+        <text
+           xml:space="preserve"
+           style="font-size:11.19999981px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#2b9eb3;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Sans Bold"
+           x="375.64166"
+           y="-484.52777"
+           id="text59166"
+           sodipodi:linespacing="125%"
+           transform="scale(1,-1)"><tspan
+             sodipodi:role="line"
+             id="tspan59168"
+             x="375.64166"
+             y="-484.52777">MOZART-4</tspan></text>
+        <path
+           inkscape:connector-curvature="0"
+           id="path55784-7"
+           style="fill:none;stroke:#2b9eb3;stroke-width:3.9973762;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+           d="m 352.6845,488.54857 19.42157,0" />
+      </g>
+      <g
+         transform="translate(0,9.6)"
+         id="g59265">
+        <g
+           id="g59260">
+          <path
+             d="m 108.59142,466.14716 10.49916,0 0,-7.02152 -10.49916,0 0,7.02152 z"
+             style="fill:none;stroke:#7570b3;stroke-width:2.07488489;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+             id="path9048-0"
+             inkscape:connector-curvature="0" />
+          <text
+             transform="scale(1,-1)"
+             sodipodi:linespacing="125%"
+             id="text59154"
+             y="-458.6156"
+             x="123.70592"
+             style="font-size:28.79999924px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:11.19999981px;font-weight:bold;fill:#7570b3;-inkscape-font-specification:Nimbus Sans L Bold"
+               y="-458.6156"
+               x="123.70592"
+               id="tspan59156"
+               sodipodi:role="line">WRF-Chem</tspan></text>
+        </g>
+        <g
+           id="g59255"
+           transform="translate(-0.49174805,0)">
+          <text
+             transform="scale(1,-1)"
+             sodipodi:linespacing="125%"
+             id="text59162"
+             y="-458.6156"
+             x="252.2464"
+             style="font-size:11.19999981px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ef6638;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Sans Bold"
+             xml:space="preserve"><tspan
+               y="-458.6156"
+               x="252.2464"
+               id="tspan59164"
+               sodipodi:role="line">CRIv2</tspan></text>
+          <path
+             d="m 228.57843,462.6364 19.42157,0"
+             style="fill:none;stroke:#ef6638;stroke-width:3.9973762;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+             id="path55784-4"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g59250"
+           transform="translate(-15.495493,0)">
+          <text
+             transform="scale(1,-1)"
+             sodipodi:linespacing="125%"
+             id="text59174"
+             y="-458.6156"
+             x="375.88806"
+             style="font-size:11.19999981px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#0e5c28;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Sans Bold"
+             xml:space="preserve"><tspan
+               y="-458.6156"
+               x="375.88806"
+               id="tspan59176"
+               sodipodi:role="line">CB05</tspan></text>
+          <path
+             d="m 352.93075,462.6364 19.42157,0"
+             style="fill:none;stroke:#0e5c28;stroke-width:3.9973762;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+             id="path55784-76"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+      <g
+         id="g59245">
+        <text
+           xml:space="preserve"
+           style="font-size:11.19999981px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#f9c500;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Sans Bold"
+           x="483.00443"
+           y="-484.46616"
+           id="text59170"
+           sodipodi:linespacing="125%"
+           transform="scale(1,-1)"><tspan
+             sodipodi:role="line"
+             id="tspan59172"
+             x="483.00443"
+             y="-484.46616">RADM2</tspan></text>
+        <path
+           inkscape:connector-curvature="0"
+           id="path55784-764"
+           style="fill:none;stroke:#f9c500;stroke-width:3.9973762;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+           d="m 460.57843,488.54857 19.42157,0" />
+      </g>
+    </g>
+  </g>
+</svg>
