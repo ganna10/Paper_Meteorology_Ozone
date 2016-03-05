@@ -19,7 +19,7 @@ The reduced chemical mechanisms in our study were Common Representative Intermed
 \citet{Coates:2015} described these chemical mechanisms and the implementation of these chemical mechanisms in MECCA.
 These reduced chemical mechanisms were chosen as they are commonly used by modelling groups in 3D regional and global models \citep{Baklanov:2014}.
 
-Model runs were repeated using a temperature-dependent and temperature-independent source of BVOC emissions to determine whether increased emissions of BVOC or faster chemistry is more important for the increase of ozone with temperature. 
+Model runs were repeated using a temperature-dependent and temperature-independent source of BVOC emissions to determine whether increased emissions of BVOC or faster reaction rates of chemical processes is more important for the increase of ozone with temperature. 
 MEGAN2.1 \citep{Guenther:2012} specified the temperature-dependent BVOC emissions of isoprene, Sect.~\ref{ss:megan} provides further details. 
 As isoprene emissions are the most important on the global scale, we considered only isoprene emissions from vegetation \citep{Guenther:2006}. 
 Only isoprene emissions were dependent on temperature, all other emissions were constant in all simulations.
@@ -42,7 +42,7 @@ Temperature-independent emissions of isoprene and monoterpenes from biogenic sou
 This data was obtained from the supplementary data available from the EMEP (European Monitoring and Evaluation Programme) model \citep{Simpson:2012}.
 Temperature-dependent emissions of isoprene are detailed in Sect.~\ref{ss:megan}.
 
-AVOC emissions were allocated to source categories defined by the different SNAP (Selected Nomenclature for Air Pollution) categories.
+AVOC emissions were allocated to source categories.
 Table~\ref{t:emissions} shows the quantity of VOC emissions from each source category and the temperature-independent BVOC emissions.
 These categorised AVOC emissions were assigned to chemical species and groups based on the country specific profiles for Belgium, the Netherlands and Luxembourg provided by TNO.
 Most individual chemical species are represented by the MCMv3.2, otherwise the individual contributions of a group of VOC were further split into individual components using the detailed speciation of \citet{Passant:2002}.
@@ -61,7 +61,7 @@ The supplementary data outlines the primary VOC and calculated emissions with ea
     \includegraphics[scale = 0.8]{img/isoprene_emissions}
 \end{figure}
 Temperature-dependent emissions of isoprene were estimated using the MEGAN2.1 algorithm for calculating the emissions of VOC from vegetation \citep{Guenther:2012}.
-Emissions from nature are dependent on variables including temperature, radiation and age but for the purpose of our study all variables except temperature were held constant.
+Emissions from nature are dependent on many variables including temperature, radiation and age but for the purpose of our study all variables except temperature were held constant.
 
 The MEGAN2.1 parameters were chosen to give similar isoprene mixing ratios at $20$~\degree C to the temperature-independent emissions of isoprene in order to compare the effects of increased isoprene emissions with temperature.
 The estimated emissions of isoprene with MEGAN2.1 using these assumptions are illustrated in Fig.~\ref{f:isoprene_emissions} and show the expected exponential increase in isoprene emissions with temperature \citep{Guenther:2006}.
