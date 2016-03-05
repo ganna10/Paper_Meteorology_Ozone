@@ -85,18 +85,18 @@ An increase of ozone with temperature goes hand in hand with an increase of OH w
     && \ce{O3 + h\nu} \rightarrow \ce{O(^1D) + O2} \\ \label{r:O3_hv} 
     && \ce{O(^1D) + H2O} \rightarrow \ce{OH + OH} \label{r:O1D_H2O}
 \end{rxnarray}
-Furthermore, the increase of \ce{HO2} radical formation from enhanced formaldehyde production during secondary degradation of VOCs recycles OH at at faster rate with temperature when reacting with NO.
+Furthermore, enhanced formaldehyde production from the faster oxidation of VOCs increases \ce{HO2} formation which speeds up the reaction rate of the reaction of \ce{HO2} and NO.
 \begin{rxnarray}
     && \ce{HO2 + NO} \rightarrow \ce{NO2 + OH} \label{r:HO2_NO}
 \end{rxnarray}
-Reaction \ref{r:HO2_NO} is responsible for both ozone production and OH recycling further illustrating the strong coupling of ozone and OH production.
+\eqref{r:HO2_NO} is responsible for both ozone production (due to \ce{NO2} production) and OH recycling further illustrating the strong coupling of ozone and OH production.
 
 The net effect of peroxy nitrates on \ce{O_x} budgets in our study is negligible, contributing to a loss of $\sim0.1$~molecules of \ce{O_x} per VOC oxidised at $40$~\degree C from $20$~\degree C.
 Peroxynitrates are produced from the reactions of acyl peroxy radicals with \ce{NO2} and are an important reservoir of peroxy radicals and \ce{NO_x}.
 The decomposition rate of peroxy nitrates is strongly temperature dependent and at higher temperatures the faster decomposition rate of \ce{RO2NO2} leads to faster release of peroxy radicals and \ce{NO_x} influencing ozone production.
-The lack of influence of RO2NO2 on \ce{O_x} budgets is surprising as many other studies cite the decrease in the lifetime of peroxy nitrates as one of the most important factors for the increase of ozone with temperature.
+The lack of influence of RO2NO2 on \ce{O_x} budgets in Fig.~\ref{f:ozone_budgets} is surprising as many other studies cite the decrease in the lifetime of peroxy nitrates as one of the most important factors for the increase of ozone with temperature.
 For example, \citet{Dawson:2007} attributed the increase in ozone with temperature during a modelling study over the eastern US to the decrease in PAN lifetime with temperature.
-\citet{Steiner:2006} also recognised that the decrease in PAN lifetime with temperature may contribute to the increase of ozone with temperature and concluded that the combined effects of increased VOC reactivity and PAN decomposition are most likely to increase the production of ozone with tempeature.
+\citet{Steiner:2006} also recognised that the decrease in PAN lifetime with temperature may contribute to the increase of ozone with temperature and concluded that the combined effects of increased VOC reactivity and PAN decomposition are most likely to increase the production of ozone with temperature.
 
 \subsection{Comparison to Observations and 3D Model Simulations} \label{ss:r_observations}
  \begin{figure}%
@@ -149,10 +149,10 @@ We selected two regions from the observations and WRF-Chem output, central and e
 Table~\ref{t:mo3-t} summarises the slopes (m$_{\text{O3-T}}$) of the linear fits of all the ozone-temperature correlations displayed in Fig.~\ref{f:comparison} in ppbv of ozone per \degree C determining the rate of change of ozone with temperature.
 
 The spread of the observed ozone-temperature values over both Germany and Poland are generally captured by the WRF-Chem simulation.
-However, the ozone-temperature data from WRF-Chem reproduces the higher ozone values with temperature from ERA-Interim but not the lower values.
+However, WRF-Chem only reproduces the higher observed values of ozone with temperature and not the lower values.
 The rate of change of ozone with temperature from the WRF-Chem simulations is similar to the rate of change of ozone with temperature from the observed data (Table~\ref{t:era_wrf_o3-T}).
 
-The differences in ozone production between the different chemical mechanisms with the box model are small compared to the spread of the ERA-Interim and WRF-Chem data.
+The differences in ozone production between the different chemical mechanisms with the box model are small compared to the spread of the observational and WRF-Chem data.
 When using a temperature-dependent source of isoprene emissions in the box model, the rate of change of ozone with temperature in the box model approaches that of the observed data, although still less than half that of the observations.
 The box model simulations using a temperature-independent source of isoprene emissions do not reproduce the range of observed ozone-temperature values (Table~\ref{t:mo3-t}).
 
@@ -161,8 +161,8 @@ In particular, the box model simulations over-predict the ozone values at lower 
 Similarly, the rate of change of ozone with temperature in the box model is less-sensitive than WRF-Chem.
 
 The main reason for the box model simulations being less sensitive to temperature than the observations and WRF-Chem simulation is related to the set-up of the box model.
-In our simulations, we focused on instantaneous production of ozone from a freshly-emitted source of VOC and do not consider stagnant atmospheric conditions which are characteristed by high temperatures and low wind speeds slowing the transport of ozone and its precursors away from sources.
-\citet{Otero:2016} showed that the previous day's ozone was also an important driver for observed ozone production over Europe also \citet{Jacob:1993} correlated high-ozone episodes in the summer over eastern US to regional stagnation.
+In our simulations, we focused on instantaneous production of ozone from a freshly-emitted source of VOC and do not consider stagnant atmospheric conditions characteristed by high temperatures and low wind speeds slowing the transport of ozone and its precursors away from sources.
+\citet{Otero:2016} showed that the previous day's ozone was also an important driver for observed ozone production over Europe and \citet{Jacob:1993} correlated high-ozone episodes in the summer over eastern US to regional stagnation.
 
 Stagnation is an example of how the coupling of meteorological variables (in this case temperature and wind speed) impact ozone production.
 In observational studies, which consider the total derivative of ozone with temperature, the direct effects of temperature (e.g. increasing reaction rates, emissions from vegetation) and indirect (e.g. heatwaves characterised by high temperatures and low wind speed) effects of temperature on ozone are not easily separated.
