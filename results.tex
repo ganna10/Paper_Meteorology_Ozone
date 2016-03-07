@@ -11,6 +11,7 @@
     \caption{Ozone mixing ratios (ppbv) at each temperature are allocated to different \ce{NO_x}-regimes of Fig.~\ref{f:ozone_contours}. The differences in ozone mixing ratios due to chemistry (solid line) and emissions (dotted line) are represented graphically for MOZART-4 with High-\ce{NO_x} conditions and summarised in Table~\ref{t:differences}, the approach was used to calculate the differences with each chemical mechanism.}%
     \label{f:O3-T}%
     \includegraphics[width=\textwidth]{img/O3-T_correlation}%
+    \vspace{-4mm}
 \end{figure}
 
 \begin{table}%
@@ -18,11 +19,12 @@
     \caption{Increase in ozone mixing ratio (ppbv) due to chemistry and emissions at $40$~\degree C from reference temperature ($20$~\degree C) in the \ce{NO_x}-regimes of Fig.~\ref{f:O3-T}.}%
     \label{t:differences}%
     \input{table_differences_td_ti}%
+    \vspace{-4mm}
 \end{table}
 
 Figure~\ref{f:ozone_contours} depicts the maximum mixing ratio of ozone as a function of the total \ce{NO_x} emissions on the first day of simulations and temperature when using a temperature-independent and temperature-dependent source of isoprene emissions for each chemical mechanism.
 A non-linear relationship of ozone mixing ratios with \ce{NO_x} and temperature is reproduced by each chemical mechanism.
-This non-linear relationship is similar to that determined by \citet{Pusede:2014} using an analytical model constrained to observational measurements over the San Joaquin Valley in California.
+This non-linear relationship is similar to that determined by \citet{Pusede:2014} using an analytical model constrained to observational measurements over San Joaquin Valley, California.
 
 Higher ozone mixing ratios are produced when using a temperature-dependent source of isoprene emissions (Fig.~\ref{f:ozone_contours}).
 The highest mixing ratios of ozone are produced at high temperatures and moderate emissions of \ce{NO_x} regardless of the source of isoprene emissions.
@@ -35,14 +37,14 @@ This is the Maximal-\ce{O3} regime.
 \citet{Pusede:2014} showed that temperature can be used as a proxy for VOC, thus we assigned the ozone mixing ratios from each box model simulation to a \ce{NO_x} regime based on the ratio of \ce{HNO3} to \ce{H2O2}.
 This ratio was used by \citet{Sillman:1995} to designate ozone to \ce{NO_x} regimes based on \ce{NO_x} and VOC levels.
 
-Fig.~\ref{f:O3-T} illustrates the mean ozone mixing ratio at each temperature in the \ce{NO_x} regimes for each chemical mechanism and each type of isoprene emissions (temperature independent and temperature dependent).  
+Figure~\ref{f:O3-T} illustrates the mean ozone mixing ratio at each temperature in the \ce{NO_x} regimes for each chemical mechanism and each type of isoprene emissions (temperature independent and temperature dependent).  
 We define the absolute increase in ozone at $40$~\degree C from $20$~\degree C due to faster reaction rates as the difference between ozone mixing ratios at $40$~\degree C and $20$~\degree C when using a temperature-independent source of isoprene emissions.
 When using a temperature-dependent source of isoprene emissions, the difference in ozone mixing ratios at $40$~\degree C from $20$~\degree C minus the increase due to faster chemistry, gives the absolute increase in ozone due to increased isoprene emissions.
 These differences are represented graphically in Fig.~\ref{f:O3-T} and summarised in Table~\ref{t:differences}.
 
 Table~\ref{t:differences} shows that the absolute increase in ozone with temperature due to chemistry (i.e.~faster reaction rates) is larger than the absolute increase in ozone due to increased isoprene emissions for each chemical mechanism and each \ce{NO_x} regime.
 In all cases the absolute increase in ozone is largest under High-\ce{NO_x} conditions and lowest with Low-\ce{NO_x} conditions (Fig.~\ref{f:O3-T} and Table~\ref{t:differences}).
-The increase in ozone mixing ratio at $40$~\degree C from $20$~\degree C due to faster reaction rates with High-\ce{NO_x} conditions is almost double that under Low-\ce{NO_x} conditions.
+The increase in ozone mixing ratio at $40$~\degree C from $20$~\degree C due to faster reaction rates with High-\ce{NO_x} conditions is almost double that with Low-\ce{NO_x} conditions.
 
 In the Low-\ce{NO_x} regime, the increase of ozone with temperature using the reduced chemical mechanisms (CRIv2, MOZART-4, CB05 and RADM2) is similar to that from the MCMv3.2, larger differences occur in the Maximal-\ce{O3} and High-\ce{NO_x} regimes.
 All reduced chemical mechanisms except RADM2 have similar increases in ozone due to increased isoprene emissions to MCMv3.2 (Table~\ref{t:differences}).
@@ -59,44 +61,50 @@ Updated versions of RADM2, RACM \citep{Stockwell:1997} and RACM2 \citep{Goliff:2
 \subsection{Ozone Production Budgets} \label{ss:r_budgets}
 \begin{figure}[t]%
     \centering%
-    \caption{Day-time budgets of \ce{O_x} normalised by the total oxidation rate of emitted VOC in the \ce{NO_x}-regimes of Fig.~\ref{f:O3-T}. The white line indicates net production or consumption of \ce{O_x}. The net contribution of reactions to \ce{O_x} budgets are allocated to categories of deposition, inorganic reactions, peroxy nitrates (RO2NO2), reactions of NO with HO2, alkyl peroxy radicals (RO2) and acyl peroxy radicals (ARO2). All other reactions contributing to \ce{O_x} budgets are allocated to the `Other Organic' category.}%
+    \caption{Day-time budgets of \ce{O_x} normalised by the total loss rate of emitted VOC in the \ce{NO_x}-regimes of Fig.~\ref{f:O3-T}. The white line indicates net production or consumption of \ce{O_x}. The net contribution of reactions to \ce{O_x} budgets are allocated to categories of deposition, inorganic reactions, peroxy nitrates (RO2NO2), reactions of NO with HO2, alkyl peroxy radicals (RO2) and acyl peroxy radicals (ARO2). All other reactions are allocated to the `Other Organic' category.}%
     \label{f:ozone_budgets}% 
     \includegraphics[width = \textwidth]{img/Ox_budgets}% 
+    \vspace{-4mm}
 \end{figure}
 % 
 The day-time production and consumption budgets of \ce{O_x} ($\equiv$ \ce{O3 + NO2 + O + O(^1D)}) normalised by the total rate of oxidation of the emitted VOC are displayed in Fig.~\ref{f:ozone_budgets}.
 The \ce{O_x} budgets are assigned to each \ce{NO_x} regime for each chemical mechanism and type of isoprene emissions.
-The budgets are allocated to the net contribution of major sources, where `HO2', `RO2', `ARO2' represent the reactions of NO with \ce{HO2}, alkyl peroxy radicals and acyl peroxy radicals respectively.
+The budgets are allocated to the net contribution of major categories, where `HO2', `RO2', `ARO2' represent the reactions of NO with \ce{HO2}, alkyl peroxy radicals and acyl peroxy radicals respectively.
 `RO2NO2' represents the effects of peroxy nitrates, `Deposition' represents ozone deposition, `Inorganic' is all other inorganic contributions to \ce{O_x} production and any other remaining organic reactions are included in the `Other Organic' category.
 Figure~\ref{f:ozone_budgets} also illustrates the net production or consumption of \ce{O_x} in each case.
 
-The net \ce{O_x} production efficiency increases from $20$~\degree C to $40$~\degree C by $\sim1$~molecule of \ce{O_x} per molecule of VOC oxidised using both temperature-dependent and temperature-independent isoprene emissions and in each \ce{NO_x} condition (Fig.~\ref{f:ozone_budgets}).
+The net \ce{O_x} production efficiency increases from $20$~\degree C to $40$~\degree C by $\sim1$~molecule of \ce{O_x} per molecule of VOC oxidised using both temperature-dependent and temperature-independent isoprene emissions and in each \ce{NO_x} condition and chemical mechanism (Fig.~\ref{f:ozone_budgets}).
 The increase in net \ce{O_x} production efficiency is due to a decrease in the consumption efficiency of \ce{O_x} with temperature while the production efficiency of \ce{O_x} remains constant with temperature ($\sim2$~molecules of \ce{O_x} per molecule of VOC).
 The decrease in ozone deposition per VOC loss from $20$~\degree C to $40$~\degree C of $\sim1$~molecule of \ce{O_x} per loss of VOC mirrors the increase in net \ce{O_x} production efficiency.
 
-As the production efficiency of \ce{O_x} remains constant with temperature in Fig.~\ref{f:ozone_budgets}, the rate of \ce{O_x} production is controlled by the loss rate of the VOCs.
-Faster oxidation of VOCs with temperature speeds up the production of peroxy radicals which increases ozone production when peroxy radicals react with NO to produce \ce{NO2}.
-The review of \citet{Pusede:2015} also acknowledged the importance of organic reactivity and radical production to the ozone-temperature relationship.
+As the production efficiency of \ce{O_x} remains constant with temperature (Fig.~\ref{f:ozone_budgets}), the rate of \ce{O_x} production is controlled by the loss rate of the VOCs.
+Faster oxidation rates of VOCs with temperature speeds up the production of peroxy radicals increasing ozone production when peroxy radicals react with NO to produce \ce{NO2}.
+The review of \citet{Pusede:2015} acknowledged the importance of organic reactivity and radical production to the ozone-temperature relationship.
 Also, the modelling study of \citet{Steiner:2006} noted that the increase in initial oxidation rates of VOCs with temperature leads to increased formaldehyde concentrations and in turn an increase of ozone as formaldehyde is an important source of \ce{HO2} radicals.
 
-Increased VOC reactivity with temperature is tied to faster reaction rates and increased levels of OH with temperature.
-An increase of ozone with temperature goes hand in hand with an increase of OH with temperature since ozone photolysis is typically the dominant source of OH radicals in the atmosphere.
+Increased VOC loss with temperature is tied to faster reaction rates and increased levels of OH with temperature.
+An increase of ozone with temperature goes hand in hand with an increase of OH with temperature since ozone photolysis is the dominant source of OH radicals in the atmosphere.
+\vspace{-5mm}
 \begin{rxnarray}
     && \ce{O3 + h\nu} \rightarrow \ce{O(^1D) + O2} \\ \label{r:O3_hv} 
-    && \ce{O(^1D) + H2O} \rightarrow \ce{OH + OH} \label{r:O1D_H2O}
+    && \ce{O(^1D) + H2O} \rightarrow \ce{OH + OH} \label{r:O1D_H2O} 
 \end{rxnarray}
-Furthermore, enhanced formaldehyde production from the faster oxidation of VOCs increases \ce{HO2} formation which speeds up the reaction rate of the reaction of \ce{HO2} and NO.
+
+\vspace{-5mm}
+Furthermore, enhanced formaldehyde production from the faster degradation of VOCs increases \ce{HO2} formation speeding up the reaction rate of the reaction of \ce{HO2} and NO.
+\eqref{r:HO2_NO} is responsible for both ozone production (through \ce{NO2} production) and OH recycling further illustrating the strong coupling of ozone and OH production.
+\vspace{-5mm}
 \begin{rxnarray}
     && \ce{HO2 + NO} \rightarrow \ce{NO2 + OH} \label{r:HO2_NO}
-\end{rxnarray}
-\eqref{r:HO2_NO} is responsible for both ozone production (due to \ce{NO2} production) and OH recycling further illustrating the strong coupling of ozone and OH production.
+\end{rxnarray} 
 
+\vspace{-5mm}
 The net effect of peroxy nitrates on \ce{O_x} budgets in our study is negligible, contributing to a loss of $\sim0.1$~molecules of \ce{O_x} per VOC oxidised at $40$~\degree C from $20$~\degree C.
 Peroxynitrates are produced from the reactions of acyl peroxy radicals with \ce{NO2} and are an important reservoir of peroxy radicals and \ce{NO_x}.
-The decomposition rate of peroxy nitrates is strongly temperature dependent and at higher temperatures the faster decomposition rate of \ce{RO2NO2} leads to faster release of peroxy radicals and \ce{NO_x} influencing ozone production.
-The lack of influence of RO2NO2 on \ce{O_x} budgets in Fig.~\ref{f:ozone_budgets} is surprising as many other studies cite the decrease in the lifetime of peroxy nitrates as one of the most important factors for the increase of ozone with temperature.
+The decomposition rate of peroxy nitrates is strongly temperature dependent and at higher temperatures the faster decomposition rate of \ce{RO2NO2} leads to faster release of peroxy radicals and \ce{NO_x} affecting ozone production.
+The lack of influence of \ce{RO2NO2} on \ce{O_x} budgets in Fig.~\ref{f:ozone_budgets} is surprising as many studies cited the decrease in the lifetime of \ce{RO2NO2} with temperature as one of the most important factors for the increase of ozone with temperature.
 For example, \citet{Dawson:2007} attributed the increase in ozone with temperature during a modelling study over the eastern US to the decrease in PAN lifetime with temperature.
-\citet{Steiner:2006} also recognised that the decrease in PAN lifetime with temperature may contribute to the increase of ozone with temperature and concluded that the combined effects of increased VOC reactivity and PAN decomposition are most likely to increase the production of ozone with temperature.
+\citet{Steiner:2006} also recognised that the decrease in PAN lifetime with temperature contributed to the increase of ozone with temperature concluding that the combined effects of increased oxidation rates of VOC and faster PAN decomposition increased the production of ozone with temperature.
 
 \subsection{Comparison to Observations and 3D Model Simulations} \label{ss:r_observations}
  \begin{figure}%
@@ -120,7 +128,7 @@ For example, \citet{Dawson:2007} attributed the increase in ozone with temperatu
 
 \begin{table}[t]%
     \centering%
-    \caption{Slopes (m$_{\text{O3-T}}$ in ppbv per \degree C) of the linear fit to the ozone-temperature correlations in Fig.~\ref{f:comparison}}%
+    \caption{Slopes (m$_{\text{O3-T}}$, ppbv per \degree C) of the linear fit to ozone-temperature correlations in Fig.~\ref{f:comparison}}%
     \label{t:mo3-t}%
     \begin{subtable}[t]{\textwidth}%
         \centering%
@@ -136,6 +144,7 @@ For example, \citet{Dawson:2007} attributed the increase in ozone with temperatu
         \label{t:boxmodel_o3-T}%
         \input{table_regression_O3_T_stats}%
     \end{subtable}
+    \vspace{-4mm}
 \end{table} 
 
 This section compares the results from our idealised box model simulations to real-world observations and model output from a 3D model.
@@ -146,7 +155,7 @@ Model output from the 3D WRF-Chem regional model using MOZART-4 chemistry set-up
 Figure~\ref{f:comparison} compares the observational (ERA-Interim) and WRF-Chem data from summer 2007 to the maximum 8~h mean ozone from the box model simulations for each chemical mechanism, \ce{NO_x} regime and type of isoprene emissions.
 In Fig.~\ref{f:comparison}, we limited the observational data to days where the observed daily maximum temperature corresponded to the temperature range in our study ($15$--$40$~\degree C).
 We selected two regions from the observations and WRF-Chem output, central and eastern Germany (Fig.~\ref{f:WRF_ERA_Germany}) and central and western Poland (Fig.~\ref{f:WRF_ERA_Poland}), where the summertime ozone values are driven by with temperature \citep{Otero:2016}.
-Table~\ref{t:mo3-t} summarises the slopes (m$_{\text{O3-T}}$) of the linear fits of all the ozone-temperature correlations displayed in Fig.~\ref{f:comparison} in ppbv of ozone per \degree C determining the rate of change of ozone with temperature.
+Table~\ref{t:mo3-t} summarises the slopes (m$_{\text{O3-T}}$) of the linear fits of each ozone-temperature correlation displayed in Fig.~\ref{f:comparison} in ppbv of ozone per \degree C determining the rate of change of ozone with temperature.
 
 The spread of the observed ozone-temperature values over both Germany and Poland are generally captured by the WRF-Chem simulation.
 However, WRF-Chem only reproduces the higher observed values of ozone with temperature and not the lower values.
@@ -160,14 +169,18 @@ A temperature-dependent source of isoprene with high-\ce{NO_x} conditions produc
 In particular, the box model simulations over-predict the ozone values at lower temperatures and under-predict the ozone values at higher temperatures compared to the observed data.
 Similarly, the rate of change of ozone with temperature in the box model is less-sensitive than WRF-Chem.
 
-The main reason for the box model simulations being less sensitive to temperature than the observations and WRF-Chem simulation is related to the set-up of the box model.
+The main reason for the box model simulations being less sensitive to temperature than the observations and WRF-Chem is related to the set-up of the box model.
 In our simulations, we focused on instantaneous production of ozone from a freshly-emitted source of VOC and do not consider stagnant atmospheric conditions characteristed by high temperatures and low wind speeds slowing the transport of ozone and its precursors away from sources.
 \citet{Otero:2016} showed that the previous day's ozone was also an important driver for observed ozone production over Europe and \citet{Jacob:1993} correlated high-ozone episodes in the summer over eastern US to regional stagnation.
 
 Stagnation is an example of how the coupling of meteorological variables (in this case temperature and wind speed) impact ozone production.
 In observational studies, which consider the total derivative of ozone with temperature, the direct effects of temperature (e.g. increasing reaction rates, emissions from vegetation) and indirect (e.g. heatwaves characterised by high temperatures and low wind speed) effects of temperature on ozone are not easily separated.
 In other words, observational studies represent the total derivative of ozone with temperature while models consider the partial derivatives of the temperature-dependent processes influencing ozone \citep{Rasmussen:2013}. 
+
+\vspace{-12mm}
 \begin{equation*} 
     \frac{d[\ce{O3}]}{dT} = \frac{\partial [\ce{O3}]}{\partial [\text{BVOC}]}\frac{\partial [\text{BVOC}]}{\partial T} + \frac{\partial [\ce{O3}]}{\partial \text{Chemistry}}\frac{\partial \text{Chemistry}}{\partial T} + \frac{\partial [\ce{O3}]}{\partial \text{Stagnation}}\frac{\partial \text{Stagnation}}{\partial T} + \dots
 \end{equation*}
+
+\vspace{-4mm}
 3D models such as WRF-Chem that can simulate more realistic atmospheric conditions would play a valuable role for future work evaluating the ozone-temperature relationship at different \ce{NO_x} conditions at a regional scale.
