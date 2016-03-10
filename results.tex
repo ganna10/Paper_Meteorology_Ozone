@@ -1,7 +1,7 @@
 \subsection[Ozone as a Function of NOx and Temperature]{Ozone as a Function of \ce{NO_x} and Temperature} \label{ss:r_contours} 
 \begin{figure}%
     \centering%
-    \caption{Contours of maximum ozone mixing ratios (ppbv) as a function of the total \ce{NO_x} emissions on the first day and temperature for each chemical mechanism using a temperature-dependent and temperature-independent source of isoprene emissions.}
+    \caption{Contours of maximum ozone mixing ratios (ppbv) as a function of the total \ce{NO_x} emissions on the first day and temperature for each chemical mechanism using a temperature-dependent and temperature-independent source of isoprene emissions. The contours can be split into three separate regimes: High-\ce{NO_x}, Maximal-\ce{O3} and Low-\ce{NO_x} indicated in the figure.}
     \label{f:ozone_contours}%
     \includegraphics[width=\textwidth]{img/O3_comparison}%
 \end{figure}
@@ -14,9 +14,9 @@
     \vspace{-4mm}
 \end{figure}
 
-\begin{table}%
+\begin{table}[t]%
     \centering%
-    \caption{Increase in ozone mixing ratio (ppbv) due to chemistry and emissions at $40$~\degree C from reference temperature ($20$~\degree C) in the \ce{NO_x}-regimes of Fig.~\ref{f:O3-T}.}%
+    \caption{Increase in ozone mixing ratio (ppbv) due to chemistry and temperature-dependent isoprene emissions from the reference temperature ($20$~\degree C) at $40$~\degree C in the \ce{NO_x}-regimes of Fig.~\ref{f:O3-T}.}%
     \label{t:differences}%
     \input{table_differences_td_ti}%
     \vspace{-4mm}
@@ -27,7 +27,7 @@ A non-linear relationship of ozone mixing ratios with \ce{NO_x} and temperature 
 This non-linear relationship is similar to that determined by \citet{Pusede:2014} using an analytical model constrained to observational measurements over the San Joaquin Valley, California.
 
 Higher ozone mixing ratios are produced when using a temperature-dependent source of isoprene emissions (Fig.~\ref{f:ozone_contours}).
-The highest mixing ratios of ozone are produced at high temperatures and moderate emissions of \ce{NO_x} regardless of the source of isoprene emissions.
+The highest mixing ratios of ozone are produced at high temperatures and moderate emissions of \ce{NO_x} regardless of the temperature dependence of isoprene emissions.
 Conversely, the least amount of ozone is produced with low emissions of \ce{NO_x} over the whole temperature range ($15$~--~$40$~\degree C) when using both a temperature-independent and temperature-dependent source of isoprene emissions.
 
 The contours of ozone mixing ratios as a function of \ce{NO_x} and temperature can be split into three \ce{NO_x} regimes (Low-\ce{NO_x}, Maximal-\ce{O3} and High-\ce{NO_x}), similar to the \ce{NO_x} regimes defined for the non-linear relationship of ozone with VOC and \ce{NO_x}.
@@ -103,7 +103,7 @@ The net effect of peroxy nitrates on \ce{O_x} budgets in our study is negligible
 Peroxy nitrates are produced from the reactions of acyl peroxy radicals with \ce{NO2} and are an important reservoir of peroxy radicals and \ce{NO_x}.
 The decomposition rate of peroxy nitrates is strongly temperature dependent and at higher temperatures the faster decomposition rate of \ce{RO2NO2} leads to faster release of peroxy radicals and \ce{NO_x} affecting ozone production.
 The lack of influence of \ce{RO2NO2} on \ce{O_x} budgets in Fig.~\ref{f:ozone_budgets} is surprising as many studies cited the decrease in the lifetime of \ce{RO2NO2} with temperature as one of the most important factors for the increase of ozone with temperature.
-For example, \citet{Dawson:2007} attributed the increase in ozone with temperature during a modelling study over the eastern US to the decrease in PAN lifetime with temperature.
+For example, \citet{Dawson:2007} attributed the increase in maximum 8~h ozone mixing ratios with temperature during a modelling study over the eastern US to the decrease in PAN lifetime with temperature.
 \citet{Steiner:2006} also recognised that the decrease in PAN lifetime with temperature contributed to the increase of ozone with temperature concluding that the combined effects of increased oxidation rates of VOC and faster PAN decomposition increased the production of ozone with temperature.
 
 \subsection{Comparison to Observations and 3D Model Simulations} \label{ss:r_observations}
@@ -128,7 +128,7 @@ For example, \citet{Dawson:2007} attributed the increase in ozone with temperatu
 
 \begin{table}[t]%
     \centering%
-    \caption{Slopes (m$_{\text{O3-T}}$, ppbv per \degree C) of the linear fit to ozone-temperature correlations in Fig.~\ref{f:comparison}}%
+    \caption{Slopes (m$_{\text{O3-T}}$, ppbv per \degree C) of the linear fit to maximum 8~h mean ozone and temperature correlations in Fig.~\ref{f:comparison}}%
     \label{t:mo3-t}%
     \begin{subtable}[t]{\textwidth}%
         \centering%
@@ -173,8 +173,8 @@ The main reason for the box model simulations being less sensitive to temperatur
 In our simulations, we focused on instantaneous production of ozone from a freshly-emitted source of VOC and do not consider stagnant atmospheric conditions characteristed by high temperatures and low wind speeds slowing the transport of ozone and its precursors away from sources.
 \citet{Otero:2016} showed that the previous day's ozone was also an important driver for observed ozone production over Europe and \citet{Jacob:1993} correlated high-ozone episodes in the summer over eastern US to regional stagnation.
 
-Stagnation is an example of how the coupling of meteorological variables (in this case temperature and wind speed) impact ozone production.
-In observational studies, which consider the total derivative of ozone with temperature, the direct effects of temperature (e.g. increasing reaction rates, emissions from vegetation) and indirect (e.g. heatwaves characterised by high temperatures and low wind speed) effects of temperature on ozone are not easily separated.
+Stagnation is an example of how the coupling of meteorological variables to each other (in this case temperature and wind speed) impact ozone production.
+In observational studies, which consider the total derivative of ozone with temperature, the direct effects of temperature (e.g. increasing reaction rates, emissions from vegetation) and indirect (e.g. heatwaves characterised by low wind speeds) effects of temperature on ozone are not easily separated.
 In other words, observational studies represent the total derivative of ozone with temperature while models consider the partial derivatives of the temperature-dependent processes influencing ozone \citep{Rasmussen:2013}. 
 
 \vspace{-12mm}
