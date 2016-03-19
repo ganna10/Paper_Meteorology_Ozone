@@ -1,26 +1,26 @@
 #! /usr/bin/env perl
 # Extract VOC emission data from country file, country name is ARGV, and transform into LaTeX table
 # Version 0: Jane Coates 1/9/2015
+# Version 1: Jane Coates 19/3/2016 using total Benelux emissions
 
 use strict;
 use diagnostics;
 
-my $country = $ARGV[0];
-die "No country specified : $!" unless (defined $ARGV[0]);
 
-my $csv_file = "${country}_MCM_Total_NMVOC_Emissions.csv";
+my $csv_file = "Benelux_MCM_Total_NMVOC_Emissions.csv";
 open my $in, '<:encoding(utf-8)', $csv_file or die $!;
 my (@lines) = <$in>;
 close $in;
 
-my $out_file = "${country}_MCM_emissions.tex";
+my $out_file = "Benelux_MCM_emissions.tex";
 open my $out, '>:encoding(utf-8)', $out_file or die $!;
 print $out "\\tiny\n";
 print $out "\\begin{longtable}{lllllllllllllll}\n";
-print $out "\t\\caption{$country AVOC and BVOC emissions, in molecules~cm\$^{-2}\$~s\$^{-1}\$, mapped to MCMv3.2 species.}\\\\%\n";
+print $out "\t\\caption{Benelux AVOC and BVOC emissions, in molecules~cm\$^{-2}\$~s\$^{-1}\$, mapped to MCMv3.2 species.}\\\\%\n";
 print $out "\t\\hline \\hline\n";
 foreach my $line (@lines) {
     chomp $line;
+    $line =~ s/\bNA\b//g;
     if ($line =~ /^Type/) {
         $line =~ s/\s+$//;
         $line =~ s/\.Emissions//g;
@@ -98,6 +98,6 @@ foreach my $line (@lines) {
     print $out "\t", $line, "\n";
 }
 print $out "\t\\hline \\hline\n";
-print $out "\t\\label{t:${country}_MCM_emissions}\n";
+print $out "\t\\label{t:Benelux_MCM_emissions}\n";
 print $out "\\end{longtable}";
 close $out;
