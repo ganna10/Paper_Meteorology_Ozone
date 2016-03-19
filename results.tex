@@ -108,43 +108,20 @@ For example, \citet{Dawson:2007} attributed the increase in maximum 8~h ozone mi
 \citet{Moxim:1996} importance of PAN transport on a regional scale, transport of \ce{NO_x} from other sources that is not included in our boxmodel.
 
 \subsection{Comparison to Observations and 3D Model Simulations} \label{ss:r_observations}
- \begin{figure}%
+\begin{figure}[t]%
     \centering%
-    \caption{The maximum 8~h mean ozone from the box model simulations allocated to the different \ce{NO_x} regimes for each chemical mechanisms (solid lines). The box model ozone-temperature correlation is compared to the summer 2007 ERA-Interim data (black circles) and WRF-Chem output (purple boxes).}%
+    \caption{MDA8 values of ozone from the box model simulations allocated to the different \ce{NO_x} regimes for each chemical mechanism with mixing (solid lines) and stagnant conditions (dashed lines). The box model ozone-temperature correlation is compared to the summer 2007 observational data (black circles) and WRF-Chem output (purple boxes).}%
     \label{f:comparison}%
-    \begin{subfigure}[t]{\textwidth}%
-        \centering%
-        \vspace{2mm}%
-        \caption{Ozone-Temperature correlation over central and eastern Germany}%
-        \label{f:WRF_ERA_Germany}%
-        \includegraphics[height=0.43\textheight]{img/Germany_O3-T_ERA_WRF_2007}%
-    \end{subfigure}%
-    \\
-    \begin{subfigure}[t]{\textwidth}%
-        \caption{Ozone-Temperature correlation over central and western Poland}%
-        \label{f:WRF_ERA_Poland}%
-        \includegraphics[height=0.43\textheight]{img/Poland_O3-T_ERA_WRF_2007}%
-    \end{subfigure}%
+    \vspace{2mm}%
+    \includegraphics[height=0.43\textheight]{img/Germany_O3-T_ERA_WRF_2007}%
 \end{figure}
 
 \begin{table}[t]%
     \centering%
-    \caption{Slopes (m$_{\text{O3-T}}$, ppbv per \degree C) of the linear fit to maximum 8~h mean ozone and temperature correlations in Fig.~\ref{f:comparison}}%
+    \caption{Slopes (m$_{\text{O3-T}}$, ppbv per \degree C) of the linear fit to MDA8 values of ozone and temperature correlations in Fig.~\ref{f:comparison}, indicating the increase of MDA8 in ppbv of ozone per \degree C. The slope of the observational data is $2.15$~ppbv/\degree C and the slope of the WRF-Chem output is $2.05$~ppbv/\degree C.}%
     \label{t:mo3-t}%
-    \begin{subtable}[t]{\textwidth}%
-        \centering%
-        \vspace{2mm}%
-        \caption{Slope of linear fit of the ERA-Interim observational data and WRF-Chem model output chemistry over central and eastern Germany and western and central Poland.}%
-        \label{t:era_wrf_o3-T}%
-        \input{table_wrf_era_O3_T}%
-    \end{subtable}
-    \begin{subtable}[t]{\textwidth}%
-        \centering%
-        \vspace{2mm}
-        \caption{Slope of linear fit of box model experiments for each chemical mechanism, source of isoprene emissions allocated to the three \ce{NO_x}-regimes.}%
-        \label{t:boxmodel_o3-T}%
-        \input{table_regression_O3_T_stats}%
-    \end{subtable}
+    \vspace{2mm}
+    \input{table_regression_O3_T_stats}%
     \vspace{-4mm}
 \end{table} 
 
