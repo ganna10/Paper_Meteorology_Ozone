@@ -1,25 +1,24 @@
 \subsection{Model Setup} \label{ss:model_setup}
-We used the MECCA box model to determine the important gas-phase chemical processes for ozone production under different temperatures and \ce{NO_x} conditions.
+We used the MECCA box model \citep{Sander:2005} to determine the important gas-phase chemical processes for ozone production under different temperatures and \ce{NO_x} conditions.
 The MECCA box model was set up as described in \citet{Coates:2015} and updated to include vertical mixing with the free troposphere using a diurnal cycle for the PBL height.
 The supplementary material includes further details of these updates.
 
-Simulations were performed to broadly simulate urban conditions representative of central Europe with equinoctical conditions.
+Simulations broadly representative of urban conditions in central Europe with equinoctical conditions were performed. 
 The simulations started at 06:00 with a total run time of two days.
 Methane was fixed at $1.7$~ppmv throughout the model run, carbon monoxide (CO) and ozone were initialised at $200$~ppbv and $40$~ppbv and then allowed to evolve freely throughout the simulation.
 All VOC emissions were held constant until noon of first day simulating a plume of freshly-emitted VOC.
 
-Separate box model simulations were performed by systematically varying the temperature between $288$ and $313$~K ($15$~--~$40$~\degree C). 
-The only source of \ce{NO_x} emissions in the box model was a constant source of NO emissions. 
-Box model runs were performed with the NO emissions systematically varied between $5.0~\times~10^9$ and $1.5~\times~10^{12}$~molecules~(NO)~cm$^{-2}$~s$^{-1}$ at each temperature used in this study.
-At $20$~\degree C, these NO emissions corresponded to peak \ce{NO_x} mixing ratios of $0.02$~ppbv and $10$~ppbv respectively, this range of \ce{NO_x} mixing ratios covers the \ce{NO_x} conditions in pristine and urban conditions \citep{vonSchneidemesser:2015}.
+Separate box model simulations were performed by systematically varying the temperature between $288$ and $313$~K ($15$~--~$40$~\degree C) in steps of $0.5$~K. 
+NO emissions were systematically varied between $5.0~\times~10^9$ and $1.5~\times~10^{12}$~molecules~(NO)~cm$^{-2}$~s$^{-1}$ at each temperature used in this study.
+At $20$~\degree C, these NO emissions corresponded to peak \ce{NO_x} mixing ratios of $0.02$~ppbv and $10$~ppbv respectively, this range of \ce{NO_x} mixing ratios covers the \ce{NO_x} conditions found in pristine and urban conditions \citep{vonSchneidemesser:2015}.
 
-All simulations were repeated using different chemical mechanisms to investigate whether the relationship of ozone with temperature across \ce{NO_x} gradients changes using different representations of ozone production chemistry.
+All simulations were repeated using different chemical mechanisms to investigate whether the relationship between ozone, temperature and \ce{NO_x} changes using different representations of ozone production chemistry.
 The reference chemical mechanism was the near-explicit Master Chemical Mechanism, MCMv3.2, \citep{Jenkin:1997, Jenkin:2003, Saunders:2003, MCM_Site}.
 The reduced chemical mechanisms in our study were Common Representative Intermediates, CRIv2 \citep{Jenkin:2008}, Model for ozone and related chemical tracers, MOZART-4 \citep{Emmons:2010}, Regional Acid Deposition Model, RADM2 \citep{Stockwell:1990} and the Carbon Bond Mechanism, CB05 \citep{Yarwood:2005}. 
-\citet{Coates:2015} described these chemical mechanisms and the implementation of these chemical mechanisms in MECCA.
+\citet{Coates:2015} described the implementation of these chemical mechanisms in MECCA.
 These reduced chemical mechanisms were chosen as they are commonly used by modelling groups in 3D regional and global models \citep{Baklanov:2014}.
 
-Model runs were repeated using a temperature-dependent and temperature-independent source of BVOC emissions to determine whether increased emissions of BVOC or faster reaction rates of chemical processes is more important for the increase of ozone with temperature. 
+Model runs were repeated using a temperature-dependent and temperature-independent source of BVOC emissions to determine the relative importance of increased emissions of BVOC and faster reaction rates of chemical processes for the increase of ozone with temperature. 
 MEGAN2.1 \citep{Guenther:2012} specified the temperature-dependent BVOC emissions of isoprene, Sect.~\ref{ss:megan} provides further details. 
 As isoprene emissions are the most important on the global scale, we considered only isoprene emissions from vegetation \citep{Guenther:2006}. 
 Only isoprene emissions were dependent on temperature, all other emissions were constant in all simulations.
@@ -27,7 +26,7 @@ In reality, many other BVOC are emitted from varying vegetation types \citep{Gue
 
 \subsection{VOC Emissions} \label{ss:VOC_emissions}
 {%
-    \renewcommand{\arraystretch}{1.15}%
+    \renewcommand{\arraystretch}{1.1}%
     \begin{table}[t]%
         \centering%
         \caption{Total AVOC emissions in 2011 in tonnes from each anthropogenic source category assigned from TNO-MACC\_III emission inventory and temperature-independent BVOC emissions in tonnes from Benelux region assigned from EMEP. The allocation of these emissions to MCMv3.2, CRIv2, CB05, MOZART-4 and RADM2 species are found in the supplementary material.}%
@@ -43,13 +42,13 @@ This data was obtained from the supplementary data available from the EMEP (Euro
 Temperature-dependent emissions of isoprene are detailed in Sect.~\ref{ss:megan}.
 
 Table~\ref{t:emissions} shows the quantity of VOC emissions from each source category and the temperature-independent BVOC emissions.
-These categorised AVOC emissions were assigned to chemical species and groups based on the country specific profiles for Belgium, the Netherlands and Luxembourg provided by TNO.
+These AVOC emissions were assigned to chemical species and groups based on the profiles provided by TNO.
 Most individual chemical species are represented by the MCMv3.2, otherwise the individual contributions of a group of VOC were further split into individual components using the detailed speciation of \citet{Passant:2002}.
 For example, `xylenes' are one of the component chemical groups in many source categories but the MCMv3.2 treats xylenes as the individual isomers (m-, o-, p-xylene) and the contributions of the individual isomers to a source category was provided by \citet{Passant:2002}.
 This approach was also used in \citet{vonSchneidemesser:2016} to allocate AVOC emissions from different solvent sector speciations to MCMv3.2 species.
 
 For simulations done with other chemical mechanisms, the VOC emissions represented by the MCMv3.2 were mapped to the mechanism species representing VOC emissions in each reduced chemical mechanism based on the recommendations of the source literature and \citet{Carter:2015}.
-The VOC emissions in the reduced chemical mechanisms were weighted by the carbon numbers of the MCMv3.2 species and the emitted mechanism species, thus keeping the amount of emitted carbon constant between simulations. 
+The VOC emissions in the reduced chemical mechanisms were weighted by the carbon numbers of the MCMv3.2 species and the emitted mechanism species, thus keeping the amount of emitted reactive carbon constant between simulations. 
 The supplementary data outlines the primary VOC and calculated emissions with each chemical mechanism.
 
 \subsection{Temperature Dependent Isoprene Emissions} \label{ss:megan}
