@@ -139,26 +139,23 @@ This section compares the results from our idealised box model simulations to re
 \citet{Otero:2016} showed that over the summer (JJA) months, temperature is the main meteorological driver of ozone production over many regions of central Europe using the interpolated observations of the maximum daily 8~h mean (MDA8) of ozone from \citet{Schnell:2015} and the meteorological observational data set of the ERA-Interim re-analysis.
 Model output from the 3D WRF-Chem regional model using MOZART-4 chemistry set-up over the European domain for simulations of the year 2007 from \citet{Mar:2016} was used to further compare the box model simulations to a model including more meteorological processes than our box model.
 
-Figure~\ref{f:comparison} compares the observational and WRF-Chem data from summer 2007 over central and easterm Germany, where summertime ozone values are driven by temperature \citep{Otero:2016}, to the maximum 8~h mean ozone from the box model simulations for each chemical mechanism.
-Table~\ref{t:mo3-t} summarises the slopes (m$_{\text{O3-T}}$) of the linear fits of each ozone-temperature correlation displayed in Fig.~\ref{f:comparison} in ppbv of ozone per \degree C determining the rate of change of ozone with temperature.
-
+Figure~\ref{f:comparison} compares the observational and WRF-Chem data from summer 2007 over central and eastern Germany, where summertime ozone values are driven by temperature \citep{Otero:2016}, to the ozone MDA8 from the box model simulations for each chemical mechanism.
 Despite, a high bias in simulated ozone in WRF-Chem, the rate of change of ozone with temperature from the WRF-Chem simulations ($2.05$~ppbv/\degree C) is similar to the rate of change of ozone with temperature from the observed data ($2.15$~ppbv/\degree C).
 The differences in ozone production between the different chemical mechanisms with the box model are small compared to the spread of the observational and WRF-Chem data.
-A temperature-dependent source of isoprene with high-\ce{NO_x} conditions produces the most similar ozone-temperature slope to the observational data but this is still lower than the observed ozone-temperature slope by a factor of two.
+A temperature-dependent source of isoprene with high-\ce{NO_x} conditions produces the most similar ozone-temperature slope to the observational data but lower than the observed ozone-temperature slope by a factor of two.
 In particular, the box model simulations over-predict the ozone values at lower temperatures and under-predict the ozone values at higher temperatures compared to the observed data.
 
+Table~\ref{t:mo3-t} summarises the slopes (m$_{\text{O3-T}}$) of the linear fits of the box model simulations displayed in Fig.~\ref{f:comparison} in ppbv of ozone per \degree C determining the rate of change of ozone with temperature.
 The main reason for the box model simulations being less sensitive to temperature than the observations and WRF-Chem is related to the set-up of the box model.
-In our simulations, we focused on instantaneous production of ozone from a freshly-emitted source of VOC and do not consider stagnant atmospheric conditions characteristed by high temperatures and low wind speeds slowing the transport of ozone and its precursors away from sources.
-\citet{Otero:2016} showed that the previous day's ozone was also an important driver for observed ozone production over Europe and \citet{Jacob:1993} correlated high-ozone episodes in the summer over eastern US to regional stagnation.
+In our simulations, we focused on instantaneous production of ozone from a freshly-emitted source of VOC and allowed transport of the chemical species into the free troposphere.
+This box model setup did not consider stagnant atmospheric conditions characteristed by low wind speeds slowing the transport of ozone and its precursors away from sources.
+Stagnant conditions have been correlated to high-ozone episodes in the summer over eastern US \citep{Jacob:1993}.
 
-Stagnation is an example of how the coupling of meteorological variables to each other (in this case temperature and wind speed) impact ozone production.
-In observational studies, which consider the total derivative of ozone with temperature, the direct effects of temperature (e.g. increasing reaction rates, emissions from vegetation) and indirect (e.g. heatwaves characterised by low wind speeds) effects of temperature on ozone are not easily separated.
-In other words, observational studies represent the total derivative of ozone with temperature while models consider the partial derivatives of the temperature-dependent processes influencing ozone \citep{Rasmussen:2013}. 
+Additional box model simulations were performed without vertical mixing, this box model set up simulates stagnant conditions which favours oxidant accumulation.
+The ozone-temperature relationship obtained with each chemical mechanism, using both a temperature-independent and temperature-dependent source of isoprene emissions and the different \ce{NO_x} conditions are displayed in Fig.~\ref{f:comparison}.
+The rate of increase with ozone with temperature from these box model simulations are also included in Table~\ref{t:mo3-t}.
 
-\vspace{-12mm}
-\begin{equation*} 
-    \frac{d[\ce{O3}]}{dT} = \frac{\partial [\ce{O3}]}{\partial [\text{BVOC}]}\frac{\partial [\text{BVOC}]}{\partial T} + \frac{\partial [\ce{O3}]}{\partial \text{Chemistry}}\frac{\partial \text{Chemistry}}{\partial T} + \frac{\partial [\ce{O3}]}{\partial \text{Stagnation}}\frac{\partial \text{Stagnation}}{\partial T} + \dots
-\end{equation*}
-
-\vspace{-4mm}
-3D models such as WRF-Chem that can simulate more realistic atmospheric conditions would play a valuable role for future work evaluating the ozone-temperature relationship at different \ce{NO_x} conditions at a regional scale.
+In each case, simulating stagnant atmospheric conditions with the box model increased the rate of increase of ozone with temperature. 
+The m$_{\text{O3-T}}$ results using a temperature-dependent source of isoprene and with Maximal-O3 conditions (ranging between $2.0$ and $2.4$~ppbv/\degree C) are the very similar to the slopes of the observational and WRF-Chem results ($2.1$ and $2.2$~ppbv/\degree C, respectively).
+Stagnant conditions allowed oxidants to accumulate leading to more VOC oxidation especially at higher temperatures when the VOC oxidation rates were faster.
+Furthermore, the secondary degradation of the VOCs was allowed to fully evolve increasing the production of peroxy radicals which produce ozone when reacting with NO.
