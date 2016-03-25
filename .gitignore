@@ -6,6 +6,9 @@
 *.fls
 *.out
 *.toc
+*.sty
+*.cfg
+*.cls
 
 ## Intermediate documents:
 *.dvi
@@ -23,6 +26,7 @@
 *-blx.bib
 *.brf
 *.run.xml
+*.bst
 
 ## Build tool auxiliary files:
 *.fdb_latexmk
@@ -130,3 +134,6 @@ sympy-plots-for-*.tex/
 
 # zip files
 *.zip
+
+template.tex
+*4_2.txt
