@@ -23,19 +23,19 @@
 
 \maketitle
 
-\section{Vertical Mixing with Diurnal Boundary Layer Height} 
-The MECCA box model used in \citet{Coates:2015} included a constant boundary layer height of $1$~km and no interactions (vertical mixing) with the free troposphere.
-In reality, the planetary boundary layer (PBL) height varies diurnally and affects chemistry by diluting emissions after sunrise when the PBL rises. 
-
-The evolution of the PBL leads to vertical mixing of the near surface air with the free tropospheric air mass. 
-When the PBL collapses in the evening, pollutants are trapped in the PBL.  
-The mixing layer height was measured as part of the BAERLIN campaign \citep{Bonn:2016} over Berlin, Germany. 
-The profile of mean mixing layer height during the campaign period (June -- August 2014) was used in the box model to represent the diurnal cycle of the mixing layer height.
-We implemented the vertical mixing scheme into the boxmodel following the approach of \citet{Lourens:2016}.
-
-The mixing ratios of \ce{O3}, CO and \ce{CH4} in the free troposphere were respectively set to $50$~ppbv, $116$~ppbv and $1.8$~ppmv. 
-These conditions were taken from the MATCH-MPIC chemical weather forecast model on the 21st March (the start date of the simulations). 
-The model results (\url{http://cwf.iass-potsdam.de/}) at the 700 hPa height were chosen and the daily average was used as input into the boxmodel.
+%\section{Vertical Mixing with Diurnal Boundary Layer Height} 
+%The MECCA box model used in \citet{Coates:2015} included a constant boundary layer height of $1$~km and no interactions (vertical mixing) with the free troposphere.
+%In reality, the planetary boundary layer (PBL) height varies diurnally and affects chemistry by diluting emissions after sunrise when the PBL rises. 
+%
+%The evolution of the PBL leads to vertical mixing of the near surface air with the free tropospheric air mass. 
+%When the PBL collapses in the evening, pollutants are trapped in the PBL.  
+%The mixing layer height was measured as part of the BAERLIN campaign \citep{Bonn:2016} over Berlin, Germany. 
+%The profile of mean mixing layer height during the campaign period (June -- August 2014) was used in the box model to represent the diurnal cycle of the mixing layer height.
+%We implemented the vertical mixing scheme into the boxmodel following the approach of \citet{Lourens:2016}.
+%
+%The mixing ratios of \ce{O3}, CO and \ce{CH4} in the free troposphere were respectively set to $50$~ppbv, $116$~ppbv and $1.8$~ppmv. 
+%These conditions were taken from the MATCH-MPIC chemical weather forecast model on the 21st March (the start date of the simulations). 
+%The model results (\url{http://cwf.iass-potsdam.de/}) at the 700 hPa height were chosen and the daily average was used as input into the boxmodel.
 
 \section{Allocation of Benelux AVOC emissions to Mechanism Species}
 Anthropogenic NMVOC emissions over Benelux specified by the TNO\_MACCIII emission inventory \citep{Kuenen:2014} were translated to MCM~v3.2 emissions (Table~\ref{t:Benelux_MCM_emissions}).
