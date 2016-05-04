@@ -161,14 +161,11 @@ Furthermore, we compare the ozone-temperature relationship produced by different
 \subsection{Model Setup} \label{ss:model_setup}
 We used the MECCA box model \citep{Sander:2005} to determine the important gas-phase chemical processes for ozone production under different temperatures and \chem{NO_x} conditions.
 The MECCA box model was set up as described in \citet{Coates:2015} and updated to include vertical mixing with the free troposphere using a diurnal cycle for the PBL height.
-The vertical mixing scheme was based on the approach of \citet{Lourens:2016} with the model using the mean mixing layer height from the BAERLIN campaign over Berlin, Germany \citep{Bonn:2016}. 
+The supplementary material includes further details of these updates.
 
 Simulations were broadly representative of urban conditions in central Europe and were run for daylight hours in one full day.
 Methane was fixed at $1.7$~ppmv throughout the model run, carbon monoxide (CO) and ozone were initialised at $200$~ppbv and $40$~ppbv and then allowed to evolve freely throughout the simulation.
 All VOC emissions were held constant until noon simulating a plume of freshly-emitted VOC.
-the mixing ratios of \chem{O_3}, CO and \chem{CH_4} in the free troposphere were respectively set to $50$~ppbv, $116$~ppbv and $1.8$~ppmv. 
-These conditions were taken from the MATCH-MPIC chemical weather forecast model on the 21st March (the start date of the simulations). 
-The model results (\url{http://cwf.iass-potsdam.de/}) at the 700 hPa height were chosen and the daily average was used as input into the boxmodel.  
 
 Separate box model simulations were performed by systematically varying the temperature between $288$ and $313$~K ($15$--$40$~\degree C) in steps of $0.5$~K. 
 NO emissions were systematically varied between \mbox{$5.0\times10^9$} and \mbox{$1.5\times10^{12}$~molecules(NO)~cm$^{-2}$~s$^{-1}$} in steps of \mbox{$1\times10^{10}$~molecules(NO)~cm$^{-2}$~s$^{-1}$} at each temperature step.
@@ -179,11 +176,6 @@ The reference chemical mechanism was the near-explicit Master Chemical Mechanism
 The reduced chemical mechanisms in our study were Common Representative Intermediates, CRIv2 \citep{Jenkin:2008}, Model for OZone and Related Chemical Tracers, MOZART-4 \citep{Emmons:2010}, Regional Acid Deposition Model, RADM2 \citep{Stockwell:1990} and the Carbon Bond Mechanism, CB05 \citep{Yarwood:2005}. 
 \citet{Coates:2015} described the implementation of these chemical mechanisms in MECCA.
 These reduced chemical mechanisms were chosen as they are commonly used by modelling groups in 3D regional and global models \citep{Baklanov:2014}.
-
-The chemical mechanisms use temperature-dependent rate constants, \chem{k}(T), to represent temperature-dependent chemical processes.
-These temperature-dependent chemical processes include the initial oxidation of VOC, peroxy nitrate (\chem{RO_2NO_2}) formation and destruction, and reactions between peroxy radicals and NO leading to alkyl nitrate (\chem{RONO_2}) formation.
-However, not all chemical mechanisms represent the same chemical processes by a temperature-dependent rate constant. 
-For example, in CB05, the rate constant of \chem{RONO_2} formation during isoprene degradation is temperature dependent while \chem{RONO_2} formation during alkane degradation is temperature independent.
 
 Model runs were repeated using a temperature-dependent and temperature-independent source of BVOC emissions to determine the relative importance of increased emissions of BVOC and faster reaction rates of chemical processes for the increase of ozone with temperature. 
 MEGAN2.1 \citep{Guenther:2012} specified the temperature-dependent BVOC emissions of isoprene, Sect.~\ref{ss:megan} provides further details. 
