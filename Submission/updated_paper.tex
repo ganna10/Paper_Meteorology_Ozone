@@ -285,6 +285,7 @@ These differences in the sensitivity of ozone to \chem{NO_x} and VOC emissions u
 
 To re-cap, a very similar non-linear relationship between ozone, temperature and \chem{NO_x} is produced by each chemical mechanism with the absolute increase in ozone with temperature due to temperature-dependent chemistry larger than the increase in ozone with temperature due to temperature-dependent isoprene emissions.
 In order to determine the chemical processes responsible for the increased ozone with temperature, we analyse the production and consumption budgets of ozone in Sect.~\ref{ss:r_budgets}.
+The larger increases in ozone levels in the Maximal-O3 and High-\chem{NO_x} regimes indicate that strong reductions in \chem{NO_x} emissions are neccessary to offset the increase in ozone pollution at higher temperatures when isoprene emissions are higher.
 
 \subsection{Ozone Production and Consumption Budgets} \label{ss:r_budgets}
 In order to understand the temperature dependence of ozone production directly, we examine the modelled day-time production and consumption budgets of \chem{O_x} ($\equiv$ \chem{O_3 + NO_2 + O(^1D) + O}) normalised by the total chemical loss rate of the emitted VOC (Fig.~\ref{f:ozone_budgets}).
@@ -308,13 +309,18 @@ Hence, at each time step the net contribution of RO2NO2 to the \chem{O_x} budget
 \end{equation}
 for each peroxy nitrate species $k$ represented by each chemical mechanism.
 In Fig.~\ref{f:ozone_budgets} the cumulative day-time budgets were calculated by summing the net contributions of the reaction rates of each category over the day-time period and normalised by the total chemical loss rate of the emitted VOC.
+
 The absolute production and consumption budgets allocated to the major categories are displayed in Fig.~\ref{f:abs_Ox}
-
-Figure~\ref{f:ozone_budgets} also illustrates the net production or consumption of \chem{O_x} in each case.
+Both production and consumption \chem{O_x} budgets increase with temperature for each chemical mechanism and each \chem{NO_x} conditions and the overall net increase of \chem{O_x} production (white line in Fig.~\ref{f:abs_Ox}) is consistent with the increase in ozone mixing ratios for each panel in Fig.~\ref{f:O3-T}.
+Moreover, the net chemical production of \chem{O_x} is larger when using a temperature-dependent source of isoprene emissions than a temperature-independent source of isoprene emissions, again this is consistent with Fig.~\ref{f:O3-T}.
+%todo: include net production in absolute budgets, check that plotting is done correctly and include absolute and normalised in one plot. Separate the mixing one into different plot.
+%Figure~\ref{f:ozone_budgets} also illustrates the net production or consumption of \chem{O_x} in each case.
 The ratio of net ozone to net \chem{O_x} production was practically constant with temperature in all cases showing that using \chem{O_x} budgets as a proxy for ozone budgets was suitable at each temperature in our study.
-The absolute production and consumption budgets of \chem{O_x} allocated to the same source categories as Fig.~\ref{f:ozone_budgets} are included in the supplementary material and further illustrate the increase in \chem{O_x} production with temperature.
+%The absolute production and consumption budgets of \chem{O_x} allocated to the same source categories as Fig.~\ref{f:ozone_budgets} are included in the supplementary material and further illustrate the increase in \chem{O_x} production with temperature.
 
-The net \chem{O_x} production efficiency increases from $20$~\degree C to $40$~\degree C by $\sim0.25$~molecules of \chem{O_x} per molecule of VOC oxidised with each \chem{NO_x}-condition and type of isoprene emissions using the detailed MCMv3.2 chemical mechanism (Fig.~\ref{f:ozone_budgets}).
+In order to determine which temperature-dependent chemical processes are responsible for the overall increase of net \chem{O_x} production with temperature, the absolute \chem{O_x} budgets in Fig.~\ref{f:abs_Ox} were normalised by the total chemical loss rate of the emitted VOC (Fig.~\ref{f:ozone_budgets}).
+Thus Fig.~\ref{f:ozone_budgets} gives a measure of the \chem{O_x} production and consumption efficiency per chemical loss of VOC.
+The net \chem{O_x} production efficiency (white line in Fig.~\ref{f:ozone_budgets}) increases from $20$~\degree C to $40$~\degree C by $\sim0.25$~molecules of \chem{O_x} per molecule of VOC oxidised with each \chem{NO_x}-condition and type of isoprene emissions using the detailed MCMv3.2 chemical mechanism.
 A lower increase in normalised net \chem{O_x} production efficiency from $20$~\degree C to $40$~\degree C was obtained with the reduced chemical mechanisms ($\sim0.2$~molecules of \chem{O_x} per molecule of VOC oxidised with CRIv2, CB05 and RADM2, and $\sim0.1$~molecules of \chem{O_x} per molecule of VOC oxidised using MOZART-4).
 The increase in net \chem{O_x} production efficiency is due to the increased contribution with temperature of acyl peroxy radicals (ARO2) reacting with NO and the decreased net contribution with temperature of RO2NO2 (peroxy nitrates) to the normalised \chem{O_x} budgets.
 
@@ -329,25 +335,40 @@ Faster oxidation of VOCs with temperature speeds up the production of peroxy rad
 The reactivity of VOCs has been linked to ozone production (e.g. \citet{Kleinman:2005}, \citet{Sadanaga:2005}) and the review of \citet{Pusede:2015} acknowledged the importance of organic reactivity and radical production to the ozone-temperature relationship.
 Also, the modelling study of \citet{Steiner:2006} noted that the increase in initial oxidation rates of VOCs with temperature leads to increased formaldehyde concentrations and in turn an increase of ozone as formaldehyde is an important source of \chem{HO2} radicals.
 
+Our results indicate that the increased VOC reactivity and decomposition rate of peroxy nitrates are the temperature-dependent chemical processes leading to increased \chem{O_x} with temperature.
+These results are consistent between each chemical mechanism and each \chem{NO_x} condition.
+Of the emitted VOC, reactive VOCs such as alkenes and aromatics were responsible for the increased VOC oxidation with temperature.
+In our study, we considered the ozone production for a single day when considering longer timescale less-reactive VOC, such as alkanes, may also play a significant role in ozone production \citep{von:Schneidemesser:2016}.
+Thus substituting emissions of more-reactive VOCs with those from less-reactive VOCs from anthropogenic activities could lead to a reduction in ozone production.
+
 \subsection{Comparison to Observations and 3D Model Simulations} \label{ss:r_observations}
-This section compares the results from our idealised box model simulations to real-world observations and model output from a 3D model.
+The final step in our study was to compare our idealised simulations to real-world observations, we wanted to see how our idealised setup could simulate the real-world relationship between ozone and temperature.
 Using the interpolated observations of the maximum daily 8~h mean (MDA8) of ozone from \citet{Schnell:2015} and the meteorological observational data set of the ERA-Interim re-analysis,
 \citet{Otero:2016} showed that over the summer (JJA) months, temperature is the main meteorological driver of ozone production over many regions of central Europe.
+A further test was to include the output from a regional 3D model, 3D models are setup to simulate areas to investigate air quality over specific regions and include many more real-world processes (horizontal transport, stratospheric influence, changing meteorological parameters such as humidity, wind speed among others) that are not included in our box model setup.
 Model output from the 3D WRF-Chem regional model using MOZART-4 chemistry set-up over the European domain for simulations of the year 2007 from \citet{Mar:2016} was used to further compare the box model simulations to a model including more meteorological processes than our box model.
 
+Our idealised box model was setup to investigate the reasons for the observed increase of ozone with temperature and a direct comparison of the ozone mixing ratios produced from the simulations are thus difficult to directly compare side-by-side to both the observations and WRF-Chem output.
+In particular, the ozone mixing ratios reported by observations and simulated using WRF-Chem are a function of more processes than included in our box model.
+For example, VOCs are constantly emitted, \chem{NO_x} emissions have a diurnal profile, more realistic meterology processes such as the influence of low wind speed (when combined with warm temperatures give rise to stagnant conditions) whereas in the box model, VOC emissions are emitted as a $6$~hour pulse, \chem{NO} emissions are held constant and besides vertical mixing into a clean troposphere, there are no other transport processes.
+Moreover, there are further differences between the box model and WRF-Chem such as how photolysis is treated and particle-phase chemistry is also utilised within WRF-Chem whereas our box model only considered gas-phase chemistry.
+Despite these differences, it is interesting to compare the rate of change of ozone with temperature (m$_{\text{O3-T}}$) between the box model, observations and the more realistic WRF-Chem model.
+This metric has been used by many studies %todo: include studies
+and is calculated taking the linear slope of the increase of ozone with temperature.
+Table~\ref{t:mo3-t} summarises the slopes (m$_{\text{O3-T}}$) of the linear fits of the box model simulations displayed in Fig.~\ref{f:comparison} in ppbv of ozone per \degree C determining the rate of increase of ozone with temperature.
+
 Figure~\ref{f:comparison} compares the observational and WRF-Chem data from summer 2007 averaged over central and eastern Germany, where summertime ozone values are driven by temperature \citep{Otero:2016}, to the MDA8 values of ozone from the box model simulations for each chemical mechanism (solid lines).
+The observational data produces an increase of $2.15$~ppbv/\degree C which is not as large as that reported for XX in XX and XX in XX.
 Despite a high bias in simulated ozone in WRF-Chem, the rate of change of ozone with temperature from the WRF-Chem simulations ($2.05$~ppbv/\degree C) is similar to the rate of change of ozone with temperature from the observed data ($2.15$~ppbv/\degree C).
 The differences in ozone production between the different chemical mechanisms with the box model are small compared to the spread of the observational and WRF-Chem data.
 A temperature-dependent source of isoprene with high-\chem{NO_x} conditions produces the highest ozone-temperature slope, but is still lower than the observed ozone-temperature slope by a factor of two.
 In particular, the box model simulations over-predict the ozone values at lower temperatures and under-predict the ozone values at higher temperatures compared to the observed data.
 
-In our simulations, we focused on instantaneous production of ozone from a freshly-emitted source of VOC with mixing of clean air from the free troposphere due to a growing boundary layer.
-This box model setup did not consider stagnant atmospheric conditions characteristed by low wind speeds slowing the transport of ozone and its precursors away from sources.
-Stagnant conditions have been correlated to high-ozone episodes in the summer over eastern US \citep{Jacob:1993}.
-
+As mentioned earlier, there are number of differences between our box model setup and both the observational and 3D model output and of these differences the one most relevant to our study could be the lack of stagnation.
+%In our simulations, we focused on instantaneous production of ozone from a freshly-emitted source of VOC with mixing of clean air from the free troposphere due to a growing boundary layer.
+Stagnant atmospheric conditions are characteristed by low wind speeds slowing the transport of ozone and its precursors away from sources and have been correlated to high-ozone episodes in the summer over eastern US \citep{Jacob:1993}.
 In order to investigate the sensitivity of ozone production to mixing, box model simulations were performed without vertical mixing to approximate stagnant conditions that favour accumulation of secondary VOC oxidation products.
 The ozone-temperature relationship obtained with each chemical mechanism, using both a temperature-independent and temperature-dependent source of isoprene emissions and the different \chem{NO_x} conditions are displayed in Fig.~\ref{f:comparison} (dotted lines).
-Table~\ref{t:mo3-t} summarises the slopes (m$_{\text{O3-T}}$) of the linear fits of the box model simulations displayed in Fig.~\ref{f:comparison} in ppbv of ozone per \degree C determining the rate of increase of ozone with temperature, for both case: with, and without mixing.
 
 For all chemical mechanisms, the rate of increase of ozone with temperature increased in the box model simulations without mixing.
 The m$_{\text{O3-T}}$ calculated from the box model simulations without mixing using a temperature-dependent source of isoprene and with Maximal-\chem{O_3} conditions (ranging between $2.0$ and $2.4$~ppbv/\degree C) are very similar to the slopes of the observational and WRF-Chem results ($2.1$ and $2.2$~ppbv/\degree C, respectively).
@@ -358,6 +379,10 @@ The chemical production of \chem{O_x} in each chemical mechanism normalised by t
 Furthermore, the supplementary material includes the absolute production and consumption budgets of \chem{O_x} which also show the increased \chem{O_x} production with temperature for the simulations performed without mixing.
 From this we conclude that the increased ozone production seen in the box model simulations with reduced mixing is due to enhanced OH reactivity from secondary VOC oxidation products.
 
+Thus our box model study does not reproduce the rate of increase of ozone with temperature obtained from observational and 3D model simulations.
+The reason for this discrepancy was that the box model did not represent stagnation conditions which are relevant to real-world conditions and in particular for simulating heatwaves.
+The lack of mixing meant that the main chemical processes leading to ozone levels with increased temperature discussed in Sect.~\ref{ss:r_budgets}, namely increase oxidation of VOC and faster peroxy nitrate thermal decomposition, were able to proceed without the chemical reactants being transported away from the region.
+This is particular important for times of heatwaves, indicating that stronger reductions in \chem{NO_x} and possibly VOCs during heatwaves are required to minimise the impact of increase ozone production at higher temperatures.
 
 \conclusions  %% \conclusions[modified heading if necessary]
 In this study, we determined the effects of temperature on ozone production using a box model over a range of temperatures and \chem{NO_x} conditions with a temperature-independent and temperature-dependent source of isoprene emissions.
