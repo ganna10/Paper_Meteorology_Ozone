@@ -7,78 +7,101 @@
 \usepackage[round]{natbib}
 \setlength{\bibhang}{0pt}
 \usepackage{hyperref}
+\usepackage[version=3]{mhchem}
+
+\DeclareRobustCommand*\degree{\ensuremath{^{\circ}}}
 
 \begin{document}
 
-We would like to thank the reviewer for the review that will enable us to improve our manuscript; our responses to the review points and comments are found below.
+We would like to thank the reviewer, we feel that this review will enable us to improve our manuscript; our responses to the review points and comments are found below.
 
 \section*{General Comments}
 
 \textbf{Review Point 1:}  Generally the paper is very short. I realise that keeping things brief and to the point is sometimes a good thing and can help the reader concentrate on the salient points, however I would suggest in this case that some of the supplementary material be moved to the main text. In particular I think the model setup section would benefit from having more description in the main text rather than most of it being in the supplementary. This is important information for the paper and in this case I believe it would assist the reader to expand the model description.
 
-\textbf{Author Response:} We thank the reviewer for required additional information about the model description, hence we shall incorporate the details of the Section in the supplement titled 'Vertical Mixing with Diurnal Boundary Layer Height' in to Section 2.1 of the article.
-The first paragraph shall include: \textit{The vertical mixing scheme was based on the approach of \citet{Lourens:2016} with the model using the mean mixing layer height from the BAERLIN campaign over Berlin, Germany \citep{Bonn:2016}.}
-
-Furthermore, the second paragraph shall include the following information:
-\textit{These conditions were taken from the MATCH-MPIC chemical weather forecast model on the 21st March (the start date of the simulations). 
-The model results (\url{http://cwf.iass-potsdam.de/}) at the 700 hPa height were chosen and the daily average was used as input into the boxmodel.  
-}
+\textbf{Author Response:} We agree that a more detailed methodology description is beneficial to the paper and this was addressed in the final ACPD paper. The supplementary material includes only the information related to the speciated VOC emissions used in each chemical mechanism, the additional information regarding the diurnal boundary layer height previously included in the supplementary material is included in Section~2.1 of the manuscript.
 
 \section*{Specific Comments:}
 \textbf{Specific Comments 1:}  In section 2.1 (page 3 line 30 – page 4 line 4), several statements are made about the setup of the model that would benefit from expansion. The authors state that isoprene emissions from vegetation are the most important BVOC emissions on a global scale, however if the study was to be used for mechanisms in regional as well as global models, then could other BVOCs and other isoprene sources become important? For example in moderate to high NOx conditions of large cities could anthropogenic isoprene be important? And could monoterpene emissions (which have a potentially large effect on O3 chemistry due to their reaction rate with OH and O3 itself) also be significant? In general this seems to be a big statement to make without further discussion. The authors also state (page 4 line 3) that AVOC emissions can be effected by increased temperature due to increase evaporation but then have no further discussion as to how omitting this temperature dependence from the study may affect the results.
 
-\textbf{Author Response:} We agree that the statements regarding isoprene emissions requires further discussion, accordingly we shall update the paper (details) with the following text.
-\textit{
-    jsjs
-}
+\textbf{Author Response:} We agree that the further discussion of these statements is required and we have updated the manuscript (Sect.~2.1, Page~4, Line~7) accordingly:
+{\itshape
+Many types of VOCs are emitted from vegetation with isoprene and monoterpenes globally having the largest emissions, $535$ and $162$~Tg~yr$^{-1}$ respectively \citep{Guenther:2012}.
+Temperature-dependent emissions of these highly-reactive BVOC in urban areas during the summer months have been linked to high levels of ozone pollution.
+For example, \citet{Wang:2013} attributed high summertime levels of ozone in Taipei to increased isoprene emissions from vegetation during the hotter summer months.
+Vegetation in urban areas also provides additional ozone sinks through stomatal uptake and ozonolysis of emitted BVOCs, the review of \citet{Calfapietra:2013} discusses the role of BVOCs emitted by trees in urban areas in more detail.
 
-Furthermore, the statement relating to evaporative emissions of anthropogenic VOC (page 4 line 3) includes the following discussion.
-\textit{
-    text
+Biogenic emissions of monoterpenes and isoprene are included in all model simulations. 
+Model runs using a temperature-dependent source of BVOC emissions considered only the temperature-dependence of isoprene emissions as specified by MEGAN2.1 \citep{Guenther:2012}, Sect.~2.3 provides further details. 
+Since isoprene is the most important BVOC on the global scale, we focused on the influence of the temperature-dependent biogenic emissions of isoprene on ozone levels.
+Future work should assess the influence of temperature-dependent biogenic emissions of monoterpenes on ozone production.
+In the temperature-dependent set of model simulations, only isoprene emissions were dependent on temperature and all other emissions were constant in all simulations.
+In reality, evaporative emissions from anthropogenic sources increase with temperature \citep{Rubin:2006} and isoprene has also been measured from vehicular exhausts \citep{Borbon:2001}.
+Representing a temperature-dependent evaporative source of AVOC and an anthropogenic source of isoprene requires detailed local knowledge of these emission sources (such as the traffic fleet).
+Since our box modelling study was designed as an idealised study and not characterise the influence of all temperature-dependent emission sources in a particular region, we have not considered the potential larger increase of ozone at higher temperatures due to these additional emission sources.
+Further modelling work assessing the influence of these temperature-dependent emission sources on ozone production would be useful for mitigating ozone pollution in urban areas.
 }
 
 \textbf{Specific Comments 2:} On page 4 line 30 it is described how isoprene emissions with varying temperature using MEGAN2.1 lead to different isoprene mixing ratios in the model, and this is then compared to isoprene measured at different temperatures during a campaign over Essen, Germany. This needs expanding. I presume MEGAN was run in the model for the particular area that the campaign took place over but this needs stating explicitly.  Could the authors check their model with other campaigns that have measure isoprene (of which there are numerous worldwide in the literature)?
 
-\textbf{Author Response:}
+\textbf{Author Response:} Our idealised study was not designed to represent the biogenic emissions of isoprene over a particular region. For this reason we did not run MEGAN over a particular area as this requires detailed knowledge of the specific vegetation. The aim of the study was to determine the additional influence of temperature-dependent isoprene emissions on top of the temperature-dependent chemistry used by different chemical mechanisms. Thus the study was designed to produce similar isoprene mixing ratios at a reference temperature (we chose $20$~\degree C) and using MEGAN to specify the temperature-dependent profile of isoprene emissions. We have updated the manuscript to further clarify our reasoning in Page~5, Line~4:
+\textit{
+The aim of the study was to determine the additional influence of temperature-dependent isoprene emissions on top of the temperature-dependent chemistry. In order to achieve this aim, we chose the MEGAN2.1 parameters used to calculate isoprene emissions online by the model to give similar isoprene mixing ratios at $20$~\degree C to the temperature-independent emissions of isoprene.
+MEGAN2.1 was used to reflect the temperature-dependent emission profile of isoprene emissions and not to accurately represent the isoprene emissions of a particular region.
+}
 
 \textbf{Specific Comments 3:} On page 5 line 30 a description is given that the increase in ozone due to chemistry is large than that due to increased emissions. The results are shown in figure 3 and table 2, however the paper would greatly benefit from a summary of the results in the text. 
 
-\textbf{Author Response:}
+\textbf{Author Response:} We agree with the reviewer and have updated the manuscript (Page~6, Line~31) to include a summary of this section:
+\textit{
+Our simulations produced a non-linear relationship between ozone, temperature and \ce{NO_x} with the absolute increase in ozone with temperature due to temperature-dependent chemistry larger than the increase in ozone with temperature due to temperature-dependent isoprene emissions.
+These results are consistent between each chemical mechanism, although RADM2 and CB05 simulate a more VOC-sensitive regime at the same temperature than the other chemical mechanisms (MCMv3.2, CRIv2, MOZART-4).
+}
 
-\textbf{Sepcific Comments 4:} On page 7 line 16, there is a paragraph describing how faster reaction of VOCs with OH with increased temperature can increase ozone production. This is backed up by references to other studies that have seen this effect. Why have the authors not included the results of their study here? Could they include some description of which VOC + OH reactions are most dependant on temperature, which would assist readers in coming to a conclusion about which reactions and their temperature dependence should be included in any given model?
+\textbf{Specific Comments 4:} On page 7 line 16, there is a paragraph describing how faster reaction of VOCs with OH with increased temperature can increase ozone production. This is backed up by references to other studies that have seen this effect. Why have the authors not included the results of their study here? Could they include some description of which VOC + OH reactions are most dependant on temperature, which would assist readers in coming to a conclusion about which reactions and their temperature dependence should be included in any given model?
 
-\textbf{Author Response:}
+\textbf{Author Response:} We agree with the reviewer and have included further information (Page~8, Line~4) about which VOC are most important for the increase of ozone with temperature:
+\textit{
+Our results indicate that increased VOC reactivity and decomposition rate of peroxy nitrates are the temperature-dependent chemical processes leading to increased \ce{O_x} with temperature.
+These results are consistent between each chemical mechanism and each \ce{NO_x} condition.
+Of the emitted VOC, reactive VOCs such as alkenes and aromatics were responsible for the increased VOC oxidation with temperature.
+The study of \citet{Li:2014} also showed that reactive VOC such as ethene and xylene were responsible for ozone formation in Asia.
+Besides decreasing \ce{NO_x} emissions to address increased ozone pollution at higher temperatures, assessing the speciation of AVOC emissions and in particular the reactivity of the AVOC may also pay dividends for improved air quality,
+However, over longer timescales, the contribution of less-reactive VOC, such as alkanes, may also significantly contribute to ozone production \citep{Butler:2011, vonSchneidemesser:2016}.
+}
 
 \textbf{Specific Comments 5:} In section 3.3, a description is given of how the box model simulations in this study compare to real-world observations and the output of various 3-D models. I must admit I am a bit confused what this section is trying to say. It seems that the result is that mixing in the box model is more important to ozone formation that the choice of mechanism (which is not surprising) and I am not quite sure how any useful comparison can be made between the different mechanisms in this study and a few real world and 3-d model studies. Maybe the authors could better explain what they are trying to achieve with this section. Would a better approach be to assess what mechanisms were used in the various studies they look at and then give some steer as to whether it is the temperature dependence of the chemistry or of the emissions that is the key driver in these different cases?
 
-\textbf{Author Response:}
+\textbf{Author Response:} Based on the comments of Reviewer \#1 as well as this review point, we have updated Section~3.3 to include more details of the motivation of this comparison and a more appropriate discussion of the results. The changes to the manuscript are found in the response to Review Point 5 of Reviewer \#1.
 
 \section*{Minor Comments:}
 
-\textbf{Minor Comments 1:} Page 1 line 22: Could more references be added here – especially
-with respect to the many studies of the 2003 European heatwave ozone events?
+\textbf{Minor Comments 1:} Page 1 line 22: Could more references be added here – especially with respect to the many studies of the 2003 European heatwave ozone events?
 
-\textbf{Author Response:} 
+\textbf{Author Response:} We agree and have included more references in the updated manuscript:
+\textit{
+In particular, heatwaves, characterised by high temperatures and stagnant meteorological conditions, are correlated with high ozone levels as was the case during the European heatwave in 2003 \citep{Solberg:2008, Vautard:2005}.
+} 
 
 \textbf{Minor Comments 2:}  Page 3 line 13: What was ‘broadly representative of urban conditions of central Europe’ mean. Please be more specific with the conditions the model was run at.
 
-\textbf{Author Response:}
+\textbf{Author Response:} We have updated the manuscript to provide further information (Page~3, Line~14):
+\textit{
+Simulations were run for daylight hours in one full day using a latitude of $51$~\degree N, broadly representative of conditions in central Europe.
+}
 
 \textbf{Minor Comments 3:} Page 3 line 27: The Stockwell 1990 reference seems very old. Has there been more recent advances in the knowledge of ozone production chemistry that might make this obsolete?
 
-\textbf{Author Response:}
+\textbf{Author Response:} We agree with the reviewer that RADM2 is indeed an old reference, however this chemical mechanism is still used by many modelling groups. We have clarified this further in the manuscript (Page~3, Line~34):
+\textit{
+These reduced chemical mechanisms were chosen as they are all currently used by modelling groups in 3D regional and global models \citep{Baklanov:2014}.
+}
 
 \textbf{Minor Comments 4:}  Page 8 line 25: The authors should consider showing the actual production and consumption budgets in the main text rather than the supplementary.
 
-\textbf{Author Response:}
+\textbf{Author Response:} We agree with the reviewer and have updated Fig.~4 to show the absolute production and consumption budgets as well as the normalised production and consumption budgets. The manuscript was updated to reflect this and details are found in the response to Review Point 4 of Reviewer \#1.
 
-
-\begin{thebibliography}{2}
-
-    \bibitem[{Lourens et~al.(2016)Lourens, Butler, Beukes, van Zyl, Fourie, and, Lawrence}]{Lourens:2016} Lourens,~A.~S.~M., Butler,~T.~M., Beukes,~J.~P., van Zyl,~P.~G., Fourie,~G.~D., and Lawrence,~M.~G.:Investigating atmospheric photochemistry in the Johennesburg-Pretoria megacity using a box model, South African Journal of Science, 112, 1/2, 2016.
-
-    \bibitem[{Bonn et~al.(2016)Bonn, von Schneidemesser, Andrich, Quedenau, Gerwig, L\"udecke, Kura, Pietsch, Ehlers, Klemp, Kofahl, Nothard, Kerschbaumer, Junkermann, Grote, Pohl, Weber, Lode, Sch\"onberger, Churkina, Butler, and, Lawrence}]{Bonn:2016} Bonn,~B., von Schneidemesser,~E., Andrich,~D., Quedenau,~J., Gerwig,~H., L\"udecke,~A., Kura,~J., Pietsch,~A., Ehlers,~C., Klemp,~D., Kofahl,~C., Nothard,~R., Kerschbaumer,~A., Junkermann,~W., Grote,~R., Pohl,~T., Weber,~K., Lode,~B., Sch\"onberger,~P., Churkina,~G., Butler,~T.~M., and, Lawrence,~M.~G.: BAERLIN2014 - The influence of land surface types on and the horizontal heterogeneity of air pollutant levels in Berlin, Atmospheric Chemistry and Physics Discussions, 1--62, 2016.
-
-\end{thebibliography}
+\bibliographystyle{copernicus}
+\bibliography{References.bib}
 
 \end{document}
