@@ -11,9 +11,9 @@
 
 \title{The Influence of Temperature on Ozone Production under varying \ce{NO_x} Conditions -- a modelling study: Supplementary Material}
 \author[1]{J. Coates}
-\author[1]{K. Mar}
+\author[1]{K. A. Mar}
 \author[2]{N. Ojha}
-\author[1]{T. Butler}
+\author[1]{T. M. Butler}
 \affil[1]{Institute for Advanced Sustainability Studies, Potsdam, Germany}
 \affil[2]{Atmospheric Chemistry Department, Max Planck Institute for Chemistry, Mainz, Germany}
 
@@ -22,20 +22,6 @@
 \begin{document}
 
 \maketitle
-
-%\section{Vertical Mixing with Diurnal Boundary Layer Height} 
-%The MECCA box model used in \citet{Coates:2015} included a constant boundary layer height of $1$~km and no interactions (vertical mixing) with the free troposphere.
-%In reality, the planetary boundary layer (PBL) height varies diurnally and affects chemistry by diluting emissions after sunrise when the PBL rises. 
-%
-%The evolution of the PBL leads to vertical mixing of the near surface air with the free tropospheric air mass. 
-%When the PBL collapses in the evening, pollutants are trapped in the PBL.  
-%The mixing layer height was measured as part of the BAERLIN campaign \citep{Bonn:2016} over Berlin, Germany. 
-%The profile of mean mixing layer height during the campaign period (June -- August 2014) was used in the box model to represent the diurnal cycle of the mixing layer height.
-%We implemented the vertical mixing scheme into the boxmodel following the approach of \citet{Lourens:2016}.
-%
-%The mixing ratios of \ce{O3}, CO and \ce{CH4} in the free troposphere were respectively set to $50$~ppbv, $116$~ppbv and $1.8$~ppmv. 
-%These conditions were taken from the MATCH-MPIC chemical weather forecast model on the 21st March (the start date of the simulations). 
-%The model results (\url{http://cwf.iass-potsdam.de/}) at the 700 hPa height were chosen and the daily average was used as input into the boxmodel.
 
 \section{Allocation of Benelux AVOC emissions to Mechanism Species}
 Anthropogenic NMVOC emissions over Benelux specified by the TNO\_MACCIII emission inventory \citep{Kuenen:2014} were translated to MCM~v3.2 emissions (Table~\ref{t:Benelux_MCM_emissions}).
@@ -67,6 +53,23 @@ The allocation of MCM~v3.2 emissions into CB05 species followed the recommendati
     \centering%
     \input{table_CB05_NMVOC_emissions}
 }
+
+\clearpage
+
+\section{Extra Plots}
+\begin{figure}[ht]
+    \centering
+    \caption{\ce{NO_x} emissions required for each chemical mechanism to achieve maximal ozone production at each temperature when using a temperature-independent and temperature-dependent source of isoprene emissions.}
+    \includegraphics[width = 0.9\textwidth]{img/NOx_emissions_for_Maximal-O3}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \caption{Contributions to cumulative VOC reactivity (VOCR) from different functional groups of emitted VOCs to the total VOCR. The contributions are normalised by the emissions of each VOC to illustrate the reactivity of each category per molecule emitted. Results illustrated at each temperature, for each chemical mechanism and source of isoprene emissions (temperature-independent and temperature-dependent).}
+    \includegraphics[width = 0.9\textwidth]{img/Sum_VOCR_percent_normalised}
+\end{figure}
+
+\newpage
 
 \section{Ox Production and Consumption Budgets}
 \vspace{-2mm}
