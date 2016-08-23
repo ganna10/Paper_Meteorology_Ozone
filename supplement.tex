@@ -1,0 +1,104 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf, .png, .jpg}
+\usepackage{style}
+
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+
+\sloppy
+
+\title{The Influence of Temperature on Ozone Production under varying \ce{NO_x} Conditions -- a modelling study: Supplementary Material}
+\author[1]{J. Coates}
+\author[1]{K. A. Mar}
+\author[2]{N. Ojha}
+\author[1]{T. M. Butler}
+\affil[1]{Institute for Advanced Sustainability Studies, Potsdam, Germany}
+\affil[2]{Atmospheric Chemistry Department, Max Planck Institute for Chemistry, Mainz, Germany}
+
+\renewcommand\Authands{ and }
+
+\begin{document}
+
+\maketitle
+
+\section{Allocation of Benelux AVOC emissions to Mechanism Species}
+Anthropogenic NMVOC emissions over Benelux specified by the TNO\_MACCIII emission inventory \citep{Kuenen:2014} were translated to MCM~v3.2 emissions (Table~\ref{t:Benelux_MCM_emissions}).
+The MCM~v3.2 emissions for each initial species were translated to emissions of mechanism species into CRI~v2, MOZART-4 and RADM2 chemical mechanisms by weighting with the carbon numbers (Tables~\ref{t:CRI_NMVOC_emissions} -- \ref{t:RADM2_NMVOC_emissions}).
+The allocation of MCM~v3.2 emissions into CB05 species followed the recommendations of \citet{Yarwood:2005} (Table~\ref{t:CB05_NMVOC_emissions}).
+{
+    \begin{landscape}%
+        \centering%
+        \input{Benelux_MCM_emissions}
+    \end{landscape}%
+}
+\newpage
+{
+    \centering%
+    \input{table_CRI_NMVOC_emissions}
+}
+\newpage
+{
+    \centering%
+    \input{table_MOZART_NMVOC_emissions}
+}
+\newpage
+{
+    \centering%
+    \input{table_RADM2_NMVOC_emissions}
+}
+\newpage
+{
+    \centering%
+    \input{table_CB05_NMVOC_emissions}
+}
+
+\clearpage
+
+\section{Extra Plots}
+\begin{figure}[ht]
+    \centering
+    \caption{\ce{NO_x} emissions required for each chemical mechanism to achieve maximal ozone production at each temperature when using a temperature-independent and temperature-dependent source of isoprene emissions.}
+    \includegraphics[width = 0.9\textwidth]{img/NOx_emissions_for_Maximal-O3}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \caption{Contributions to cumulative VOC reactivity (VOCR) from different functional groups of emitted VOCs to the total VOCR. The contributions are normalised by the emissions of each VOC to illustrate the reactivity of each category per molecule emitted. Results illustrated at each temperature, for each chemical mechanism and source of isoprene emissions (temperature-independent and temperature-dependent).}
+    \includegraphics[width = 0.9\textwidth]{img/Sum_VOCR_percent_normalised}
+\end{figure}
+
+\newpage
+
+\section{Ox Production and Consumption Budgets}
+\vspace{-2mm}
+Further box model simulations of stagnant conditions were performed as outlined in Section~3.3 of the research article and an analysis similar to that Section~3.2 of the research article looked at the production and consumption budgets of \ce{O_x} was performed.
+As in Fig.~4 of the research article the production and consumption of \ce{O_x} are allocated to the net contributions of major categories: `ARO2', `RO2' and `HO2' represent the reaction of acyl peroxy radicals, alkyl peroxy radicals and \ce{HO2} with NO.
+`Inorganic' represents the net contribution of inorganic reactions, `RO2NO2' the net contribution of peroxy nitrates and any other reactions were allocated to the `Other Organic' category.
+The absolute \ce{O_x} production and consumption budgets for these addition simulations are depicted in Fig.~\ref{f:abs_Ox} while the \ce{O_x} budgets normalised by the total chemical loss rate of emitted VOC are displayed in Fig.~\ref{f:norm_Ox}.
+These \ce{O_x} budgets are displayed for each chemical mechanism, \ce{NO_x} condition and source of isoprene emissions (temperature independent and temperature dependent) in Figs.~\ref{f:abs_Ox} and \ref{f:norm_Ox}.
+This analysis support the conclusion that the increased OH-reactivity of the emitted VOCs caused the increase of ozone with temperature in our study.
+\begin{figure}[ht]
+    \centering
+    \caption{Day-time budgets of \ce{O_x} from box model simulations without mixing allocated to the \ce{NO_x}-regimes allocated to the net contribution of reactions to \ce{O_x} budgets are allocated to categories of inorganic reactions, peroxy nitrates (RO2NO2), reactions of NO with HO2, alkyl peroxy radicals (RO2) and acyl peroxy radicals (ARO2). All other reactions are allocated to the 'Other Organic' category.}
+    \begin{subfigure}[t]{\textwidth}
+        \centering
+        \caption{Absolute \ce{O_x} production and consumption budgets.}
+        \includegraphics[width = 0.97\textwidth]{img/Absolute_Ox_Budget_categories-No_mixing}
+        \label{f:abs_Ox}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[t]{\textwidth}
+        \centering
+        \caption{\ce{O_x} production and consumption budgets normalised by the total chemical loss rate of emitted VOC.}
+        \includegraphics[width = 0.97\textwidth]{img/Normalised_Ox_Budget-No_mixing}
+        \label{f:norm_Ox}
+    \end{subfigure}
+\end{figure}
+
+\clearpage
+\bibliographystyle{abbrvnat}
+\bibliography{References} 
+
+\end{document}

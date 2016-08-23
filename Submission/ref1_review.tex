@@ -54,7 +54,7 @@ The \ce{NO_x} emissions required for maximum ozone production (the contour ridge
 This figure illustrates that RADM2 and CB05 require higher \ce{NO_x} emissions than the MCMv3.2 to achieve maximum ozone production at each temperature for both a temperature-independent and temperature-dependent source of isoprene emissions.
 At $20$~\degree C, maximum ozone production is reached with $\sim$~$30$~\% more \ce{NO_x} emissions using CB05 and RADM2 than the MCMv3.2 with a temperature-independent and temperature-dependent source of isoprene emissions.
 The CRIv2 and MOZART-4 chemical mechanisms require very similar \ce{NO_x} emissions to the MCMv3.2 at each temperature to produce maximum levels of ozone.
-Thus when modelling the air quality over a particular region using RADM2 and CB05, these mechanisms would simulate more \ce{NO_x}-sensitive chemistry than the MCMv3.2, CRIv2 and MOZART-4 chemical mechanisms for the same conditions (i.e.~emissions, meteorology and radiation).
+Thus when modelling the air quality over a particular region using RADM2 and CB05, these mechanisms would be expected to simulate more \ce{NO_x}-sensitive chemistry than the MCMv3.2, CRIv2 and MOZART-4 chemical mechanisms for the same conditions (i.e.~emissions, meteorology and radiation).
 These differences in the ozone production regime using different chemical mechanisms highlight the need for air quality studies to assess the chemical scheme used by the model, otherwise differing mitigation strategies may be proposed.
 }
 
@@ -105,11 +105,11 @@ We used the WRF-Chem 3D model set-up over the European domain to simulate ozone 
 Directly comparing the ozone mixing ratios from our idealised box model simulations to the WRF-Chem output is difficult due to significant differences in the setups of the models.
 For example, WRF-Chem used gas-phase and aerosol chemistry whereas our box model setup used only gas-phase chemistry, also the treatment of photolysis and VOC and \ce{NO_x} emissions differ between our box model and WRF-Chem.
 In addition to this, to include the effects of transport and mixing, the box model includes a simple mixing term representing the entrainment of clean free tropospheric air into the growing daytime boundary layer.
-Out of the metereological conditions not represented by our box model, stagnation could have the largest influence on the increase of ozone with temperature
 Stagnant atmospheric conditions are characteristed by low wind speeds slowing the transport of ozone and its precursors away from sources and have been correlated with high-ozone episodes in the summer over eastern US \citep{Jacob:1993}.
+Hence, out of the metereological conditions not represented by our box model, stagnation could have the largest influence on the increase of ozone with temperature
 In order to investigate the sensitivity of ozone production to mixing, further box model simulations were performed without mixing approximating stagnant conditions. 
 
-Figure~5 compares the ERA-Interim reanalysis and WRF-Chem data from summer 2007 averaged over central and eastern Germany, where summertime ozone values are driven by temperature \citep{Otero:2016}, to the MDA8 values of ozone from the box model simulations for each chemical mechanism with mixing (solid lines) and without mixing (dotted lines).
+Figure~5 compares the ERA-Interim reanalysis and WRF-Chem output from summer 2007 averaged over central and eastern Germany, where summertime ozone values are driven by temperature \citep{Otero:2016}, to the MDA8 values of ozone from the box model simulations for each chemical mechanism with mixing (solid lines) and without mixing (dotted lines).
 We compare the rate of change of ozone with temperature (m$_{\text{O3-T}}$) between the box model, WRF-Chem and ERA-Interim reanalysis data.
 This metric has been used to quantify future ozone pollution due to the warmer temperatures predicted by climate change \citep{Dawson:2007, Rasmussen:2013} and is discussed further in the review of \citet{Pusede:2015}.
 m$_{\text{O3-T}}$ is calculated as the linear slope of the increase of ozone with temperature in ppbv of ozone per \degree C.
@@ -120,7 +120,7 @@ Table~3 summarises the calculated slopes of the box model simulations displayed 
 The final paragraph of Sect.~3.3 in the manuscript (Page~9, Line~4) was updated and additional discussion was included:
 {\itshape
 Analysis of the \ce{O_x} budgets, similar to that presented in Sect.~3.2, shows an increase in absolute net production of \ce{O_x} when simulating stagnant conditions compared to simulations including mixing (Fig.~4a).
-Moreover, the \ce{O_x} budgets normalised by the chemical loss rate of VOC for the simulations without mixing show no appreciable difference to the simulations including mixing (Fig.~4b).
+Moreover, the \ce{O_x} budgets normalised by the chemical loss rate of VOC for the simulations without mixing show no appreciable difference to the simulations including mixing.
 This analysis is displayed in the supplementary material and is consistent for each chemical mechanism and each \ce{NO_x} condition.
 Thus we conclude that the increased ozone production seen in the box model simulations with reduced mixing is due to enhanced OH reactivity from secondary VOC oxidation products.
 
