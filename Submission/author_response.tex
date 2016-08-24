@@ -1,0 +1,251 @@
+\documentclass{article}
+
+\usepackage{setspace}
+\setstretch{1.5}
+\usepackage{microtype}
+\usepackage[round]{natbib}
+\setlength{\bibhang}{0pt}
+\usepackage[hidelinks]{hyperref}
+\usepackage[a4paper, margin = 29mm]{geometry}
+\usepackage[version = 3]{mhchem}
+
+\DeclareRobustCommand*\degree{\ensuremath{^{\circ}}}
+
+\begin{document}
+
+\section*{Response to Referee \#1}
+
+We would like to thank the reviewer for the review that has enabled us to improve our manuscript; our responses to the review points and comments are found below.
+
+\textbf{Review Point 1:}  Generally, the paper needs clearer focus and to supply more model details/results/discussion pertinent to this focus. While the stated goal is to assess the temperature dependence of ozone chemistry as a function of NOx, at the end, I am not exactly sure what new has been learned. Really, what I think is missing is just a dedicated discussion section, the `Results' read like a true results section, rather than combined results and discussion, so it is difficult for the reader to understand the significance of the calculations.
+
+\textbf{Author Response:} We thank the reviewer for communicating these concerns. In order to address these concerns, we have updated each subsection in the `Results and Discussion' section to include further discussion. The changes to the manuscript are detailed in the responses to the review comments on each subsection below.
+
+\textbf{Review Point 2:} The reasons behind the ozone impacts from temperature-dependent reaction rates are unclear because it is not stated explicitly what this term includes. If I understand correctly, only temperature-dependent reaction rates, k(T), are being tested (page 4, lines 1–6). Generally, the model description does not give the reader sufficient information to understand what causes the changes reported in Table 2. For example, the text states the RONO2 formation is temperature dependent, at least in some mechanisms, but does this refer to the RONO2 branching ratio?
+
+\textbf{Author Response:} The reviewer is correct in saying that only temperature-dependent reaction rates, k(T), are tested in our study. In Sect.~2.1 (Page~4, Line~2), the temperature-dependent processes included in the chemical mechanisms are presented. We have clarified that the branching ratio of \ce{RONO2} formation is not represented as a temperature-dependent process by any chemical mechanism by adding the following text to the manuscript at Page~4, Line~6: 
+\textit{
+Furthermore, none of the chemical mechanisms in our study represent the \ce{RONO_2} branching ratio as a temperature dependent process. 
+Laboratory experiments have shown the temperature dependence of the \ce{RONO_2} branching ratio for some VOCs \citep{Atkinson:1987} but generally \ce{RONO_2} chemistry is not well known \citep{Pusede:2015} and this level of detail is not represented by the chemical mechanisms.
+Before chemical mechanisms can include the temperature-dependence of the \ce{RONO2} branching ratio, further research is required.
+}
+
+\textbf{Review Point 3:} It is interesting to see how the five different mechanisms capture these effects; however, there is little discussion of what is learned about the different mechanisms by testing them in this way. Can the last paragraph of Sect. 3.1 be expanded? Also, I have difficulty discerning differences between panels in Fig. 2. Is there a way to highlight key differences here? Regarding Fig. 3, something has been lost in translation - there are some floating numbers in the upper left corner of the top-left panel, but the different colors are not labeled, either in the text or caption. I deduce that green is CB05, purple is MCM3.2, blue is MOZART-4, and orange and yellow are each either RADM2 or CRIv2. I would be interested to read more, not just about what causes the differences between the curves, but also the implications for studying air quality and chemistry. Finally, the NOx regime distinction is derived from each individual model's H2O2:HNO3. Why not simply use the shape of simulated PO3 versus NOx. A missing piece of information is whether maximal O3 - at different temperatures - occurs at the same NOx level in each mechanism. Differences in the NOx level of maximal O3 for different mechanisms have consequences for air quality decision-making.
+
+\textbf{Author Response:} We thank the reviewer for the comments on Sect.~3.1 of the manuscript and have made changes to the manuscript based on these points.
+Figure 2 has been updated with a subfigure (Fig.~2b) displaying the relative differences in ozone mixing ratios in each chemical mechanism at each temperature, \ce{NO_x} condition from the MCMv3.2 when using a temperature-independent and temperature-dependent source of isoprene emissions. Based on this figure, a discussion of the differences between the chemical mechanisms is included in the manuscript (Page~5, Line~26):
+\textit{
+As shown in Fig.~2b, regions of high temperatures and high \ce{NO_x} emissions generally lead to the largest inter-mechanism differences between ozone mixing ratios using reduced chemical mechanisms from the MCMv3.2 (up to $13$~\%).
+These differences in peak ozone mixing ratio produced from the reduced chemical mechanisms compared with the MCMv3.2 in each \ce{NO_x} condition are consistent with Fig.~3 (described below) where RADM2 and CB05 generally produced higher ozone levels than the MCMv3.2.
+Also consistent with Fig.~3, CRIv2 produced the most similar amounts of ozone to the MCMv3.2 in each \ce{NO_x} condition whereas MOZART-4 tended to produce lower ozone mixing ratios than the MCMv3.2 in High-\ce{NO_x} conditions.
+In Fig.~3, a maximum difference of $10$~ppbv between ozone mixing ratios produced using the chemical mechanisms is reached at $40$~\degree C in the High-\ce{NO_x} state when using both a temperature-independent and temperature-dependent source of isoprene emissions.
+}
+
+The issue with the display of the figures appears to be an issue with the default pdfviewer of the Chrome browser, downloading the file from the default pdfviewer in Chrome does not correct this issue. Opening the ACPD pdf using the Firefox browser and a pdfviewer extension of the Chrome browser (Kami) solves the issue and the manuscript is displayed as intended by the authors. We shall ensure that the updated manuscript does display correctly with the default pdfviewer in Chrome.
+
+We used the H2O2:HNO3 ratio to assign a NOx regime as this has been used previously in other studies for this purpose, we have updated the manuscript to include examples. Sect.~3.1 (Page~6, Line~1) was updated:
+\textit{
+This ratio was used by \citet{Sillman:1995} and \citet{Staffelbach:1997} to designate ozone to \ce{NO_x} regimes based on \ce{NO_x} and VOC levels. 
+}
+
+The manuscript (Page~6, Line~17) was also updated to include further discussion on the \ce{NO_x} emission required for the Maximal-O3 regime with each chemical mechanism, to aid this discussion a new figure was generated and included in the updated supplementary material:
+\textit{
+The \ce{NO_x} emissions required for maximum ozone production (the contour ridges in Fig.~2a) at each temperature is displayed in Fig.~1 of the supplementary material.
+This figure illustrates that RADM2 and CB05 require higher \ce{NO_x} emissions than the MCMv3.2 to achieve maximum ozone production at each temperature for both a temperature-independent and temperature-dependent source of isoprene emissions.
+At $20$~\degree C, maximum ozone production is reached with $\sim$~$30$~\% more \ce{NO_x} emissions using CB05 and RADM2 than the MCMv3.2 with a temperature-independent and temperature-dependent source of isoprene emissions.
+The CRIv2 and MOZART-4 chemical mechanisms require very similar \ce{NO_x} emissions to the MCMv3.2 at each temperature to produce maximum levels of ozone.
+Thus when modelling the air quality over a particular region using RADM2 and CB05, these mechanisms would be expected to simulate more \ce{NO_x}-sensitive chemistry than the MCMv3.2, CRIv2 and MOZART-4 chemical mechanisms for the same conditions (i.e.~emissions, meteorology and radiation).
+These differences in the ozone production regime using different chemical mechanisms highlight the need for air quality studies to assess the chemical scheme used by the model, otherwise differing mitigation strategies may be proposed.
+}
+
+\textbf{Review Point 4:}  Provide a statement as to why the ozone production and consumption budget is informative for understanding the temperature dependence of ozone, i.e.  what is gained compared to thinking about production alone. Also, can an equation be provided for the production and consumption budgeting? This section is in need of discussion and summary. There are many panels in Fig. 4 and it is not obvious to me what the take-away point(s) are.
+
+\textbf{Author Response:} We agree with these review points and have provided additional information about the analysis of ozone production and consumption budgets, including equations and further description of how Fig.~4 was obtained. Section~3.2 of the manuscript (Page~7, Line 1) was updated:
+{\itshape
+Since chemical reactions contributing to both production and consumption of \ce{O_x} ($\equiv$ \ce{O_3 + NO_2 + O(^1D) + O}) have temperature-dependent rate constants, we analysed the production and consumption budgets of \ce{O_x} to determine the temperature-dependent chemical processes controlling the increase of ozone with temperature which was shown in Fig.~3.
+The \ce{O_x} budgets displayed in Fig.~4 are assigned to each \ce{NO_x} regime for each chemical mechanism and source of isoprene emissions.
+The net production or consumption of \ce{O_x} is also indicated in Fig.~4.
+
+Figure~4 was obtained by determining the chemical reactions producing and consuming \ce{O_x} and then allocating these reactions to important categories.
+Reactions of peroxy radicals with NO produce \ce{O_x} and the peroxy radicals are divided into `HO2', `RO2', `ARO2' categories representing the reactions of NO with \ce{HO_2}, alkyl peroxy radicals and acyl peroxy radicals respectively.
+Thus at each time step the \ce{O_x} production rate is given by 
+\begin{equation}
+    k_{HO_2 + NO}[HO_2][NO] + \sum_i{k_{RO_{2,i} + NO}[RO_{2,i}][NO]} + \sum_j{k_{ARO_{2,j} + NO}[ARO_{2,j}][NO]}
+\end{equation}
+for each alkyl peroxy radical $i$ and acyl peroxy radical $j$.
+The net contributions of peroxy nitrates, inorganic reactions and any other remaining organic reactions to the \ce{O_x} budget are represented by the `RO2NO2', `Inorganic' and `Other Organic' categories in Fig.~4.
+The net contributions of these categories to the \ce{O_x} budget was calculated by subtracting the consumption rate from the production rate of the reactions contributing to each category.
+For example, peroxy nitrates produce \ce{O_x} when thermally decomposing or reacting with OH and consume \ce{O_x} when produced.
+Hence, at each time step the net contribution of RO2NO2 to the \ce{O_x} budget was calculated by
+\begin{equation}
+    \sum_k{k_{RO_2NO_{2,k}}[RO_2NO_{2,k}]} + \sum_k{k_{RO_2NO_{2,k} + OH}[RO_2NO_{2,k}][OH]} - \sum_k{k_{RO_{2,k} + NO_2}[RO_{2,k}][NO_2]}
+\end{equation}
+for each peroxy nitrate species $k$.
+The cumulative day-time budgets were calculated by summing the net contributions of the reaction rates of each category over the day-time period.
+The ratio of net ozone to net \ce{O_x} production was practically constant with temperature in all cases showing that using \ce{O_x} budgets as a proxy for ozone budgets was suitable at each temperature in our study.
+}
+
+The main results of the section are summarised and discussed in the final paragraph of Sect.~3.2 (Page~8) of the updated manuscript:
+\textit{
+Our results indicate that increased VOC reactivity due to faster rate constants for the reaction with OH and the decomposition rate of peroxy nitrates are the temperature-dependent chemical processes leading to increased production of \ce{O_x} with temperature.
+Out of these two chemical processes, the increased VOC reactivity with OH with temperature had a larger influence on the increase of \ce{O_x} production with temperature.
+These results are consistent between each chemical mechanism and each \ce{NO_x} condition.
+}
+
+\textbf{Review Point 5:} Before the authors talk about mixing, the WRF-CHEM and box MOZART- 4 results should be compared directly and discussed. The importance of atmospheric mixing appears for the first time in Section 3.3, at which time, the paper states it is the most important term in mO3-T. At this stage in the manuscript, I am left wondering what is this paper actually about. How does Section 3.3 relate to the previous two sections?  A subsequent discussion would be helpful.
+
+\textbf{Author Response:} We thank the reviewer for these comments on Sect.~3.3, we have updated the introductory part of this section to include further details of the motivations of the analysis and also discuss the use of the metric of m$_{\text{O3-T}}$ for comparing the box model, observations and WRF-Chem output. Furthermore the box model simulations looking at the effect of mixing on the increase of ozone with temperature are discussed in more detail. Accordingly, Section~3.3 (Page~8, Line 5) of the manuscript was updated:
+{\itshape
+The final step in our study was to compare how well our idealised box model simulations represent the real-world relationship between ozone and temperature.
+Firstly, we compared the box model simulations to the interpolated observations of the maximum daily 8~h mean (MDA8) of ozone from \citet{Schnell:2015} and the meteorological data of the ERA-Interim re-analysis \citep{Dee:2011}. 
+Using this data set, \citet{Otero:2016} showed that temperature is the main meteorological driver of ozone production during the summer (JJA) months over many regions of central Europe.
+A further test was to compare the box model simulations to the output from a regional 3D model as 3D models include explicit representations of transport and mixing processes which influence ozone production, and which are not well represented in our box model.
+We used the WRF-Chem 3D model set-up over the European domain to simulate ozone production in the year 2007 using MOZART-4 chemistry, further details are described in \citet{Mar:2016}.
+
+Directly comparing the ozone mixing ratios from our idealised box model simulations to the WRF-Chem output is difficult due to significant differences in the setups of the models.
+For example, WRF-Chem used gas-phase and aerosol chemistry whereas our box model setup used only gas-phase chemistry, also the treatment of photolysis and VOC and \ce{NO_x} emissions differ between our box model and WRF-Chem.
+In addition to this, to include the effects of transport and mixing, the box model includes a simple mixing term representing the entrainment of clean free tropospheric air into the growing daytime boundary layer.
+Stagnant atmospheric conditions are characteristed by low wind speeds slowing the transport of ozone and its precursors away from sources and have been correlated with high-ozone episodes in the summer over eastern US \citep{Jacob:1993}.
+Hence, out of the metereological conditions not represented by our box model, stagnation could have the largest influence on the increase of ozone with temperature
+In order to investigate the sensitivity of ozone production to mixing, further box model simulations were performed without mixing approximating stagnant conditions. 
+
+Figure~5 compares the ERA-Interim reanalysis and WRF-Chem output from summer 2007 averaged over central and eastern Germany, where summertime ozone values are driven by temperature \citep{Otero:2016}, to the MDA8 values of ozone from the box model simulations for each chemical mechanism with mixing (solid lines) and without mixing (dotted lines).
+We compare the rate of change of ozone with temperature (m$_{\text{O3-T}}$) between the box model, WRF-Chem and ERA-Interim reanalysis data.
+This metric has been used to quantify future ozone pollution due to the warmer temperatures predicted by climate change \citep{Dawson:2007, Rasmussen:2013} and is discussed further in the review of \citet{Pusede:2015}.
+m$_{\text{O3-T}}$ is calculated as the linear slope of the increase of ozone with temperature in ppbv of ozone per \degree C.
+Polluted areas have larger m$_{\text{O3-T}}$ values than rural areas corresponding to the High-\ce{NO_x} and Low-\ce{NO_x} conditions simulated in our study.  
+Table~3 summarises the calculated slopes of the box model simulations displayed in Fig.~5.
+}
+
+The final paragraph of Sect.~3.3 in the manuscript (Page~9, Line~4) was updated and additional discussion was included:
+{\itshape
+Analysis of the \ce{O_x} budgets, similar to that presented in Sect.~3.2, shows an increase in absolute net production of \ce{O_x} when simulating stagnant conditions compared to simulations including mixing (Fig.~4a).
+Moreover, the \ce{O_x} budgets normalised by the chemical loss rate of VOC for the simulations without mixing show no appreciable difference to the simulations including mixing.
+This analysis is displayed in the supplementary material and is consistent for each chemical mechanism and each \ce{NO_x} condition.
+Thus we conclude that the increased ozone production seen in the box model simulations with reduced mixing is due to enhanced OH reactivity from secondary VOC oxidation products.
+
+A slower rate of increase of ozone with temperature with our box model was obtained compared to the rate of increase of ozone with temperature of observational and 3D model simulations.
+The reason for this discrepancy was that the box model did not represent stagnation conditions which are relevant to real-world conditions.
+The lack of mixing meant that secondary VOC oxidation products were allowed to accumulate, leading to further degradation and increased production of peroxy radicals compared with simulations including mixing. 
+Thus the chemical processes driving the increase of ozone with temperature determined in Sect.~3.2 (faster VOC oxidation and peroxy nitrate decomposition) are not altered by stagnant condition but proceed at a faster rate.
+Thus during stagnant conditions, stronger reductions in \ce{NO_x} are required to minimise the impact of increased ozone production at higher temperatures on the urban population.
+}
+
+\textbf{Minor Comments 1:}  More information should be provided in the introduction. The three sentences in the paper’s first paragraph do not really follow logically. I am not familiar with the Otero paper and this single-sentence description does not stand on its own–temperature was shown to be a driver of which process?
+
+\textbf{Author Response:} We thank the reviewer for this comment and have updated the introduction (Page~1, Line~21):
+\textit{
+In particular, heatwaves, characterised by high temperatures and stagnant meteorological conditions, are correlated with high ozone levels as was the case during the European heatwave in 2003 \citep{Solberg:2008, Vautard:2005}.
+}
+
+\textbf{Minor Comments 2:} Fig. 2: The ozone contours are labeled left to right: 5, 50, 55, 0, 5, 0, 5. The y-axis reads: 10, 10, 30, 50. On the x-axis, the 4 of 40 has been lost.
+
+\textbf{Author Response:} As discussed in the answer to Review Point 3, the issue with figures appears to be a problem with the default pdfviewer of the Chrome browser. We shall ensure that the updated manuscript does display correctly with the default pdfviewer in Chrome.
+
+\textbf{Minor Comments 3:} Fig. 5: The majority of measured O3 data are found at lower temperatures, so fitting the calculated O3 with a straight line across the whole temperature range may not be representative.
+
+\textbf{Author Response:} We agree with the reviewer that a linear regression may not be the best choice for the observation. However, as a metric m$_{\text{O3-T}}$, defined as the linear slope of the increase of ozone with temperature, was the most appropriate with which to compare the observations not only to other studies but also to the box model and WRF-Chem output. The manuscipt was updated as outlined in the response to Review Point 5 and Page~8, Line~14 was also updated to compare m$_{\text{O3-T}}$ of the observational data to that from other studies:
+\textit{
+The linear slope of the observational data indicates an increase of $2.15$~ppbv ozone per \degree C, this is comparable to the increase of ozone with temperature from other recent studies over urban areas: $2.2$~ppbv/\degree C obtained over the Northeast US \citep{Rasmussen:2013} and Milan, Italy ($2.8$~ppbv/\degree C, \citet{Baertsch-Ritter:2004}).
+}
+
+\textbf{Minor Comments 4:} Fig. 5: y-axis reads 25, 50, 5, 100, 125; on the x-axis, the 4 of 40 has been lost.
+
+\textbf{Author Response:} See response to Minor Comments 2.
+
+\newpage
+\section*{Response to Referee \#2}
+
+We would like to thank the reviewer, we feel that this review has enabled us to improve our manuscript; our responses to the review points and comments are found below.
+
+\textbf{Review Point 1:}  Generally the paper is very short. I realise that keeping things brief and to the point is sometimes a good thing and can help the reader concentrate on the salient points, however I would suggest in this case that some of the supplementary material be moved to the main text. In particular I think the model setup section would benefit from having more description in the main text rather than most of it being in the supplementary. This is important information for the paper and in this case I believe it would assist the reader to expand the model description.
+
+\textbf{Author Response:} We agree that a more detailed methodology description is beneficial to the paper and this was addressed in the published ACPD paper. 
+The supplementary material published in ACPD includes only the information related to the speciated VOC emissions used in each chemical mechanism and no other information pertaining to the model setup. 
+We believe that the reviewer may be commenting on a previous uploaded version, the only difference between the published ACPD paper and this previous version is the description of the model setup that was previously included in the supplement.
+Thus all other review comments be the reviewer are valid and addressed below. 
+
+Furthermore, the methodology section has also been updated in reponse to Specific Comments~\#1 and~\#2 below and Review Point~\#2 from the first referee.
+
+\textbf{Specific Comments 1:}  In section 2.1 (page 3 line 30 – page 4 line 4), several statements are made about the setup of the model that would benefit from expansion. The authors state that isoprene emissions from vegetation are the most important BVOC emissions on a global scale, however if the study was to be used for mechanisms in regional as well as global models, then could other BVOCs and other isoprene sources become important? For example in moderate to high NOx conditions of large cities could anthropogenic isoprene be important? And could monoterpene emissions (which have a potentially large effect on O3 chemistry due to their reaction rate with OH and O3 itself) also be significant? In general this seems to be a big statement to make without further discussion. The authors also state (page 4 line 3) that AVOC emissions can be effected by increased temperature due to increase evaporation but then have no further discussion as to how omitting this temperature dependence from the study may affect the results.
+
+\textbf{Author Response:} We agree that further discussion of these statements is required. In order to respond to this review point and also Review Point~\#1, we have updated the manuscript (Sect.~2.1, Page~4, Line~7) with the following text:
+{\itshape
+Many types of VOCs are emitted from vegetation with isoprene and monoterpenes globally having the largest emissions, $535$ and $162$~Tg~yr$^{-1}$ respectively \citep{Guenther:2012}.
+Temperature-dependent emissions of these highly-reactive BVOC in urban areas during the summer months have been linked to high levels of ozone pollution.
+For example, \citet{Wang:2013} attributed high summertime levels of ozone in Taipei to increased isoprene emissions from vegetation during the hotter summer months.
+Vegetation in urban areas also provides additional ozone sinks through stomatal uptake and ozonolysis of emitted BVOCs, the review of \citet{Calfapietra:2013} discusses the role of BVOCs emitted by trees in urban areas in more detail.
+
+Biogenic emissions of monoterpenes and isoprene are included in all model simulations. 
+Model runs using a temperature-dependent source of BVOC emissions considered only the temperature-dependence of isoprene emissions as specified by MEGAN2.1 \citep{Guenther:2012}, Sect.~2.3 provides further details. 
+Since isoprene is the most important BVOC on the global scale, we focused on the influence of the temperature-dependent biogenic emissions of isoprene on ozone levels.
+Future work should assess the influence of temperature-dependent biogenic emissions of monoterpenes on ozone production.
+In the temperature-dependent set of model simulations, only isoprene emissions were dependent on temperature and all other emissions were constant in all simulations.
+In reality, evaporative emissions from anthropogenic sources increase with temperature \citep{Rubin:2006} and isoprene has also been measured from vehicular exhausts \citep{Borbon:2001}.
+Representing a temperature-dependent evaporative source of AVOC and an anthropogenic source of isoprene requires detailed local knowledge of these emission sources (such as the traffic fleet).
+Since our box modelling study was designed as an idealised study and not to characterise the influence of all temperature-dependent emission sources in a particular region, we have not considered the potentially larger increase of ozone at higher temperatures due to these additional emission sources.
+Further modelling work assessing the influence of these temperature-dependent emission sources on ozone production would be useful for mitigating ozone pollution in urban areas.
+}
+
+\textbf{Specific Comments 2:} On page 4 line 30 it is described how isoprene emissions with varying temperature using MEGAN2.1 lead to different isoprene mixing ratios in the model, and this is then compared to isoprene measured at different temperatures during a campaign over Essen, Germany. This needs expanding. I presume MEGAN was run in the model for the particular area that the campaign took place over but this needs stating explicitly.  Could the authors check their model with other campaigns that have measure isoprene (of which there are numerous worldwide in the literature)?
+
+\textbf{Author Response:} Our idealised study was not designed to represent the biogenic emissions of isoprene over a particular region. For this reason we did not run MEGAN over a particular area as this requires detailed knowledge of the specific vegetation. The aim of the study was to determine the additional influence of temperature-dependent isoprene emissions on top of the temperature-dependent chemistry used by different chemical mechanisms. Thus the study was designed to produce similar isoprene mixing ratios at a reference temperature (we chose $20$~\degree C) and using MEGAN to specify the temperature-dependent profile of isoprene emissions. We have updated the manuscript to further clarify our reasoning in Page~5, Line~4:
+\textit{
+The aim of the study was to determine the additional influence of temperature-dependent isoprene emissions on top of the temperature-dependent chemistry. In order to achieve this aim, we chose the MEGAN2.1 parameters used to calculate isoprene emissions online by the model to give similar isoprene mixing ratios at $20$~\degree C to the temperature-independent emissions of isoprene.
+MEGAN2.1 was used to reflect the temperature-dependent emission profile of isoprene emissions and not to accurately represent the isoprene emissions of a particular region.
+}
+
+\textbf{Specific Comments 3:} On page 5 line 30 a description is given that the increase in ozone due to chemistry is large than that due to increased emissions. The results are shown in figure 3 and table 2, however the paper would greatly benefit from a summary of the results in the text. 
+
+\textbf{Author Response:} We agree with the reviewer and have updated the manuscript (Page~6, Line~31) to include a summary of this section:
+\textit{
+Our simulations produced a non-linear relationship between ozone, temperature and \ce{NO_x} with the absolute increase in ozone with temperature due to temperature-dependent chemistry larger than the increase in ozone with temperature due to temperature-dependent isoprene emissions.
+These results are consistent between each chemical mechanism, although for the same \ce{NO_x} and VOC conditions RADM2 and CB05 simulate a more \ce{NO_x}-sensitive regime at the same temperature than the other chemical mechanisms (MCMv3.2, CRIv2, MOZART-4).
+}
+
+\textbf{Specific Comments 4:} On page 7 line 16, there is a paragraph describing how faster reaction of VOCs with OH with increased temperature can increase ozone production. This is backed up by references to other studies that have seen this effect. Why have the authors not included the results of their study here? Could they include some description of which VOC + OH reactions are most dependant on temperature, which would assist readers in coming to a conclusion about which reactions and their temperature dependence should be included in any given model?
+
+\textbf{Author Response:} We agree with the reviewer and have included further information (Page~8, Line~4) about which VOC are most important for the increase of ozone with temperature:
+\textit{
+When using a temperature-independent source of isoprene emissions, the increased VOC reactivity with temperature is dominated by the increased reactivity of aldehydes at higher temperatures (up to $50$~\% at $40$~\degree C), alkene and alkane emissions also have large contributions to the total VOC reactivity.
+The increase in VOC reactivity with temperature is primarily due to the increased emissions of isoprene with temperature in simulations using a temperature-dependent source of isoprene, aldehydes and alkanes also contribute to the total VOC reactivity when using a temperature-dependent source of isoprene.
+The supplementary material illustrates the contributions of different VOC functional groups to the total reactivity.
+The large contribution of aldehyde reactivity to total reactivity at higher temperatures is due to the increased production of aldehydes during the secondary degradation of other VOC. 
+}
+
+\textbf{Specific Comments 5:} In section 3.3, a description is given of how the box model simulations in this study compare to real-world observations and the output of various 3-D models. I must admit I am a bit confused what this section is trying to say. It seems that the result is that mixing in the box model is more important to ozone formation that the choice of mechanism (which is not surprising) and I am not quite sure how any useful comparison can be made between the different mechanisms in this study and a few real world and 3-d model studies. Maybe the authors could better explain what they are trying to achieve with this section. Would a better approach be to assess what mechanisms were used in the various studies they look at and then give some steer as to whether it is the temperature dependence of the chemistry or of the emissions that is the key driver in these different cases?
+
+\textbf{Author Response:} Based on the comments of Reviewer \#1 as well as this review point, we have updated Section~3.3 to include more details of the motivation of this comparison and a more appropriate discussion of the results. The changes to the manuscript are found in the response to Review Point 5 of Reviewer \#1.
+
+\section*{Minor Comments:}
+
+\textbf{Minor Comments 1:} Page 1 line 22: Could more references be added here – especially with respect to the many studies of the 2003 European heatwave ozone events?
+
+\textbf{Author Response:} We agree and have included more references in the updated manuscript:
+\textit{
+In particular, heatwaves, characterised by high temperatures and stagnant meteorological conditions, are correlated with high ozone levels as was the case during the European heatwave in 2003 \citep{Solberg:2008, Vautard:2005}.
+} 
+
+\textbf{Minor Comments 2:}  Page 3 line 13: What was ‘broadly representative of urban conditions of central Europe’ mean. Please be more specific with the conditions the model was run at.
+
+\textbf{Author Response:} We have updated the manuscript to provide further information (Page~3, Line~14):
+\textit{
+Our simulations were designed were designed as an idealised case and not to be exact representations of any particular place.
+The simulations used a latitude of $51$~\degree N, broadly representative of conditions in central Europe, and were run for daylight hours in one full day.
+}
+
+\textbf{Minor Comments 3:} Page 3 line 27: The Stockwell 1990 reference seems very old. Has there been more recent advances in the knowledge of ozone production chemistry that might make this obsolete?
+
+\textbf{Author Response:} We agree with the reviewer that RADM2 is indeed an old reference, however this chemical mechanism is still used by many modelling groups. We have clarified this further in the manuscript (Page~3, Line~34):
+\textit{
+These reduced chemical mechanisms were chosen as they are all currently used by modelling groups in 3D regional and global models \citep{Baklanov:2014}.
+}
+
+\textbf{Minor Comments 4:}  Page 8 line 25: The authors should consider showing the actual production and consumption budgets in the main text rather than the supplementary.
+
+\textbf{Author Response:} We agree with the reviewer and have updated Fig.~4 to show the absolute production and consumption budgets as well as the normalised production and consumption budgets. The manuscript was updated to reflect this and details are found in the response to Review Point 4 of Reviewer \#1.
+
+\bibliographystyle{copernicus}
+\bibliography{References.bib}
+
+\end{document}
